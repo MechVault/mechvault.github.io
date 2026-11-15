@@ -1,0 +1,1926 @@
+{
+ "name": "English",
+ "culture": "en-US",
+ "strings": [
+  [
+   "crediti",
+   "credits"
+  ],
+  [
+   "mai",
+   "never"
+  ],
+  [
+   "adesso",
+   "just now"
+  ],
+  [
+   "{0} min fa",
+   "{0} min ago"
+  ],
+  [
+   "{0} h fa",
+   "{0} h ago"
+  ],
+  [
+   "Account del {0}",
+   "Account from {0}"
+  ],
+  [
+   "È l'unico account: non si può eliminare.",
+   "This is the only account: it can't be deleted."
+  ],
+  [
+   "Eliminare l'account «{0}» con tutti i suoi obiettivi e la cronologia?\n\nIl file viene spostato nel Cestino di Windows.",
+   "Delete the account “{0}” with all its goals and history?\n\nThe file is moved to the Windows Recycle Bin."
+  ],
+  [
+   "impostato da te",
+   "set by you"
+  ],
+  [
+   "stima iniziale",
+   "initial estimate"
+  ],
+  [
+   "ora",
+   "now"
+  ],
+  [
+   "1 giorno",
+   "1 day"
+  ],
+  [
+   "{0} giorni",
+   "{0} days"
+  ],
+  [
+   "imposta il ritmo",
+   "set the rate"
+  ],
+  [
+   "oggi",
+   "today"
+  ],
+  [
+   "pronto",
+   "ready"
+  ],
+  [
+   "mancano {0} {1}",
+   "{0} {1} to go"
+  ],
+  [
+   "Nessun obiettivo attivo.",
+   "No active goals."
+  ],
+  [
+   "Guadagno · {0}",
+   "Earned · {0}"
+  ],
+  [
+   "Spesa non autorizzata",
+   "Unauthorized spend"
+  ],
+  [
+   "Spesa per missione",
+   "Mission spend"
+  ],
+  [
+   "Piccola spesa tollerata",
+   "Small tolerated spend"
+  ],
+  [
+   "Obiettivo comprato",
+   "Goal purchased"
+  ],
+  [
+   "Saldo iniziale · {0}",
+   "Starting balance · {0}"
+  ],
+  [
+   "letto dal gioco",
+   "read from the game"
+  ],
+  [
+   "manuale",
+   "manual"
+  ],
+  [
+   "Buongiorno, pilota",
+   "Good morning, pilot"
+  ],
+  [
+   "Buon pomeriggio, pilota",
+   "Good afternoon, pilot"
+  ],
+  [
+   "Buonasera, pilota",
+   "Good evening, pilot"
+  ],
+  [
+   "1 giorno pulito",
+   "1 clean day"
+  ],
+  [
+   "{0} giorni puliti",
+   "{0} clean days"
+  ],
+  [
+   "Hai chiuso Mech Arena e la lettura automatica è spenta: aggiorna i saldi in Impostazioni.",
+   "You closed Mech Arena and automatic reading is off: update your balances in Settings."
+  ],
+  [
+   "Apri Mech Arena e vai nell'hangar: leggo io crediti e A-coin dalla barra in alto.",
+   "Open Mech Arena and go to the hangar: I read credits and A-coins from the top bar myself."
+  ],
+  [
+   "Inserisci i saldi attuali in Impostazioni › Correggi a mano.",
+   "Enter your current balances in Settings › Manual correction."
+  ],
+  [
+   "Acquisto autorizzato: compralo in gioco, riconosco da solo la spesa.",
+   "Purchase authorized: buy it in the game, I'll recognize the spend myself."
+  ],
+  [
+   "Hai il 100%: autorizza l'acquisto, poi compralo in gioco.",
+   "You're at 100%: authorize the purchase, then buy it in the game."
+  ],
+  [
+   "Al ritmo di ~{0} {1} al giorno ({2}).",
+   "At ~{0} {1} per day ({2})."
+  ],
+  [
+   "Il tempo stimato compare dopo un giorno di letture.",
+   "The time estimate appears after one day of readings."
+  ],
+  [
+   "Nessun obiettivo",
+   "No goal"
+  ],
+  [
+   "Aggiungine uno nella sezione Obiettivi.",
+   "Add one in the Goals section."
+  ],
+  [
+   "~{0} al giorno · {1}",
+   "~{0} per day · {1}"
+  ],
+  [
+   "oggi {0}",
+   "today {0}"
+  ],
+  [
+   "Record: {0} giorni  ·  Spese confessate: {1}",
+   "Best: {0} days  ·  Confessed spends: {1}"
+  ],
+  [
+   "/ {0} crediti",
+   "/ {0} credits"
+  ],
+  [
+   "Budget missioni disattivato: imposta un valore in Impostazioni.",
+   "Mission budget is off: set a value in Settings."
+  ],
+  [
+   "Restano {0} crediti{1} per le missioni giornaliere, senza rompere la serie. Si azzera a mezzanotte.",
+   "{0} credits{1} left for daily missions without breaking the streak. Resets at midnight."
+  ],
+  [
+   " e {0} A-coin",
+   " and {0} A-coins"
+  ],
+  [
+   "Ancora niente. Gioca una partita: ogni guadagno o spesa comparirà qui da solo.",
+   "Nothing yet. Play a match: every gain or spend will show up here on its own."
+  ],
+  [
+   "Acquisto autorizzato · compralo in gioco, la spesa verrà riconosciuta",
+   "Purchase authorized · buy it in the game, the spend will be recognized"
+  ],
+  [
+   "Pronto · hai abbastanza {0}",
+   "Ready · you have enough {0}"
+  ],
+  [
+   "mancano {0} · ~{1} · entro {2}",
+   "{0} to go · ~{1} · by {2}"
+  ],
+  [
+   "in coda dopo «{0}» · mancano {1} in totale · entro {2}",
+   "queued after “{0}” · {1} to go in total · by {2}"
+  ],
+  [
+   "   comprato il {0}",
+   "   purchased on {0}"
+  ],
+  [
+   "Nessun obiettivo per questo account. Aggiungine uno qui sotto.",
+   "No goals for this account. Add one below."
+  ],
+  [
+   "Ancora da mettere da parte: ",
+   "Still to save:"
+  ],
+  [
+   "Tutti gli obiettivi attivi sono coperti.",
+   "All active goals are covered."
+  ],
+  [
+   "Oggi",
+   "Today"
+  ],
+  [
+   "Ieri",
+   "Yesterday"
+  ],
+  [
+   "Nessuna attività registrata.",
+   "No activity recorded."
+  ],
+  [
+   "Nessuna spesa confessata. Continua così.",
+   "No confessed spends. Keep it up."
+  ],
+  [
+   "Totale buttato: {0} crediti · {1} A-coin",
+   "Total wasted: {0} credits · {1} A-coins"
+  ],
+  [
+   "Lette dal gioco per l'account «{0}».",
+   "Read from the game for the account “{0}”."
+  ],
+  [
+   "Saldo non ancora letto: apri Mech Arena e vai nell'hangar.",
+   "Balance not read yet: open Mech Arena and go to the hangar."
+  ],
+  [
+   "{0} copiati negli appunti: {1}",
+   "{0} copied to the clipboard: {1}"
+  ],
+  [
+   "Attivo: {0}  ·  Account salvati: {1}\nQuando apri Mech Arena ti chiedo sempre con quale giochi.",
+   "Active: {0}  ·  Saved accounts: {1}\nWhen you open Mech Arena I always ask which one you're playing."
+  ],
+  [
+   "Mech Arena aperto",
+   "Mech Arena open"
+  ],
+  [
+   "Sorveglianza attiva",
+   "Watching"
+  ],
+  [
+   "Mech Arena chiuso",
+   "Mech Arena closed"
+  ],
+  [
+   "Blocco attivo",
+   "Lock active"
+  ],
+  [
+   "lettura automatica spenta",
+   "automatic reading off"
+  ],
+  [
+   "OCR non disponibile",
+   "OCR unavailable"
+  ],
+  [
+   "ultima lettura {0}",
+   "last read {0}"
+  ],
+  [
+   "in attesa del gioco",
+   "waiting for the game"
+  ],
+  [
+   "MechVault · {0} · {1} gg puliti",
+   "MechVault · {0} · {1} clean days"
+  ],
+  [
+   "Spesa rilevata dal gioco",
+   "Spend detected in the game"
+  ],
+  [
+   "Il budget missioni di oggi ha coperto {0} {1}; questo è il resto. ",
+   "Today's mission budget covered {0} {1}; this is the rest."
+  ],
+  [
+   "Avevi {0} giorni puliti: la serie riparte da zero.",
+   "You had {0} clean days: the streak restarts from zero."
+  ],
+  [
+   "La serie riparte da zero.",
+   "The streak restarts from zero."
+  ],
+  [
+   " Hai bruciato circa {0} giorni di grind.",
+   " You burned about {0} days of grind."
+  ],
+  [
+   "Se era per una missione giornaliera premi «Era una missione»: non rompe la serie.",
+   "If it was for a daily mission press “It was a mission”: it doesn't break the streak."
+  ],
+  [
+   "Saldo letto",
+   "Balance read"
+  ],
+  [
+   "{0}: {1} {2}. Da qui parte il conteggio.",
+   "{0}: {1} {2}. Counting starts here."
+  ],
+  [
+   "Obiettivo completato!",
+   "Goal completed!"
+  ],
+  [
+   "{0}: te lo sei guadagnato.",
+   "{0}: you earned it."
+  ],
+  [
+   "Acquisto",
+   "Purchase"
+  ],
+  [
+   "Segnare −{0} {1} come spesa per una missione?\nLa serie torna com'era prima.",
+   "Mark −{0} {1} as a mission spend?\nThe streak goes back to what it was."
+  ],
+  [
+   "Numero non valido. Esempi: 512000 · 512k · 1,2M",
+   "Invalid number. Examples: 512000 · 512k · 1.2M"
+  ],
+  [
+   "Obiettivo raggiunto: {0}\n\nAutorizzo UNA spesa di circa {1} {2} per le prossime 6 ore.\nCompralo in gioco: riconosco l'acquisto da solo e segno l'obiettivo come completato.\n\nQualsiasi altra spesa resta vietata. Procedo?",
+   "Goal reached: {0}\n\nI authorize ONE spend of about {1} {2} for the next 6 hours.\nBuy it in the game: I recognize the purchase myself and mark the goal as completed.\n\nAny other spend stays forbidden. Proceed?"
+  ],
+  [
+   "Eliminare l'obiettivo «{0}»?",
+   "Delete the goal “{0}”?"
+  ],
+  [
+   "Scrivi il nome dell'obiettivo.",
+   "Enter the goal name."
+  ],
+  [
+   "Costo non valido. Esempi: 827k · 932000 · 1,2M",
+   "Invalid cost. Examples: 827k · 932000 · 1.2M"
+  ],
+  [
+   "Espressione non valida.",
+   "Invalid expression."
+  ],
+  [
+   "OCR di Windows non disponibile su questo PC.",
+   "Windows OCR is not available on this PC."
+  ],
+  [
+   "Mech Arena non è aperto.",
+   "Mech Arena is not open."
+  ],
+  [
+   "Barra delle valute non visibile: vai nell'hangar (non in battaglia) e riprova.",
+   "Currency bar not visible: go to the hangar (not in battle) and try again."
+  ],
+  [
+   "Letto: ",
+   "Read:"
+  ],
+  [
+   "Cambia account",
+   "Switch account"
+  ],
+  [
+   "{0}   ·   ultimo usato",
+   "{0}   ·   last used"
+  ],
+  [
+   "{0} · sei a {1} giorni senza spendere. Non buttarli via per una cassa.",
+   "{0} · you're at {1} days without spending. Don't throw them away for a crate."
+  ],
+  [
+   "Giocare, farmare, missioni giornaliere (fino a {0} crediti al giorno). Comprare solo l'obiettivo #1 al 100%.",
+   "Playing, farming, daily missions (up to {0} credits per day). Buying only goal #1 at 100%."
+  ],
+  [
+   "Leggi... ({0})",
+   "Read... ({0})"
+  ],
+  [
+   "Ho capito: oggi non spendo",
+   "Got it: no spending today"
+  ],
+  [
+   "{0} crediti  ·  {1} A-coin",
+   "{0} credits  ·  {1} A-coins"
+  ],
+  [
+   " · missioni {0} rimasti",
+   " · missions {0} left"
+  ],
+  [
+   "{0}: blocco spese attivo.",
+   "{0}: spending lock active."
+  ],
+  [
+   "Partita finita",
+   "Match over"
+  ],
+  [
+   "{0}: {1} crediti · {2} A-coin. Serie: {3} giorni.",
+   "{0}: {1} credits · {2} A-coins. Streak: {3} days."
+  ],
+  [
+   "Se chiudi MechVault smette di sorvegliarti fino al prossimo avvio del PC.\n\nVuoi davvero uscire?",
+   "If you close MechVault it stops watching you until the next PC start.\n\nDo you really want to quit?"
+  ],
+  [
+   "MechVault resta attivo",
+   "MechVault stays active"
+  ],
+  [
+   "Ti sorveglio dalla barra. Per uscire: tasto destro sull'icona › Esci.",
+   "I'm watching from the tray. To quit: right-click the icon › Quit."
+  ],
+  [
+   "Apri MechVault",
+   "Open MechVault"
+  ],
+  [
+   "Esci",
+   "Quit"
+  ],
+  [
+   "{0} · {1} giorni senza spendere.",
+   "{0} · {1} days without spending."
+  ],
+  [
+   "MechVault attivo",
+   "MechVault active"
+  ],
+  [
+   "Panoramica",
+   "Overview"
+  ],
+  [
+   "Obiettivi",
+   "Goals"
+  ],
+  [
+   "Attività",
+   "Activity"
+  ],
+  [
+   "Strumenti",
+   "Tools"
+  ],
+  [
+   "Impostazioni",
+   "Settings"
+  ],
+  [
+   "0 giorni puliti",
+   "0 clean days"
+  ],
+  [
+   "Ciao, pilota",
+   "Hi, pilot"
+  ],
+  [
+   "completato",
+   "completed"
+  ],
+  [
+   "Prossimo obiettivo",
+   "Next goal"
+  ],
+  [
+   "Mancano",
+   "To go"
+  ],
+  [
+   "Tempo stimato",
+   "Estimated time"
+  ],
+  [
+   "Pronto entro",
+   "Ready by"
+  ],
+  [
+   "Compra ora",
+   "Buy now"
+  ],
+  [
+   "oggi 0",
+   "today 0"
+  ],
+  [
+   "Crediti",
+   "Credits"
+  ],
+  [
+   "Serie senza spese",
+   "No-spend streak"
+  ],
+  [
+   "giorni",
+   "days"
+  ],
+  [
+   "14 giorni fa",
+   "14 days ago"
+  ],
+  [
+   "Budget missioni di oggi",
+   "Today's mission budget"
+  ],
+  [
+   "/ 2.000 crediti",
+   "/ 2,000 credits"
+  ],
+  [
+   "Spese per le missioni giornaliere (es. «usa 2.000 crediti»): non rompono la serie. Si azzera a mezzanotte.",
+   "Spends for daily missions (e.g. “use 2,000 credits”): they don't break the streak. Resets at midnight."
+  ],
+  [
+   "Vedi tutto",
+   "See all"
+  ],
+  [
+   "Ultime attività",
+   "Latest activity"
+  ],
+  [
+   "Nuovo obiettivo",
+   "New goal"
+  ],
+  [
+   "Nome (es. Hadron Lance liv. 20)",
+   "Name (e.g. Hadron Lance lvl 20)"
+  ],
+  [
+   "Costo (es. 827k)",
+   "Cost (e.g. 827k)"
+  ],
+  [
+   "Aggiungi",
+   "Add"
+  ],
+  [
+   "Nome · costo (es. 827k) · valuta. L'ordine conta: si può comprare solo il primo della lista per ogni valuta.",
+   "Name · cost (e.g. 827k) · currency. Order matters: you can only buy the first in the list for each currency."
+  ],
+  [
+   "Tutto quello che MechVault ha visto cambiare nei tuoi saldi.",
+   "Everything MechVault has seen change in your balances."
+  ],
+  [
+   "Crediti guadagnati · 14 gg",
+   "Credits earned · 14 d"
+  ],
+  [
+   "A-coin guadagnate · 14 gg",
+   "A-coins earned · 14 d"
+  ],
+  [
+   "Crediti sprecati · 14 gg",
+   "Credits wasted · 14 d"
+  ],
+  [
+   "A-coin sprecate · 14 gg",
+   "A-coins wasted · 14 d"
+  ],
+  [
+   "Cronologia",
+   "History"
+  ],
+  [
+   "Confessionale",
+   "Confessional"
+  ],
+  [
+   "Le mie risorse",
+   "My resources"
+  ],
+  [
+   "Copia",
+   "Copy"
+  ],
+  [
+   "Informazioni",
+   "About"
+  ],
+  [
+   "MechVault è un progetto di fan. Non è affiliato, approvato o sponsorizzato da Plarium Global Ltd. Mech Arena e i relativi nomi e marchi appartengono ai rispettivi proprietari.",
+   "MechVault is a fan project. It is not affiliated with, endorsed or sponsored by Plarium Global Ltd. Mech Arena and its names and trademarks belong to their respective owners."
+  ],
+  [
+   "MechVault legge solo lo schermo, come uno screenshot: non modifica il gioco, non legge la sua memoria e non automatizza nulla.",
+   "MechVault only reads the screen, like a screenshot: it doesn't modify the game, doesn't read its memory and doesn't automate anything."
+  ],
+  [
+   "Lingua",
+   "Language"
+  ],
+  [
+   "Account",
+   "Account"
+  ],
+  [
+   "Nuovo nome per questo account",
+   "New name for this account"
+  ],
+  [
+   "Rinomina",
+   "Rename"
+  ],
+  [
+   "Cambia o crea",
+   "Switch or create"
+  ],
+  [
+   "Elimina",
+   "Delete"
+  ],
+  [
+   "Budget missioni",
+   "Mission budget"
+  ],
+  [
+   "Quanto puoi spendere ogni giorno per completare le missioni giornaliere (es. «usa 2.000 crediti») senza rompere la serie. Oltre il budget è una spesa vietata.",
+   "How much you can spend each day to complete daily missions (e.g. “use 2,000 credits”) without breaking the streak. Beyond the budget it's a forbidden spend."
+  ],
+  [
+   "Crediti al giorno",
+   "Credits per day"
+  ],
+  [
+   "A-coin al giorno",
+   "A-coins per day"
+  ],
+  [
+   "Salva",
+   "Save"
+  ],
+  [
+   "Lettura automatica",
+   "Automatic reading"
+  ],
+  [
+   "Leggi crediti e A-coin dallo schermo del gioco",
+   "Read credits and A-coins from the game screen"
+  ],
+  [
+   "Guarda solo la barra delle valute in alto a destra, come uno screenshot, ogni 3 secondi. Non legge la memoria del gioco e non tocca i suoi file: niente rischio ban. Funziona nell'hangar e nei menu.",
+   "It only looks at the currency bar in the top right, like a screenshot, every 3 seconds. It doesn't read the game's memory or touch its files: no ban risk. Works in the hangar and menus."
+  ],
+  [
+   "Prova lettura adesso",
+   "Test reading now"
+  ],
+  [
+   "Correggi a mano",
+   "Manual correction"
+  ],
+  [
+   "Solo se la lettura automatica sbaglia o è spenta. Anche qui un saldo più basso conta come spesa.",
+   "Only if automatic reading is wrong or off. A lower balance counts as a spend here too."
+  ],
+  [
+   "Crediti attuali (es. 512k)",
+   "Current credits (e.g. 512k)"
+  ],
+  [
+   "A-coin attuali",
+   "Current A-coins"
+  ],
+  [
+   "Ritmo crediti/giorno",
+   "Credit rate/day"
+  ],
+  [
+   "0 = calcolato in automatico",
+   "0 = calculated automatically"
+  ],
+  [
+   "A-coin/giorno",
+   "A-coins/day"
+  ],
+  [
+   "Sistema",
+   "System"
+  ],
+  [
+   "Avvia MechVault con Windows",
+   "Start MechVault with Windows"
+  ],
+  [
+   "Promemoria fisso sullo schermo mentre giochi",
+   "Fixed on-screen reminder while you play"
+  ],
+  [
+   "Processo del gioco (espressione regolare)",
+   "Game process (regular expression)"
+  ],
+  [
+   "Esci da MechVault",
+   "Quit MechVault"
+  ],
+  [
+   "Mech Arena rilevato",
+   "Mech Arena detected"
+  ],
+  [
+   "Prima di giocare, leggi.",
+   "Before you play, read this."
+  ],
+  [
+   "Vietato",
+   "Forbidden"
+  ],
+  [
+   "Crate Rush · casse · offerte a tempo · spin · scorciatoie",
+   "Crate Rush · crates · timed offers · spins · shortcuts"
+  ],
+  [
+   "Consentito",
+   "Allowed"
+  ],
+  [
+   "Giocare, farmare, missioni giornaliere. Comprare solo l'obiettivo #1 al 100%.",
+   "Playing, farming, daily missions. Buying only goal #1 at 100%."
+  ],
+  [
+   "I tuoi obiettivi",
+   "Your goals"
+  ],
+  [
+   "Ti sto guardando: se i saldi scendono, lo vedo da solo.",
+   "I'm watching: if your balances drop, I'll see it myself."
+  ],
+  [
+   "Leggi...",
+   "Read..."
+  ],
+  [
+   "Spesa rilevata",
+   "Spend detected"
+  ],
+  [
+   "Perché l'hai fatto? (obbligatorio, almeno 15 caratteri)",
+   "Why did you do it? (required, at least 15 characters)"
+  ],
+  [
+   "Confesso. Azzera la serie.",
+   "I confess. Reset the streak."
+  ],
+  [
+   "Era una missione",
+   "It was a mission"
+  ],
+  [
+   "Non rompe la serie: viene contata nel budget missioni",
+   "Doesn't break the streak: it counts toward the mission budget"
+  ],
+  [
+   "Lettura sbagliata",
+   "Wrong reading"
+  ],
+  [
+   "Con quale account giochi?",
+   "Which account are you playing?"
+  ],
+  [
+   "Ogni account ha saldi, obiettivi e serie separati.",
+   "Each account has its own balances, goals and streak."
+  ],
+  [
+   "Nuovo account",
+   "New account"
+  ],
+  [
+   "Nome del nuovo account",
+   "Name of the new account"
+  ],
+  [
+   "Crea e usa",
+   "Create and use"
+  ],
+  [
+   "Risparmio attivo · non spendere",
+   "Saving mode on · don't spend"
+  ],
+  [
+   "Annulla",
+   "Cancel"
+  ],
+  [
+   "Revoca l'autorizzazione",
+   "Revoke the authorization"
+  ],
+  [
+   "Bloccato",
+   "Locked"
+  ],
+  [
+   "Più importante",
+   "Higher priority"
+  ],
+  [
+   "Meno importante",
+   "Lower priority"
+  ],
+  [
+   "Rimuovi dalla lista",
+   "Remove from the list"
+  ],
+  [
+   "Era una missione: ripristina la serie",
+   "It was a mission: restore the streak"
+  ],
+  [
+   "Una Crate Rush senza garantito non ha un tetto di spesa. Un obiettivo a crediti sì.",
+   "A Crate Rush with no guarantee has no spending cap. A credit goal does."
+  ],
+  [
+   "Le casse sono progettate per farti perdere. Un obiettivo fisso no.",
+   "Crates are designed to make you lose. A fixed goal isn't."
+  ],
+  [
+   "Ogni giorno senza spendere avvicina il tuo prossimo obiettivo.",
+   "Every day without spending brings your next goal closer."
+  ],
+  [
+   "Un'arma sicura vale più di dieci tentativi a vuoto.",
+   "A guaranteed weapon beats ten failed attempts."
+  ],
+  [
+   "La voglia di aprire una cassa passa in 5 minuti. Il saldo vuoto resta.",
+   "The urge to open a crate passes in 5 minutes. The empty balance stays."
+  ],
+  [
+   "Le offerte a tempo esistono per farti decidere senza pensare. Pensa.",
+   "Timed offers exist to make you decide without thinking. Think."
+  ],
+  [
+   "budget missioni",
+   "mission budget"
+  ],
+  [
+   "segnata come missione",
+   "marked as mission"
+  ],
+  [
+   "saldo iniziale",
+   "starting balance"
+  ],
+  [
+   "Pianifica i potenziamenti con le risorse lette dal gioco. Calcolatore e gestore di obiettivi sono di MechVault: niente siti esterni.",
+   "Plan your upgrades with the resources read from the game. The calculator and the goal manager are MechVault's own; upgrade costs come from the community wiki."
+  ],
+  [
+   "Calcolatore potenziamenti",
+   "Upgrade calculator"
+  ],
+  [
+   "Mech o arma, rarità, da quale stella e livello a quale: somma crediti, blueprint e A-coin e li confronta con le tue risorse.",
+   "Mech or weapon, rarity, from which star and level to which: it adds up credits, blueprints and A-coins and compares them with your resources."
+  ],
+  [
+   "Nome dell'oggetto",
+   "Item name"
+  ],
+  [
+   "Arma",
+   "Weapon"
+  ],
+  [
+   "Comune",
+   "Common"
+  ],
+  [
+   "Non comune",
+   "Uncommon"
+  ],
+  [
+   "Raro",
+   "Rare"
+  ],
+  [
+   "Epico",
+   "Epic"
+  ],
+  [
+   "Leggendario",
+   "Legendary"
+  ],
+  [
+   "Da stella",
+   "From star"
+  ],
+  [
+   "Da livello",
+   "From level"
+  ],
+  [
+   "A stella",
+   "To star"
+  ],
+  [
+   "A livello",
+   "To level"
+  ],
+  [
+   "Al massimo",
+   "To max"
+  ],
+  [
+   "1-6 stelle, 7 livelli per stella. Dopo il livello 7 si sale di stella e si riparte dal livello 1. Il massimo è 6 stelle livello 7.",
+   "1-6 stars, 7 levels per star. After level 7 you go up a star and start again from level 1. The maximum is 6 stars level 7."
+  ],
+  [
+   "Blueprint",
+   "Blueprints"
+  ],
+  [
+   "I miei blueprint",
+   "My blueprints"
+  ],
+  [
+   "Aggiungi agli obiettivi",
+   "Add to goals"
+  ],
+  [
+   "Importa tabella",
+   "Import table"
+  ],
+  [
+   "Esporta tabella",
+   "Export table"
+  ],
+  [
+   "Costi passo per passo",
+   "Step-by-step costs"
+  ],
+  [
+   "Passo",
+   "Step"
+  ],
+  [
+   "Stelle da 1 a 6, livelli da 1 a 7.",
+   "Stars from 1 to 6, levels from 1 to 7."
+  ],
+  [
+   "★{0} · liv. {1} → {2}",
+   "★{0} · lvl {1} → {2}"
+  ],
+  [
+   "★{0} → ★{1}",
+   "★{0} → ★{1}"
+  ],
+  [
+   "mancano {0}",
+   "{0} to go"
+  ],
+  [
+   "coperto ✓",
+   "covered ✓"
+  ],
+  [
+   "per ora coperto",
+   "covered so far"
+  ],
+  [
+   "saldo non ancora letto",
+   "balance not read yet"
+  ],
+  [
+   "scrivi quanti ne hai",
+   "type how many you have"
+  ],
+  [
+   "Scegli un arrivo più alto della partenza.",
+   "Pick a target higher than the start."
+  ],
+  [
+   "Mancano {0} costi su {1}: copiali qui sotto dalla schermata di potenziamento del gioco. Per ora il totale è un minimo.",
+   "{0} of {1} costs are missing: copy them below from the game's upgrade screen. For now the total is a minimum."
+  ],
+  [
+   "crediti tra ~{0}",
+   "credits in ~{0}"
+  ],
+  [
+   "crediti: imposta il ritmo",
+   "credits: set the rate"
+  ],
+  [
+   "A-coin tra ~{0}",
+   "A-coins in ~{0}"
+  ],
+  [
+   "A-coin: imposta il ritmo",
+   "A-coins: set the rate"
+  ],
+  [
+   "{0} passi. Al tuo ritmo: {1}.",
+   "{0} steps. At your rate: {1}."
+  ],
+  [
+   "{0} passi. Hai già tutto il necessario.",
+   "{0} steps. You already have everything you need."
+  ],
+  [
+   "{0} passi.",
+   "{0} steps."
+  ],
+  [
+   "Prima compila tutti i costi ({0} mancanti).",
+   "Fill in all the costs first ({0} missing)."
+  ],
+  [
+   "liv. {0}",
+   "lvl {0}"
+  ],
+  [
+   "Costo totale zero: niente da aggiungere.",
+   "Total cost is zero: nothing to add."
+  ],
+  [
+   "Aggiunto agli obiettivi: {0}",
+   "Added to goals: {0}"
+  ],
+  [
+   "File non valido: serve una tabella esportata da MechVault.",
+   "Invalid file: you need a table exported from MechVault."
+  ],
+  [
+   "Importati {0} costi.",
+   "Imported {0} costs."
+  ],
+  [
+   "Tabella esportata: {0} costi.",
+   "Table exported: {0} costs."
+  ],
+  [
+   "Energia dell'arma (la vedi nella scheda dell'arma)",
+   "Weapon energy (shown on the weapon's card)"
+  ],
+  [
+   "Dal Mech Arena Wiki: correggilo se nel gioco è diverso.",
+   "From the Mech Arena Wiki: correct it if the game shows something different."
+  ],
+  [
+   "Costi già inclusi dal Mech Arena Wiki (Fandom, licenza CC BY-SA 3.0). Se nel gioco vedi un numero diverso correggilo qui: la tua correzione vale per tutti gli oggetti uguali. Una casella vuota è un costo che il wiki non ha. Con Esporta/Importa condividi la tabella con altri piloti.",
+   "Costs are included from the Mech Arena Wiki (Fandom, CC BY-SA 3.0 license). If the game shows a different number, correct it here: your correction applies to every matching item. An empty box is a cost the wiki doesn't have. Use Export/Import to share the table with other pilots."
+  ],
+  [
+   "Costi di potenziamento: Mech Arena: Robot Showdown Wiki (mech-arena-robot-showdown.fandom.com, pagine Mechs e Weapons), licenza CC BY-SA 3.0. Dati riformattati in calc\\wiki-costs.json, stessa licenza.",
+   "Upgrade costs: Mech Arena: Robot Showdown Wiki (mech-arena-robot-showdown.fandom.com, Mechs and Weapons pages), CC BY-SA 3.0 license. Data reformatted in calc\\wiki-costs.json, same license."
+  ],
+  [
+   "automatico · prima sessione",
+   "automatic · first session"
+  ],
+  [
+   "automatico · 1 giorno giocato",
+   "automatic · 1 day played"
+  ],
+  [
+   "automatico · {0} giorni giocati",
+   "automatic · {0} days played"
+  ],
+  [
+   "{0}: ancora nessun guadagno registrato.",
+   "{0}: no gains recorded yet."
+  ],
+  [
+   "{0}: ~{1} al giorno · {2} per giorno giocato · giochi {3} giorni su 7 · {4}",
+   "{0}: ~{1} per day · {2} per day played · you play {3} days out of 7 · {4}"
+  ],
+  [
+   " (solo oggi: si assesta nei prossimi giorni)",
+   " (today only: it settles over the next days)"
+  ],
+  [
+   "Ritmo automatico",
+   "Automatic rate"
+  ],
+  [
+   "Calcolato da solo dai saldi letti: guadagni meno spese per missioni, ultimi 28 giorni, i giorni recenti contano di più, e tiene conto dei giorni in cui non giochi. Lascia 0 nei campi sopra per usarlo.",
+   "Worked out on its own from the balances read: gains minus mission spends, last 28 days, recent days count more, and it accounts for the days you don't play. Leave 0 in the fields above to use it."
+  ],
+  [
+   "Ritmo: gioca una partita e lo calcolo da solo",
+   "Rate: play a match and I'll work it out myself"
+  ],
+  [
+   " · esclusi {0} guadagni una tantum",
+   " · {0} one-off gains left out"
+  ],
+  [
+   "1 giorno di dati",
+   "1 day of data"
+  ],
+  [
+   "{0} giorni di dati",
+   "{0} days of data"
+  ],
+  [
+   "{0}: ultimamente spendi più di quanto guadagni, il ritmo è zero.",
+   "{0}: lately you spend more than you earn, so the rate is zero."
+  ],
+  [
+   "Analisi Crate Rush",
+   "Crate Rush analysis"
+  ],
+  [
+   "Confronta una Crate Rush (a A-coin o a crediti) con l'acquisto diretto nel Gear Hub (a crediti o A-coin), usando il tuo ritmo: quanto costa in media, nel caso peggiore, e fino a quanto ha senso spendere.",
+   "Compares a Crate Rush (A-coins or credits) with buying directly in the Gear Hub (credits or A-coins), using your rate: average cost, worst case, and how far it makes sense to spend."
+  ],
+  [
+   "Premio principale della Crate Rush",
+   "Crate Rush main prize"
+  ],
+  [
+   "Costo di uno spin",
+   "Cost of one spin"
+  ],
+  [
+   "Probabilità del premio a spin (%)",
+   "Prize chance per spin (%)"
+  ],
+  [
+   "La trovi nelle info della Crate Rush (es. 1,5)",
+   "Shown in the Crate Rush info (e.g. 1.5)"
+  ],
+  [
+   "Prezzo dello stesso oggetto nel Gear Hub",
+   "Price of the same item in the Gear Hub"
+  ],
+  [
+   "Dal calcolatore",
+   "From the calculator"
+  ],
+  [
+   "Quanto vorresti spendere (facoltativo)",
+   "How much you'd spend (optional)"
+  ],
+  [
+   "Scrivi il costo di uno spin.",
+   "Enter the cost of one spin."
+  ],
+  [
+   "Via diretta: {0} {2} = ~{1} di grind.",
+   "Direct route: {0} {2} = ~{1} of grind."
+  ],
+  [
+   " (~{0} di grind)",
+   " (~{0} of grind)"
+  ],
+  [
+   "In media servono {0} spin = {1} {2}{3}.",
+   "On average it takes {0} spins = {1} {2}{3}."
+  ],
+  [
+   "Metà dei giocatori lo prende entro {0} spin ({1} {3}), 9 su 10 entro {2} ({4} {3}).",
+   "Half of players get it within {0} spins ({1} {3}), 9 out of 10 within {2} ({4} {3})."
+  ],
+  [
+   "Caso peggiore, con il garantito: {0} spin = {1} {2}.",
+   "Worst case, with the guarantee: {0} spins = {1} {2}."
+  ],
+  [
+   "Nessun garantito: 1 giocatore su 10 spende più di {0} {1} e non c'è un tetto.",
+   "No guarantee: 1 player in 10 spends more than {0} {1} and there is no cap."
+  ],
+  [
+   "Con {0} {1} ({2} spin) hai il {3} di probabilità di prenderlo.",
+   "With {0} {1} ({2} spins) you have a {3} chance of getting it."
+  ],
+  [
+   "Truffa: in media costa {0} volte la via diretta.",
+   "Scam: on average it costs {0} times the direct route."
+  ],
+  [
+   "In media conviene ({0} della via diretta), ma resta un azzardo.",
+   "Worth it on average ({0} of the direct route), but still a gamble."
+  ],
+  [
+   "Pari con la via diretta: nessun vantaggio, solo rischio.",
+   "Even with the direct route: no advantage, only risk."
+  ],
+  [
+   "Scrivi il costo a crediti per avere il giudizio.",
+   "Enter the credit cost to get a verdict."
+  ],
+  [
+   "Scrivi la probabilità del premio per il giudizio.",
+   "Enter the prize chance to get a verdict."
+  ],
+  [
+   "Conviene solo se lo prendi entro {0} spin: serve almeno il {1} a spin. Se le info della Crate Rush dicono meno, è una truffa.",
+   "Only worth it if you get it within {0} spins: it needs at least {1} per spin. If the Crate Rush info says less, it's a scam."
+  ],
+  [
+   "Truffa: un solo spin costa più della via diretta.",
+   "Scam: a single spin costs more than the direct route."
+  ],
+  [
+   "Budget massimo sensato: {0} {1} ({2} spin). Oltre, la via diretta costa meno.",
+   "Sensible maximum budget: {0} {1} ({2} spins). Beyond that, the direct route is cheaper."
+  ],
+  [
+   "Calcolato con il tuo ritmo: ~{0} crediti e ~{1} A-coin al giorno.",
+   "Based on your rate: ~{0} credits and ~{1} A-coins per day."
+  ],
+  [
+   "Trascina per spostare",
+   "Drag to move"
+  ],
+  [
+   "Rimpicciolisci / ingrandisci",
+   "Shrink / enlarge"
+  ],
+  [
+   "Riporta in basso a destra",
+   "Move back to bottom right"
+  ],
+  [
+   "Trascina il promemoria per spostarlo. Il pulsante nell'angolo lo rimpicciolisce: normale, piccolo, solo una riga.",
+   "Drag the reminder to move it. The corner button shrinks it: normal, small, one line only."
+  ],
+  [
+   "{0}: blocco spese attivo. Per cambiare account: icona MechVault › Cambia account.",
+   "{0}: spending lock active. To switch account: MechVault icon › Switch account."
+  ],
+  [
+   "Garantito spendendo (0 = no)",
+   "Guaranteed after spending (0 = no)"
+  ],
+  [
+   "Di solito 7.000 A-coin per la Crate Rush",
+   "Usually 7,000 A-coins for the Crate Rush"
+  ],
+  [
+   "Garantito: al massimo {0} spin = {1} {2}{3}, qualunque sia la fortuna.",
+   "Guaranteed: at most {0} spins = {1} {2}{3}, whatever your luck."
+  ],
+  [
+   "Conviene: anche nel caso peggiore costa {0} della via diretta.",
+   "Worth it: even in the worst case it costs {0} of the direct route."
+  ],
+  [
+   "Rischio: nel caso peggiore costa {0} volte la via diretta. Scrivi la probabilità per il costo medio.",
+   "Risky: in the worst case it costs {0} times the direct route. Enter the chance to see the average cost."
+  ],
+  [
+   "Ricorda: le A-coin servono anche per salire di stella (810 per un'arma epica, 1.875 per un mech epico).",
+   "Remember: A-coins are also needed for star-ups (810 for an epic weapon, 1,875 for an epic mech)."
+  ],
+  [
+   "Il premio della cassa arriva a ★ / liv.",
+   "Crate prize comes at ★ / lvl"
+  ],
+  [
+   "Comprato nel Gear Hub arriva a ★ / liv.",
+   "Bought in the Gear Hub comes at ★ / lvl"
+  ],
+  [
+   "Via diretta: {0} {6}, poi da {1} servono {2} crediti, {3} A-coin e {4} blueprint = ~{5} in tutto.",
+   "Direct route: {0} {6}, then from {1} you need {2} credits, {3} A-coins and {4} blueprints = ~{5} in total."
+  ],
+  [
+   "Con la cassa: da {0} servono ancora {1} crediti, {2} A-coin e {3} blueprint (~{4}).",
+   "With the crate: from {0} you still need {1} credits, {2} A-coins and {3} blueprints (~{4})."
+  ],
+  [
+   "Blueprint: con la cassa ne servono {0} in più (non convertibili in giorni).",
+   "Blueprints: the crate route needs {0} more (not converted to days)."
+  ],
+  [
+   "Mancano {0} costi di potenziamento nella tabella: il confronto è approssimato.",
+   "{0} upgrade costs are missing from the table: the comparison is approximate."
+  ],
+  [
+   "Il premio della cassa arriva così basso che i soli potenziamenti costano più della via diretta.",
+   "The crate prize comes so low that the upgrades alone cost more than the direct route."
+  ],
+  [
+   "Potenziamenti: stelle da 1 a 6, livelli da 1 a 7.",
+   "Upgrades: stars 1 to 6, levels 1 to 7."
+  ],
+  [
+   "Ritmo troppo alto: massimo 2.000.000 crediti e 50.000 A-coin al giorno. Lascia 0 per il calcolo automatico.",
+   "Rate too high: at most 2,000,000 credits and 50,000 A-coins per day. Leave 0 for the automatic calculation."
+  ],
+  [
+   "Gli spin si pagano in",
+   "Spins are paid in"
+  ],
+  [
+   "Il premio arriva a ★{0}, dal Gear Hub a ★{1}: finché non paghi le stelle mancanti non hai i bonus di rango (per esempio la Voidghost sblocca la doppia abilità a rango 5).",
+   "The prize comes at ★{0}, from the Gear Hub at ★{1}: until you pay for the missing stars you don't get the rank perks (for example Voidghost unlocks its double ability at rank 5)."
+  ],
+  [
+   "Truffa: anche gratis, il premio della cassa ti costa più potenziamenti della via diretta.",
+   "Scam: even for free, the crate prize costs you more upgrades than the direct route."
+  ],
+  [
+   "+ Aggiungi premio",
+   "+ Add prize"
+  ],
+  [
+   "Altri premi della stessa Crate Rush",
+   "Other prizes in the same Crate Rush"
+  ],
+  [
+   "Ogni premio con la sua probabilità a spin e il prezzo nel Gear Hub. Spunta «Lo voglio» solo per quelli che useresti davvero: gli altri valgono zero.",
+   "Each prize with its chance per spin and its Gear Hub price. Tick “I want it” only for those you would really use: the others count as zero."
+  ],
+  [
+   "Premio",
+   "Prize"
+  ],
+  [
+   "Prob. %",
+   "Chance %"
+  ],
+  [
+   "Prezzo Gear Hub",
+   "Gear Hub price"
+  ],
+  [
+   "Ogni premio vale quanto costerebbe nel Gear Hub, in giorni di grind al tuo ritmo; un doppione non vale niente. Le probabilità le trovi nelle info della Crate Rush (pulsante i).",
+   "Each prize is worth what it would cost in the Gear Hub, in days of grind at your rate; a duplicate is worth nothing. Chances are in the Crate Rush info (the i button)."
+  ],
+  [
+   "Scheda mech",
+   "Mech sheet"
+  ],
+  [
+   "Quanto vale un mech in battaglia prima di spenderci: resistenza, velocità, energia per le armi e abilità, confrontati con tutti gli altri mech.",
+   "How good a mech is in battle before you spend on it: toughness, speed, weapon energy and ability, compared with every other mech."
+  ],
+  [
+   "Cerca un mech",
+   "Search a mech"
+  ],
+  [
+   "Dati: Mech Arena Wiki (HP e velocità al rango massimo), licenza CC BY-SA 3.0. L'abilità e il meta contano quanto i numeri: usa la scheda come base, non come sentenza.",
+   "Data: Mech Arena Wiki (HP and speed at max rank), CC BY-SA 3.0 license. Ability and meta matter as much as the numbers: use the sheet as a baseline, not a verdict."
+  ],
+  [
+   "Lo voglio",
+   "I want it"
+  ],
+  [
+   "Premi che vuoi oltre al principale: {0}.",
+   "Prizes you want besides the main one: {0}."
+  ],
+  [
+   "{0} premi senza probabilità o prezzo non sono contati.",
+   "{0} prizes without chance or price are not counted."
+  ],
+  [
+   "Il punto migliore è fermarsi a {0} spin ({1} {2}): valore atteso ~{3} contro ~{4} spesi.",
+   "The best point is to stop at {0} spins ({1} {2}): expected value ~{3} against ~{4} spent."
+  ],
+  [
+   "Fino al garantito ({0} spin): valore atteso ~{1} contro ~{2} spesi.",
+   "Up to the guarantee ({0} spins): expected value ~{1} against ~{2} spent."
+  ],
+  [
+   "Conviene fino a {0} spin con tutti i premi che vuoi: oltre, ogni spin vale meno di quanto costa.",
+   "Worth it up to {0} spins with all the prizes you want: beyond that, each spin is worth less than it costs."
+  ],
+  [
+   "Truffa: nemmeno contando tutti i premi che vuoi un solo spin ripaga quello che costa.",
+   "Scam: even counting every prize you want, not a single spin pays for itself."
+  ],
+  [
+   "{0}: {1}. Dettagli in «Scheda mech».",
+   "{0}: {1}. Details in “Mech sheet”."
+  ],
+  [
+   "resistenza sconosciuta",
+   "toughness unknown"
+  ],
+  [
+   "molto resistente",
+   "very tough"
+  ],
+  [
+   "resistente",
+   "tough"
+  ],
+  [
+   "resistenza media",
+   "average toughness"
+  ],
+  [
+   "fragile",
+   "fragile"
+  ],
+  [
+   "molto veloce",
+   "very fast"
+  ],
+  [
+   "velocità media",
+   "average speed"
+  ],
+  [
+   "lento",
+   "slow"
+  ],
+  [
+   "armi pesanti (32 energia)",
+   "heavy weapons (32 energy)"
+  ],
+  [
+   "armi medie (24 energia)",
+   "medium weapons (24 energy)"
+  ],
+  [
+   "armi leggere (16 energia)",
+   "light weapons (16 energy)"
+  ],
+  [
+   "HP massimi",
+   "Max HP"
+  ],
+  [
+   "Velocità",
+   "Speed"
+  ],
+  [
+   "Energia per le armi",
+   "Weapon energy"
+  ],
+  [
+   "meglio del {0}",
+   "better than {0}"
+  ],
+  [
+   "ricarica {0}",
+   "cooldown {0}"
+  ],
+  [
+   "Abilità: {0}",
+   "Ability: {0}"
+  ],
+  [
+   "Dal wiki: ",
+   "From the wiki: "
+  ],
+  [
+   "Tank",
+   "Tank"
+  ],
+  [
+   "Scout",
+   "Scout"
+  ],
+  [
+   "Attacker",
+   "Attacker"
+  ],
+  [
+   "Support",
+   "Support"
+  ],
+  [
+   "Legendary",
+   "Legendary"
+  ],
+  [
+   "Epic",
+   "Epic"
+  ],
+  [
+   "Rare",
+   "Rare"
+  ],
+  [
+   "Uncommon",
+   "Uncommon"
+  ],
+  [
+   "Common",
+   "Common"
+  ],
+  [
+   "Heavy",
+   "Heavy"
+  ],
+  [
+   "Medium",
+   "Medium"
+  ],
+  [
+   "Light",
+   "Light"
+  ],
+  [
+   "Valuta",
+   "Currency"
+  ],
+  [
+   "nome (es. Lacewing)",
+   "name (e.g. Lacewing)"
+  ],
+  [
+   "es. 1,5",
+   "e.g. 1.5"
+  ],
+  [
+   "prezzo",
+   "price"
+  ],
+  [
+   "Gear Hub: {0} {1}",
+   "Gear Hub: {0} {1}"
+  ],
+  [
+   "Gear Hub: solo a pagamento",
+   "Gear Hub: real money only"
+  ],
+  [
+   "meno di un'ora",
+   "less than an hour"
+  ],
+  [
+   "1 ora",
+   "1 hour"
+  ],
+  [
+   "{0} ore",
+   "{0} hours"
+  ],
+  [
+   "Il Gear Hub vende questa rarità a partire da ★{0}, non da ★{1}.",
+   "The Gear Hub sells this rarity from ★{0}, not ★{1}."
+  ],
+  [
+   "Nel Gear Hub {0} costa {1} {2}, tu hai scritto {3} {4}.",
+   "In the Gear Hub {0} costs {1} {2}; you entered {3} {4}."
+  ],
+  [
+   "{0} è {1}, non {2}.",
+   "{0} is {1}, not {2}."
+  ],
+  [
+   "Importi troppo piccoli per un confronto sensato.",
+   "Amounts too small for a meaningful comparison."
+  ],
+  [
+   "Controlla i dati: qualcosa non torna.",
+   "Check the inputs: something doesn't add up."
+  ],
+  [
+   "{0} mech nel database · {1} mostrati",
+   "{0} mechs in the database · {1} shown"
+  ],
+  [
+   "Dati incompleti: aggiungili tu",
+   "Incomplete data: add it yourself"
+  ],
+  [
+   "+ Aggiungi o correggi",
+   "+ Add or correct"
+  ],
+  [
+   "Mech mancante o con dati sbagliati? Scrivili come li vedi nel gioco (al rango massimo). Restano salvati solo su questo PC.",
+   "Missing mech or wrong data? Enter it as you see it in the game (at max rank). It is saved on this PC only."
+  ],
+  [
+   "Nome",
+   "Name"
+  ],
+  [
+   "Velocità km/h",
+   "Speed km/h"
+  ],
+  [
+   "Energia",
+   "Energy"
+  ],
+  [
+   "Attaccante",
+   "Attacker"
+  ],
+  [
+   "Supporto",
+   "Support"
+  ],
+  [
+   "Abilità (facoltativo)",
+   "Ability (optional)"
+  ],
+  [
+   "Togli i miei dati",
+   "Remove my data"
+  ],
+  [
+   "Scrivi il nome del mech.",
+   "Enter the mech name."
+  ],
+  [
+   "HP non validi: scrivi gli HP massimi, per esempio 198.900.",
+   "Invalid HP: enter max HP, e.g. 198,900."
+  ],
+  [
+   "Velocità non valida: di solito tra 14 e 30 km/h.",
+   "Invalid speed: usually between 14 and 30 km/h."
+  ],
+  [
+   "Energia non valida: 16, 24 o 32.",
+   "Invalid energy: 16, 24 or 32."
+  ],
+  [
+   "Salvato: {0}.",
+   "Saved: {0}."
+  ],
+  [
+   "Tolti i tuoi dati per {0}.",
+   "Removed your data for {0}."
+  ],
+  [
+   "Dati incompleti: premi «+ Aggiungi o correggi» e scrivili come li vedi nel gioco.",
+   "Incomplete data: press “+ Add or correct” and enter it as you see it in the game."
+  ],
+  [
+   "dati tuoi",
+   "your data"
+  ],
+  [
+   "Aggiorna dal wiki",
+   "Update from wiki"
+  ],
+  [
+   "Voto 0-100 e fascia S-D: HP, velocità ed energia rispetto a tutti i mech, più l'abilità (effetti × durata e ricarica) e la nota della community, pesati secondo il ruolo. Dati: Mech Arena Wiki, licenza CC BY-SA 3.0.",
+   "Score 0-100 and tier S-D: HP, speed and energy against every mech, plus the ability (effects × duration and cooldown) and the community note, weighted by role. Data: Mech Arena Wiki, CC BY-SA 3.0 license."
+  ],
+  [
+   "Abilità",
+   "Ability"
+  ],
+  [
+   "Sopravvivenza",
+   "Survival"
+  ],
+  [
+   "Danno",
+   "Damage"
+  ],
+  [
+   "Controllo",
+   "Control"
+  ],
+  [
+   "Mobilità",
+   "Mobility"
+  ],
+  [
+   "Squadra",
+   "Team"
+  ],
+  [
+   "attiva il {0} del tempo",
+   "active {0} of the time"
+  ],
+  [
+   "ricarica {0} s",
+   "cooldown {0} s"
+  ],
+  [
+   "Aggiornamento dal wiki in corso…",
+   "Updating from the wiki…"
+  ],
+  [
+   "Dati dal Mech Arena Wiki, aggiornati il {0}.",
+   "Data from the Mech Arena Wiki, updated {0}."
+  ],
+  [
+   "Dati inclusi nell'app (Mech Arena Wiki). Premi Aggiorna per scaricare la versione più recente.",
+   "Data bundled with the app (Mech Arena Wiki). Press Update to download the latest version."
+  ],
+  [
+   "{0}: fascia {1} ({2}/100) · {3} · abilità migliore del {4} dei mech.",
+   "{0}: tier {1} ({2}/100) · {3} · ability better than {4} of mechs."
+  ],
+  [
+   "Attenzione: {0} è un mech debole (fascia {1}). Anche se il prezzo conviene, valuta se lo useresti davvero.",
+   "Warning: {0} is a weak mech (tier {1}). Even if the price is right, consider whether you would really use it."
+  ],
+  [
+   "Conta la differenza di rango tra il premio e il Gear Hub",
+   "Count the rank difference between the prize and the Gear Hub"
+  ],
+  [
+   "Calcola il costo del potenziamento",
+   "Calculate upgrade cost"
+  ],
+  [
+   "Costo totale del potenziamento",
+   "Total upgrade cost"
+  ],
+  [
+   "Mostra il dettaglio passo per passo",
+   "View detailed breakdown"
+  ],
+  [
+   "Nascondi il dettaglio",
+   "Hide detailed breakdown"
+  ],
+  [
+   "Dati cambiati: premi di nuovo «Calcola» per aggiornare il risultato.",
+   "Inputs changed: press “Calculate” again to update the result."
+  ],
+  [
+   "energia",
+   "energy"
+  ],
+  [
+   "{0} · da ★{1} liv. {2} a ★{3} liv. {4} · {5} passi",
+   "{0} · from ★{1} lvl {2} to ★{3} lvl {4} · {5} steps"
+  ],
+  [
+   "Valuta al rango",
+   "Rate at rank"
+  ],
+  [
+   "Statistiche per rango",
+   "Stats by rank"
+  ],
+  [
+   "HP",
+   "HP"
+  ],
+  [
+   "Per questo mech le fonti non pubblicano ancora le statistiche per rango.",
+   "The sources don't publish stats by rank for this mech yet."
+  ],
+  [
+   "Fonte: {0}. ★N = rango N livello 1, Max = ★6 livello 7.",
+   "Source: {0}. ★N = rank N level 1, Max = ★6 level 7."
+  ],
+  [
+   "Attenzione: le fonti non concordano sugli HP massimi ({0} contro {1}).",
+   "Warning: sources disagree on max HP ({0} vs {1})."
+  ],
+  [
+   "{0}: fascia {1} ({2}/100) al massimo · {3} · abilità migliore del {4} dei mech.",
+   "{0}: tier {1} ({2}/100) at max · {3} · ability better than {4} of mechs."
+  ],
+  [
+   "Al rango con cui arriva dalla cassa ({0}): fascia {1} ({2}/100), {3} HP, più resistente del {4} dei mech allo stesso rango.",
+   "At the rank it comes at from the crate ({0}): tier {1} ({2}/100), {3} HP, tougher than {4} of mechs at the same rank."
+  ],
+  [
+   "Energy",
+   "Energy"
+  ],
+  [
+   "Speed",
+   "Speed"
+  ],
+  [
+   "Power",
+   "Power"
+  ],
+  [
+   "Ability Cooldown",
+   "Ability cooldown"
+  ],
+  [
+   "Ability Duration",
+   "Ability duration"
+  ],
+  [
+   "Shield Durability",
+   "Shield durability"
+  ],
+  [
+   "Conferma",
+   "Confirm"
+  ],
+  [
+   "Liquid glass (finestre trasparenti con riflessi). Spento: finestre scure piene. Cambiando, l'app si riavvia.",
+   "Liquid glass (transparent windows with reflections). Off: solid dark windows. Changing it restarts the app."
+  ],
+  [
+   "Stima dalle categorie del wiki: nessun profilo rivisto per questo mech.",
+   "Estimated from the wiki categories: no reviewed profile for this mech yet."
+  ],
+  [
+   "Versione {0} installata. Si attiva al prossimo avvio di MechVault.",
+   "Version {0} installed. It takes effect the next time MechVault starts."
+  ],
+  [
+   "MechVault {0} è installato. Riavviare adesso per usarlo?",
+   "MechVault {0} is installed. Restart now to use it?"
+  ],
+  [
+   "Controllo aggiornamenti…",
+   "Checking for updates…"
+  ],
+  [
+   "Controllo non riuscito ({0}). Riprova più tardi.",
+   "Update check failed ({0}). Try again later."
+  ],
+  [
+   "Hai l'ultima versione ({0}).",
+   "You have the latest version ({0})."
+  ],
+  [
+   "Installazione non riuscita: {0}",
+   "Install failed: {0}"
+  ],
+  [
+   "Versione {0}.",
+   "Version {0}."
+  ],
+  [
+   "Aggiornamenti automatici (da mechvault.github.io, solo se l'impronta SHA-256 coincide; i tuoi dati non si toccano)",
+   "Automatic updates (from mechvault.github.io, installed only if the SHA-256 fingerprint matches; your data is never touched)"
+  ],
+  [
+   "Cerca aggiornamenti",
+   "Check for updates"
+  ],
+  [
+   "Avvia MechVault all'accesso",
+   "Start MechVault at login"
+  ],
+  [
+   "Concedi il permesso",
+   "Grant permission"
+  ],
+  [
+   "Dati salvati in: {0}",
+   "Data saved in: {0}"
+  ],
+  [
+   "Eliminare l'account «{0}» con tutti i suoi obiettivi e la cronologia?\n\nIl file viene spostato nel Cestino.",
+   "Delete the account “{0}” with all its goals and history?\n\nThe file is moved to the Trash."
+  ],
+  [
+   "Il grafico si riempie man mano che giochi.",
+   "The chart fills in as you play."
+  ],
+  [
+   "lettura automatica non disponibile",
+   "automatic reading not available"
+  ],
+  [
+   "Lettura automatica non disponibile senza X11: inserisci i saldi a mano.",
+   "Automatic reading is not available without X11: enter your balances manually."
+  ],
+  [
+   "Lettura automatica non disponibile su Wayland: inserisci i saldi a mano.",
+   "Automatic reading is not available on Wayland: enter your balances manually."
+  ],
+  [
+   "Lettura automatica non disponibile: manca il componente di lettura. Inserisci i saldi a mano.",
+   "Automatic reading is not available: the reading component is missing. Enter your balances manually."
+  ],
+  [
+   "Lettura automatica non disponibile su questo sistema: inserisci i saldi a mano.",
+   "Automatic reading is not available on this system: enter your balances manually."
+  ],
+  [
+   "Per la lettura automatica installa Tesseract (pacchetto tesseract-ocr), poi riapri MechVault.",
+   "For automatic reading install Tesseract (package tesseract-ocr), then reopen MechVault."
+  ],
+  [
+   "Esempi: sudo apt install tesseract-ocr · sudo dnf install tesseract · sudo pacman -S tesseract tesseract-data-eng",
+   "Examples: sudo apt install tesseract-ocr · sudo dnf install tesseract · sudo pacman -S tesseract tesseract-data-eng"
+  ],
+  [
+   "Su Wayland nessun programma può guardare la finestra di un altro. Per la lettura automatica scegli una sessione «X11» (o «Xorg») all'accesso; altrimenti aggiorna i saldi a mano in Impostazioni.",
+   "On Wayland no program can look at another program's window. For automatic reading choose an “X11” (or “Xorg”) session at login; otherwise update your balances manually in Settings."
+  ],
+  [
+   "Serve il permesso Registrazione schermo per leggere i saldi.",
+   "The Screen Recording permission is needed to read your balances."
+  ],
+  [
+   "macOS chiede il permesso «Registrazione schermo» (Impostazioni di Sistema › Privacy e sicurezza › Registrazione schermo e audio). MechVault lo usa solo per guardare la barra delle valute di Mech Arena, come uno screenshot: niente viene salvato o inviato. Dopo averlo attivato, riapri MechVault.",
+   "macOS asks for the “Screen Recording” permission (System Settings › Privacy & Security › Screen & System Audio Recording). MechVault uses it only to look at Mech Arena's currency bar, like a screenshot: nothing is saved or sent. After turning it on, reopen MechVault."
+  ],
+  [
+   "MechVault - account",
+   "MechVault - account"
+  ],
+  [
+   "MechVault - prima di giocare",
+   "MechVault - before you play"
+  ],
+  [
+   "MechVault - spesa rilevata",
+   "MechVault - spend detected"
+  ]
+ ]
+}

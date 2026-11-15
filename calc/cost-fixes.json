@@ -1,0 +1,109 @@
+{
+ "format": "mechvault-costs",
+ "version": 1,
+ "source": "Verified in game by MechVault users",
+ "note": "Applied over wiki-costs.json",
+ "updated": "2026-11-10",
+ "costs": {
+  "weapon|epic|e2|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e2|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e4|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e4|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e6|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e6|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e8|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e8|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e10|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e10|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e12|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e12|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e14|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e14|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e16|star|5": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "weapon|epic|e16|star|6": {
+   "c": null,
+   "b": null,
+   "a": 810
+  },
+  "mech|epic|star|5": {
+   "c": null,
+   "b": null,
+   "a": 1875
+  },
+  "mech|epic|star|6": {
+   "c": null,
+   "b": null,
+   "a": 1875
+  },
+  "mech|rare|lvl|4|7": {
+   "c": 25000,
+   "b": 24,
+   "a": null
+  },
+  "mech|legendary|lvl|5|7": {
+   "c": 125000,
+   "b": 6,
+   "a": null
+  }
+ }
+}

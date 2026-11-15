@@ -1,0 +1,675 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MechVault.App.Views.MainWindow"
+        Title="MechVault" Width="1180" Height="820" MinWidth="1020" MinHeight="660"
+        WindowStartupLocation="CenterScreen" Background="Transparent" Icon="avares://MechVault/Assets/mechvault.ico">
+  <Grid x:Name="Root" RowDefinitions="68,*">
+    <Grid.Background>
+      <RadialGradientBrush Center="50%,45%" GradientOrigin="50%,45%" RadiusX="75%" RadiusY="80%">
+        <GradientStop Color="#00FFFFFF" Offset="0.6"/><GradientStop Color="#0FFFFFFF" Offset="0.92"/><GradientStop Color="#1FFFFFFF" Offset="1"/>
+      </RadialGradientBrush>
+    </Grid.Background>
+    <Border x:Name="Sheen" Grid.RowSpan="2" VerticalAlignment="Top" Height="90" IsHitTestVisible="False">
+      <Border.Background><LinearGradientBrush StartPoint="0%,0%" EndPoint="0%,100%"><GradientStop Color="#1AFFFFFF"/><GradientStop Color="#00FFFFFF" Offset="1"/></LinearGradientBrush></Border.Background>
+    </Border>
+
+    <Grid x:Name="TopBar" Margin="22,14,12,0" ColumnDefinitions="*,Auto,*" Background="Transparent">
+      <StackPanel x:Name="Brand" Orientation="Horizontal" VerticalAlignment="Center">
+        <Border Width="32" Height="32" CornerRadius="10" Background="{DynamicResource GlassFillStrong}" BorderBrush="{DynamicResource GlassEdge}" BorderThickness="1" Margin="0,0,10,0">
+          <Path Classes="ic" Data="{StaticResource IcLock}" Stroke="#F5F5F7" Width="13" Height="13"/>
+        </Border>
+        <TextBlock Text="MechVault" FontSize="15" FontWeight="SemiBold" VerticalAlignment="Center"/>
+      </StackPanel>
+
+      <Border Grid.Column="1" CornerRadius="20" Padding="4" Background="#0FFFFFFF" BorderBrush="#1FFFFFFF" BorderThickness="1" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal">
+          <RadioButton x:Name="NavHome" Classes="seg" Content="Panoramica" GroupName="nav" IsChecked="True"/>
+          <RadioButton x:Name="NavGoals" Classes="seg" Content="Obiettivi" GroupName="nav"/>
+          <RadioButton x:Name="NavActivity" Classes="seg" Content="Attività" GroupName="nav"/>
+          <RadioButton x:Name="NavTools" Classes="seg" Content="Strumenti" GroupName="nav"/>
+          <RadioButton x:Name="NavSettings" Classes="seg" Content="Impostazioni" GroupName="nav"/>
+        </StackPanel>
+      </Border>
+
+      <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+        <Button x:Name="BtnAccount" Padding="12,6" Margin="0,0,10,0" ToolTip.Tip="Cambia account">
+          <StackPanel Orientation="Horizontal">
+            <Path Classes="ic" Data="{StaticResource IcUser}" Stroke="#B8FFFFFF" Margin="0,0,8,0"/>
+            <TextBlock x:Name="AccName" Text="—" MaxWidth="150" TextTrimming="CharacterEllipsis"/>
+            <Path Classes="ic" Data="{StaticResource IcDown}" Stroke="#7AFFFFFF" Width="9" Height="9" Margin="8,1,0,0"/>
+          </StackPanel>
+        </Button>
+        <StackPanel x:Name="ChromeButtons" Orientation="Horizontal">
+          <Button x:Name="BtnMin" Classes="chrome"><Path Classes="ic" Data="{StaticResource IcMin}" Stroke="#B8FFFFFF" Width="10" Height="10"/></Button>
+          <Button x:Name="BtnMax" Classes="chrome"><Path x:Name="BtnMaxIcon" Classes="ic" Data="{StaticResource IcMax}" Stroke="#B8FFFFFF" Width="10" Height="10"/></Button>
+          <Button x:Name="BtnClose" Classes="chrome chromeClose"><Path Classes="ic" Data="{StaticResource IcClose}" Stroke="#B8FFFFFF" Width="10" Height="10"/></Button>
+        </StackPanel>
+      </StackPanel>
+    </Grid>
+
+    <ScrollViewer x:Name="PageHome" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+      <StackPanel Margin="40,14,40,40" MaxWidth="1000">
+        <DockPanel>
+          <Border x:Name="StreakChip" DockPanel.Dock="Right" VerticalAlignment="Center" CornerRadius="18" Padding="14,8" Background="#1F30D158" BorderBrush="#4D30D158" BorderThickness="1">
+            <StackPanel Orientation="Horizontal">
+              <Path Classes="ic" Data="{StaticResource IcCheck}" Stroke="#30D158" Margin="0,0,8,0"/>
+              <TextBlock x:Name="StreakChipTxt" Text="0 giorni puliti" Foreground="#B5F5C8" FontWeight="SemiBold"/>
+            </StackPanel>
+          </Border>
+          <Border DockPanel.Dock="Right" CornerRadius="18" Padding="14,8" Background="#0FFFFFFF" BorderBrush="#1FFFFFFF" BorderThickness="1" Margin="0,0,10,0" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+              <Grid Width="10" Height="10" Margin="0,0,8,0" VerticalAlignment="Center">
+                <Ellipse x:Name="StatusGlow" Fill="#4D30D158" Width="10" Height="10"/>
+                <Ellipse x:Name="StatusDot" Fill="#30D158" Width="6" Height="6"/>
+              </Grid>
+              <TextBlock x:Name="StatusTitle" Text="Blocco attivo" Foreground="#B8FFFFFF" VerticalAlignment="Center"/>
+            </StackPanel>
+          </Border>
+          <StackPanel>
+            <TextBlock x:Name="Hello" Text="Ciao, pilota" Classes="h1"/>
+            <TextBlock x:Name="SubLine" Classes="dim" Margin="0,4,0,0" TextTrimming="CharacterEllipsis"/>
+          </StackPanel>
+        </DockPanel>
+
+        <Border x:Name="Notice" Margin="0,20,0,0" CornerRadius="18" Padding="18,12" Background="#0FFFFFFF" BorderBrush="#1AFFFFFF" BorderThickness="1">
+          <DockPanel>
+            <Path x:Name="NoticeIcon" Classes="ic" Data="{StaticResource IcInfo}" Stroke="#B8FFFFFF" Margin="0,2,12,0" VerticalAlignment="Top" Width="13" Height="13"/>
+            <TextBlock x:Name="NoticeTxt" Classes="wrap" Foreground="#B8FFFFFF"/>
+          </DockPanel>
+        </Border>
+
+        <Border Classes="card" Margin="0,16,0,0" Padding="32,28" CornerRadius="30">
+          <Grid ColumnDefinitions="Auto,*">
+            <Grid Width="184" Height="184" Margin="0,0,36,0">
+              <Ellipse Stroke="#17FFFFFF" StrokeThickness="12" Margin="6"/>
+              <Path x:Name="RingPath" StrokeThickness="12" StrokeLineCap="Round" Stroke="{DynamicResource GCred}">
+                <Path.Effect><DropShadowEffect Color="#64D2FF" BlurRadius="16" OffsetX="0" OffsetY="0" Opacity="0.45"/></Path.Effect>
+              </Path>
+              <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="RingPct" Text="0%" FontSize="44" FontWeight="Light" HorizontalAlignment="Center"/>
+                <TextBlock Text="completato" Classes="dim" FontSize="12" HorizontalAlignment="Center" Margin="0,-4,0,0"/>
+              </StackPanel>
+            </Grid>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+              <TextBlock x:Name="HeroLabel" Text="Prossimo obiettivo" Classes="label"/>
+              <TextBlock x:Name="HeroName" Text="—" FontSize="28" FontWeight="SemiBold" Margin="0,6,0,2" TextTrimming="CharacterEllipsis"/>
+              <TextBlock x:Name="HeroCost" Classes="soft"/>
+              <UniformGrid Columns="3" Margin="0,22,0,0">
+                <StackPanel Margin="0,0,12,0">
+                  <TextBlock Text="Mancano" Classes="label"/>
+                  <TextBlock x:Name="HeroLeft" Text="—" FontSize="24" FontWeight="Light" Margin="0,2,0,0"/>
+                </StackPanel>
+                <StackPanel Margin="0,0,12,0">
+                  <TextBlock Text="Tempo stimato" Classes="label"/>
+                  <TextBlock x:Name="HeroEta" Text="—" FontSize="24" FontWeight="Light" Margin="0,2,0,0"/>
+                </StackPanel>
+                <StackPanel>
+                  <TextBlock Text="Pronto entro" Classes="label"/>
+                  <TextBlock x:Name="HeroDate" Text="—" FontSize="24" FontWeight="Light" Margin="0,2,0,0"/>
+                </StackPanel>
+              </UniformGrid>
+              <DockPanel Margin="0,20,0,0">
+                <Button x:Name="HeroBuy" Classes="safe" Content="Compra ora" IsVisible="False" Margin="0,0,12,0"/>
+                <TextBlock x:Name="HeroHint" Classes="dim wrap" VerticalAlignment="Center" FontSize="12"/>
+              </DockPanel>
+            </StackPanel>
+          </Grid>
+        </Border>
+
+        <Grid Margin="0,16,0,0" ColumnDefinitions="*,16,*">
+          <Border Classes="card">
+            <StackPanel>
+              <DockPanel>
+                <Border x:Name="CredTodayChip" DockPanel.Dock="Right" Classes="chip">
+                  <TextBlock x:Name="CredToday" Text="oggi 0" Foreground="#B8FFFFFF" FontSize="12" FontWeight="SemiBold"/>
+                </Border>
+                <Ellipse Width="9" Height="9" Fill="#64D2FF" Margin="0,0,9,0" VerticalAlignment="Center"/>
+                <TextBlock Text="Crediti" Classes="soft" FontWeight="SemiBold" VerticalAlignment="Center"/>
+              </DockPanel>
+              <TextBlock x:Name="CredVal" Text="—" Classes="big" Margin="0,12,0,0"/>
+              <TextBlock x:Name="CredRate" Classes="dim wrap" FontSize="12"/>
+              <Canvas x:Name="SparkCred" Height="56" Margin="0,16,0,0"/>
+            </StackPanel>
+          </Border>
+          <Border Grid.Column="2" Classes="card">
+            <StackPanel>
+              <DockPanel>
+                <Border x:Name="AcTodayChip" DockPanel.Dock="Right" Classes="chip">
+                  <TextBlock x:Name="AcToday" Text="oggi 0" Foreground="#B8FFFFFF" FontSize="12" FontWeight="SemiBold"/>
+                </Border>
+                <Ellipse Width="9" Height="9" Fill="#DA8FFF" Margin="0,0,9,0" VerticalAlignment="Center"/>
+                <TextBlock Text="A-coin" Classes="soft" FontWeight="SemiBold" VerticalAlignment="Center"/>
+              </DockPanel>
+              <TextBlock x:Name="AcVal" Text="—" Classes="big" Margin="0,12,0,0"/>
+              <TextBlock x:Name="AcRate" Classes="dim wrap" FontSize="12"/>
+              <Canvas x:Name="SparkAc" Height="56" Margin="0,16,0,0"/>
+            </StackPanel>
+          </Border>
+        </Grid>
+
+        <Grid Margin="0,16,0,0" ColumnDefinitions="*,16,*">
+          <Border Classes="card">
+            <StackPanel>
+              <TextBlock Text="Serie senza spese" Classes="label"/>
+              <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                <TextBlock x:Name="StreakBig" Text="0" FontSize="60" FontWeight="Light"/>
+                <TextBlock Text="giorni" Classes="dim" FontSize="16" VerticalAlignment="Bottom" Margin="10,0,0,14"/>
+              </StackPanel>
+              <TextBlock x:Name="BestTxt" Classes="dim" FontSize="12"/>
+              <UniformGrid x:Name="Cal" Columns="14" Rows="1" Height="18" Margin="0,18,0,6"/>
+              <DockPanel>
+                <TextBlock DockPanel.Dock="Right" Text="oggi" Classes="faint"/>
+                <TextBlock Text="14 giorni fa" Classes="faint"/>
+              </DockPanel>
+            </StackPanel>
+          </Border>
+          <Border Grid.Column="2" Classes="card">
+            <StackPanel>
+              <TextBlock Text="Budget missioni di oggi" Classes="label"/>
+              <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                <TextBlock x:Name="MisUsed" Text="0" FontSize="60" FontWeight="Light"/>
+                <TextBlock x:Name="MisTot" Text="/ 2.000 crediti" Classes="dim" FontSize="16" VerticalAlignment="Bottom" Margin="10,0,0,14"/>
+              </StackPanel>
+              <Grid x:Name="MisBar" Height="8" Margin="0,8,0,12" ColumnDefinitions="0*,1*">
+                <Border Grid.ColumnSpan="2" Background="#17FFFFFF" CornerRadius="4"/>
+                <Border Background="{DynamicResource GWarn}" CornerRadius="4"/>
+              </Grid>
+              <TextBlock x:Name="MisSub" Classes="dim wrap" FontSize="12"/>
+            </StackPanel>
+          </Border>
+        </Grid>
+
+        <Border Classes="card" Margin="0,16,0,0">
+          <StackPanel>
+            <DockPanel>
+              <Button x:Name="BtnAllActivity" DockPanel.Dock="Right" Classes="ghost" Content="Vedi tutto" Padding="6,0" FontSize="12"/>
+              <TextBlock Text="Ultime attività" Classes="label" VerticalAlignment="Center"/>
+            </DockPanel>
+            <StackPanel x:Name="RecentList" Margin="0,14,0,0"/>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </ScrollViewer>
+
+    <ScrollViewer x:Name="PageGoals" Grid.Row="1" VerticalScrollBarVisibility="Auto" IsVisible="False">
+      <StackPanel Margin="40,14,40,40" MaxWidth="1000">
+        <TextBlock Text="Obiettivi" Classes="h1"/>
+        <TextBlock x:Name="GoalsSummary" Classes="dim" Margin="0,4,0,22"/>
+        <StackPanel x:Name="GoalsPanel"/>
+        <Border Classes="card" Margin="0,6,0,0">
+          <StackPanel>
+            <TextBlock Text="Nuovo obiettivo" Classes="label"/>
+            <Grid Margin="0,12,0,0" ColumnDefinitions="*,140,Auto,Auto">
+              <TextBox x:Name="GoalName" Watermark="Nome (es. Hadron Lance liv. 20)"/>
+              <TextBox x:Name="GoalCost" Grid.Column="1" Margin="10,0,0,0" Watermark="Costo (es. 827k)"/>
+              <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="10,6,0,0">
+                <RadioButton x:Name="RbCred" Content="Crediti" GroupName="cur" IsChecked="True" Classes="pill"/>
+                <RadioButton x:Name="RbAc" Content="A-coin" GroupName="cur" Classes="pill"/>
+              </StackPanel>
+              <Button x:Name="GoalAdd" Grid.Column="3" Content="Aggiungi" Classes="primary"/>
+            </Grid>
+            <TextBlock Text="Nome · costo (es. 827k) · valuta. L'ordine conta: si può comprare solo il primo della lista per ogni valuta." Classes="faint wrap" Margin="4,8,0,0"/>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </ScrollViewer>
+
+    <ScrollViewer x:Name="PageActivity" Grid.Row="1" VerticalScrollBarVisibility="Auto" IsVisible="False">
+      <StackPanel Margin="40,14,40,40" MaxWidth="1000">
+        <TextBlock Text="Attività" Classes="h1"/>
+        <TextBlock Text="Tutto quello che MechVault ha visto cambiare nei tuoi saldi." Classes="dim" Margin="0,4,0,22"/>
+        <UniformGrid Columns="4" Margin="0,0,0,16">
+          <Border Classes="card" Margin="0,0,12,0" Padding="20,16">
+            <StackPanel><TextBlock Text="Crediti guadagnati · 14 gg" Classes="label"/><TextBlock x:Name="StatGainC" Text="0" FontSize="26" FontWeight="Light" Margin="0,4,0,0"/></StackPanel>
+          </Border>
+          <Border Classes="card" Margin="0,0,12,0" Padding="20,16">
+            <StackPanel><TextBlock Text="A-coin guadagnate · 14 gg" Classes="label"/><TextBlock x:Name="StatGainA" Text="0" FontSize="26" FontWeight="Light" Margin="0,4,0,0"/></StackPanel>
+          </Border>
+          <Border Classes="card" Margin="0,0,12,0" Padding="20,16">
+            <StackPanel><TextBlock Text="Crediti sprecati · 14 gg" Classes="label"/><TextBlock x:Name="StatSpendC" Text="0" FontSize="26" FontWeight="Light" Foreground="#FF8A80" Margin="0,4,0,0"/></StackPanel>
+          </Border>
+          <Border Classes="card" Padding="20,16">
+            <StackPanel><TextBlock Text="A-coin sprecate · 14 gg" Classes="label"/><TextBlock x:Name="StatSpendA" Text="0" FontSize="26" FontWeight="Light" Foreground="#FF8A80" Margin="0,4,0,0"/></StackPanel>
+          </Border>
+        </UniformGrid>
+        <Grid ColumnDefinitions="3*,16,2*">
+          <Border Classes="card" VerticalAlignment="Top">
+            <StackPanel>
+              <TextBlock Text="Cronologia" Classes="label"/>
+              <StackPanel x:Name="ActivityList" Margin="0,8,0,0"/>
+            </StackPanel>
+          </Border>
+          <Border Grid.Column="2" Classes="card" VerticalAlignment="Top">
+            <StackPanel>
+              <TextBlock Text="Confessionale" Classes="label"/>
+              <TextBlock x:Name="ViolTotal" Classes="soft wrap" Margin="0,8,0,6"/>
+              <StackPanel x:Name="ViolPanel"/>
+            </StackPanel>
+          </Border>
+        </Grid>
+      </StackPanel>
+    </ScrollViewer>
+
+    <ScrollViewer x:Name="PageTools" Grid.Row="1" VerticalScrollBarVisibility="Auto" IsVisible="False">
+      <StackPanel Margin="40,14,40,40" MaxWidth="820">
+        <TextBlock Text="Strumenti" Classes="h1"/>
+        <TextBlock Text="Pianifica i potenziamenti con le risorse lette dal gioco. Calcolatore e gestore di obiettivi sono di MechVault: niente siti esterni." Classes="dim wrap" Margin="0,4,0,22"/>
+
+        <Border Classes="card">
+          <StackPanel>
+            <TextBlock Text="Le mie risorse" Classes="label"/>
+            <TextBlock x:Name="ToolAccount" Classes="dim" FontSize="12" Margin="0,4,0,0"/>
+            <Grid Margin="0,10,0,0" ColumnDefinitions="*,16,*">
+              <Border Classes="box" Padding="20,14">
+                <DockPanel>
+                  <Button x:Name="BtnCopyCred" DockPanel.Dock="Right" Content="Copia" Padding="14,7" VerticalAlignment="Center"/>
+                  <StackPanel>
+                    <StackPanel Orientation="Horizontal"><Ellipse Width="9" Height="9" Fill="#64D2FF" Margin="0,0,9,0" VerticalAlignment="Center"/><TextBlock Text="Crediti" Classes="soft" FontWeight="SemiBold"/></StackPanel>
+                    <TextBlock x:Name="ToolCred" Text="—" FontSize="32" FontWeight="Light"/>
+                  </StackPanel>
+                </DockPanel>
+              </Border>
+              <Border Grid.Column="2" Classes="box" Padding="20,14">
+                <DockPanel>
+                  <Button x:Name="BtnCopyAc" DockPanel.Dock="Right" Content="Copia" Padding="14,7" VerticalAlignment="Center"/>
+                  <StackPanel>
+                    <StackPanel Orientation="Horizontal"><Ellipse Width="9" Height="9" Fill="#DA8FFF" Margin="0,0,9,0" VerticalAlignment="Center"/><TextBlock Text="A-coin" Classes="soft" FontWeight="SemiBold"/></StackPanel>
+                    <TextBlock x:Name="ToolAc" Text="—" FontSize="32" FontWeight="Light"/>
+                  </StackPanel>
+                </DockPanel>
+              </Border>
+            </Grid>
+            <TextBlock x:Name="ToolMsg" Foreground="#8CF0A8" Margin="4,10,0,0" Classes="wrap"/>
+          </StackPanel>
+        </Border>
+
+        <Border x:Name="CalcCard" Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <DockPanel>
+              <Border DockPanel.Dock="Right" Classes="chip"><TextBlock Text="MechVault" Foreground="#B8FFFFFF" FontSize="11" FontWeight="SemiBold"/></Border>
+              <TextBlock Text="Calcolatore potenziamenti" FontSize="20" FontWeight="SemiBold"/>
+            </DockPanel>
+            <TextBlock Classes="soft wrap" Margin="0,8,0,0" Text="Mech o arma, rarità, da quale stella e livello a quale: somma crediti, blueprint e A-coin e li confronta con le tue risorse."/>
+            <Grid Margin="0,16,0,0" ColumnDefinitions="*,Auto">
+              <TextBox x:Name="CalcName" Watermark="Nome dell'oggetto"/>
+              <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="10,6,0,0">
+                <RadioButton x:Name="CalcWeapon" Content="Arma" GroupName="calckind" IsChecked="True" Classes="pill"/>
+                <RadioButton x:Name="CalcMech" Content="Mech" GroupName="calckind" Classes="pill"/>
+              </StackPanel>
+            </Grid>
+            <WrapPanel x:Name="CalcRarities" Margin="0,10,0,0">
+              <RadioButton x:Name="CalcR_common" Tag="common" Content="Comune" GroupName="calcrar" Classes="pill"/>
+              <RadioButton x:Name="CalcR_uncommon" Tag="uncommon" Content="Non comune" GroupName="calcrar" Classes="pill"/>
+              <RadioButton x:Name="CalcR_rare" Tag="rare" Content="Raro" GroupName="calcrar" Classes="pill"/>
+              <RadioButton x:Name="CalcR_epic" Tag="epic" Content="Epico" GroupName="calcrar" IsChecked="True" Classes="pill"/>
+              <RadioButton x:Name="CalcR_legendary" Tag="legendary" Content="Leggendario" GroupName="calcrar" Classes="pill"/>
+            </WrapPanel>
+            <StackPanel x:Name="CalcEnergyPanel" Margin="0,8,0,0">
+              <TextBlock Text="Energia dell'arma (la vedi nella scheda dell'arma)" Classes="hint" Margin="4,0,0,6"/>
+              <WrapPanel x:Name="CalcEnergies">
+                <RadioButton Tag="2" Content="2" GroupName="calcen" Classes="pill"/>
+                <RadioButton Tag="4" Content="4" GroupName="calcen" Classes="pill"/>
+                <RadioButton Tag="6" Content="6" GroupName="calcen" Classes="pill"/>
+                <RadioButton Tag="8" Content="8" GroupName="calcen" IsChecked="True" Classes="pill"/>
+                <RadioButton Tag="10" Content="10" GroupName="calcen" Classes="pill"/>
+                <RadioButton Tag="12" Content="12" GroupName="calcen" Classes="pill"/>
+                <RadioButton Tag="14" Content="14" GroupName="calcen" Classes="pill"/>
+                <RadioButton Tag="16" Content="16" GroupName="calcen" Classes="pill"/>
+              </WrapPanel>
+            </StackPanel>
+            <Grid Margin="0,14,0,0" ColumnDefinitions="*,*,24,*,*,Auto">
+              <StackPanel><TextBlock Text="Da stella" Classes="hint"/><TextBox x:Name="CalcFS" Text="4"/></StackPanel>
+              <StackPanel Grid.Column="1" Margin="8,0,0,0"><TextBlock Text="Da livello" Classes="hint"/><TextBox x:Name="CalcFL" Text="1"/></StackPanel>
+              <TextBlock Grid.Column="2" Text="→" Classes="dim" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10"/>
+              <StackPanel Grid.Column="3"><TextBlock Text="A stella" Classes="hint"/><TextBox x:Name="CalcTS" Text="6"/></StackPanel>
+              <StackPanel Grid.Column="4" Margin="8,0,0,0"><TextBlock Text="A livello" Classes="hint"/><TextBox x:Name="CalcTL" Text="7"/></StackPanel>
+              <Button x:Name="BtnCalcMax" Grid.Column="5" Content="Al massimo" VerticalAlignment="Bottom" Margin="10,0,0,0"/>
+            </Grid>
+            <TextBlock Text="1-6 stelle, 7 livelli per stella. Dopo il livello 7 si sale di stella e si riparte dal livello 1. Il massimo è 6 stelle livello 7." Classes="faint wrap" Margin="4,8,0,0"/>
+            <Button x:Name="BtnCalcRun" Classes="primary" Content="Calcola il costo del potenziamento" HorizontalAlignment="Stretch" Margin="0,16,0,0" Padding="18,13" FontSize="14"/>
+            <TextBlock x:Name="CalcHint" Classes="dim wrap" FontSize="12" Margin="4,8,0,0"/>
+
+            <StackPanel x:Name="CalcResult" IsVisible="False">
+              <TextBlock Text="Costo totale del potenziamento" FontSize="17" FontWeight="SemiBold" Margin="0,22,0,0"/>
+              <TextBlock x:Name="CalcSummary" Classes="soft wrap" Margin="0,4,0,0"/>
+              <Grid Margin="0,14,0,0" ColumnDefinitions="*,12,*,12,*">
+                <Border Classes="box" Padding="18,12">
+                  <StackPanel>
+                    <StackPanel Orientation="Horizontal"><Ellipse Width="9" Height="9" Fill="#64D2FF" Margin="0,0,9,0" VerticalAlignment="Center"/><TextBlock Text="Crediti" Classes="soft" FontWeight="SemiBold"/></StackPanel>
+                    <TextBlock x:Name="CalcTotC" Text="0" FontSize="26" FontWeight="Light"/>
+                    <TextBlock x:Name="CalcNeedC" Classes="dim wrap" FontSize="12"/>
+                  </StackPanel>
+                </Border>
+                <Border Grid.Column="2" Classes="box" Padding="18,12">
+                  <StackPanel>
+                    <StackPanel Orientation="Horizontal"><Ellipse Width="9" Height="9" Fill="#FFD60A" Margin="0,0,9,0" VerticalAlignment="Center"/><TextBlock Text="Blueprint" Classes="soft" FontWeight="SemiBold"/></StackPanel>
+                    <TextBlock x:Name="CalcTotB" Text="0" FontSize="26" FontWeight="Light"/>
+                    <TextBox x:Name="CalcMyBp" Classes="small" Margin="0,4,0,4" Watermark="I miei blueprint"/>
+                    <TextBlock x:Name="CalcNeedB" Classes="dim wrap" FontSize="12"/>
+                  </StackPanel>
+                </Border>
+                <Border Grid.Column="4" Classes="box" Padding="18,12">
+                  <StackPanel>
+                    <StackPanel Orientation="Horizontal"><Ellipse Width="9" Height="9" Fill="#DA8FFF" Margin="0,0,9,0" VerticalAlignment="Center"/><TextBlock Text="A-coin" Classes="soft" FontWeight="SemiBold"/></StackPanel>
+                    <TextBlock x:Name="CalcTotA" Text="0" FontSize="26" FontWeight="Light"/>
+                    <TextBlock x:Name="CalcNeedA" Classes="dim wrap" FontSize="12"/>
+                  </StackPanel>
+                </Border>
+              </Grid>
+              <TextBlock x:Name="CalcInfo" Classes="soft wrap" Margin="4,12,0,0"/>
+              <WrapPanel Margin="0,14,0,0">
+                <Button x:Name="BtnCalcGoal" Classes="primary" Content="Aggiungi agli obiettivi" Margin="0,0,8,8"/>
+                <Button x:Name="BtnCalcImport" Content="Importa tabella" Margin="0,0,8,8"/>
+                <Button x:Name="BtnCalcExport" Content="Esporta tabella" Margin="0,0,8,8"/>
+              </WrapPanel>
+              <TextBlock x:Name="CalcMsg" Foreground="#8CF0A8" Margin="4,2,0,0" Classes="wrap"/>
+              <Button x:Name="BtnCalcDetail" Content="Mostra il dettaglio passo per passo" HorizontalAlignment="Left" Margin="0,8,0,0"/>
+
+              <StackPanel x:Name="CalcBreakdown" IsVisible="False">
+                <TextBlock Text="Costi passo per passo" Classes="label" Margin="0,20,0,0"/>
+                <TextBlock Classes="dim wrap" FontSize="12" Margin="0,6,0,10" Text="Costi già inclusi dal Mech Arena Wiki (Fandom, licenza CC BY-SA 3.0). Se nel gioco vedi un numero diverso correggilo qui: la tua correzione vale per tutti gli oggetti uguali. Una casella vuota è un costo che il wiki non ha. Con Esporta/Importa condividi la tabella con altri piloti."/>
+                <Grid Margin="0,0,0,4" ColumnDefinitions="*,130,110,110">
+                  <TextBlock Text="Passo" Classes="hint"/>
+                  <TextBlock Grid.Column="1" Text="Crediti" Classes="hint" Margin="12,0,0,0"/>
+                  <TextBlock Grid.Column="2" Text="Blueprint" Classes="hint" Margin="12,0,0,0"/>
+                  <TextBlock Grid.Column="3" Text="A-coin" Classes="hint" Margin="12,0,0,0"/>
+                </Grid>
+                <StackPanel x:Name="CalcSteps"/>
+              </StackPanel>
+            </StackPanel>
+          </StackPanel>
+        </Border>
+
+        <Border x:Name="CrateCard" Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <DockPanel>
+              <Border DockPanel.Dock="Right" Classes="chip"><TextBlock Text="MechVault" Foreground="#B8FFFFFF" FontSize="11" FontWeight="SemiBold"/></Border>
+              <TextBlock Text="Analisi Crate Rush" FontSize="20" FontWeight="SemiBold"/>
+            </DockPanel>
+            <TextBlock Classes="soft wrap" Margin="0,8,0,0" Text="Confronta una Crate Rush (a A-coin o a crediti) con l'acquisto diretto nel Gear Hub (a crediti o A-coin), usando il tuo ritmo: quanto costa in media, nel caso peggiore, e fino a quanto ha senso spendere."/>
+            <Grid Margin="0,14,0,0" ColumnDefinitions="*,Auto">
+              <TextBox x:Name="CrName" Watermark="Premio principale della Crate Rush"/>
+              <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="10,6,0,0">
+                <RadioButton x:Name="CrKW" Content="Arma" GroupName="crkind" Classes="pill"/>
+                <RadioButton x:Name="CrKM" Content="Mech" GroupName="crkind" IsChecked="True" Classes="pill"/>
+              </StackPanel>
+            </Grid>
+            <WrapPanel x:Name="CrRarities" Margin="0,10,0,0">
+              <RadioButton Tag="common" Content="Comune" GroupName="crrar" Classes="pill"/>
+              <RadioButton Tag="uncommon" Content="Non comune" GroupName="crrar" Classes="pill"/>
+              <RadioButton Tag="rare" Content="Raro" GroupName="crrar" Classes="pill"/>
+              <RadioButton Tag="epic" Content="Epico" GroupName="crrar" Classes="pill"/>
+              <RadioButton Tag="legendary" Content="Leggendario" GroupName="crrar" IsChecked="True" Classes="pill"/>
+            </WrapPanel>
+            <StackPanel x:Name="CrEnergyPanel" Margin="0,8,0,0" IsVisible="False">
+              <TextBlock Text="Energia dell'arma (la vedi nella scheda dell'arma)" Classes="hint" Margin="4,0,0,6"/>
+              <WrapPanel x:Name="CrEnergies">
+                <RadioButton Tag="2" Content="2" GroupName="cren" Classes="pill"/>
+                <RadioButton Tag="4" Content="4" GroupName="cren" Classes="pill"/>
+                <RadioButton Tag="6" Content="6" GroupName="cren" Classes="pill"/>
+                <RadioButton Tag="8" Content="8" GroupName="cren" Classes="pill"/>
+                <RadioButton Tag="10" Content="10" GroupName="cren" Classes="pill"/>
+                <RadioButton Tag="12" Content="12" GroupName="cren" Classes="pill"/>
+                <RadioButton Tag="14" Content="14" GroupName="cren" Classes="pill"/>
+                <RadioButton Tag="16" Content="16" GroupName="cren" IsChecked="True" Classes="pill"/>
+              </WrapPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+              <TextBlock Text="Gli spin si pagano in" Classes="dim" VerticalAlignment="Center" Margin="4,0,10,6"/>
+              <RadioButton x:Name="CrAc" Content="A-coin" GroupName="crcur" IsChecked="True" Classes="pill"/>
+              <RadioButton x:Name="CrCr" Content="crediti" GroupName="crcur" Classes="pill"/>
+            </StackPanel>
+            <Grid Margin="0,10,0,0" ColumnDefinitions="*,10,*,10,*">
+              <StackPanel><TextBlock Text="Costo di uno spin" Classes="hint"/><TextBox x:Name="CrSpin"/></StackPanel>
+              <StackPanel Grid.Column="2"><TextBlock Text="Probabilità del premio a spin (%)" Classes="hint"/><TextBox x:Name="CrP" Watermark="es. 1,5" ToolTip.Tip="La trovi nelle info della Crate Rush (es. 1,5)"/></StackPanel>
+              <StackPanel Grid.Column="4"><TextBlock Text="Garantito spendendo (0 = no)" Classes="hint"/><TextBox x:Name="CrPity" Text="7.000" ToolTip.Tip="Di solito 7.000 A-coin per la Crate Rush"/></StackPanel>
+            </Grid>
+            <Grid Margin="0,12,0,0" ColumnDefinitions="*,Auto,10,*">
+              <StackPanel>
+                <TextBlock Text="Prezzo dello stesso oggetto nel Gear Hub" Classes="hint"/>
+                <Grid ColumnDefinitions="*,Auto">
+                  <TextBox x:Name="CrDirect"/>
+                  <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="8,6,0,0" VerticalAlignment="Center">
+                    <RadioButton x:Name="CrDirCr" Content="crediti" GroupName="crdir" IsChecked="True" Classes="pill"/>
+                    <RadioButton x:Name="CrDirAc" Content="A-coin" GroupName="crdir" Classes="pill"/>
+                  </StackPanel>
+                </Grid>
+              </StackPanel>
+              <Button x:Name="CrFromCalc" Grid.Column="1" Content="Dal calcolatore" VerticalAlignment="Bottom" Margin="8,0,0,0"/>
+              <StackPanel Grid.Column="3"><TextBlock Text="Quanto vorresti spendere (facoltativo)" Classes="hint"/><TextBox x:Name="CrBudget"/></StackPanel>
+            </Grid>
+            <CheckBox x:Name="CrUpg" Classes="switch" IsChecked="True" Margin="0,14,0,0" Content="Conta la differenza di rango tra il premio e il Gear Hub"/>
+            <Grid x:Name="CrUpgGrid" Margin="0,6,0,0" ColumnDefinitions="*,10,*">
+              <StackPanel>
+                <TextBlock Text="Il premio della cassa arriva a ★ / liv." Classes="hint"/>
+                <Grid ColumnDefinitions="*,6,*"><TextBox x:Name="CrPS" Text="4"/><TextBox x:Name="CrPL" Grid.Column="2" Text="1"/></Grid>
+              </StackPanel>
+              <StackPanel Grid.Column="2">
+                <TextBlock Text="Comprato nel Gear Hub arriva a ★ / liv." Classes="hint"/>
+                <Grid ColumnDefinitions="*,6,*"><TextBox x:Name="CrDS" Text="5"/><TextBox x:Name="CrDL" Grid.Column="2" Text="1"/></Grid>
+              </StackPanel>
+            </Grid>
+            <DockPanel Margin="0,18,0,0">
+              <Button x:Name="CrAddPrize" DockPanel.Dock="Right" Content="+ Aggiungi premio" Padding="14,7"/>
+              <StackPanel>
+                <TextBlock Text="Altri premi della stessa Crate Rush" Classes="soft" FontWeight="SemiBold"/>
+                <TextBlock Text="Ogni premio con la sua probabilità a spin e il prezzo nel Gear Hub. Spunta «Lo voglio» solo per quelli che useresti davvero: gli altri valgono zero." Classes="dim wrap" FontSize="11" Margin="0,2,12,0"/>
+              </StackPanel>
+            </DockPanel>
+            <Grid x:Name="CrPrizeHead" Margin="0,10,0,4" IsVisible="False" ColumnDefinitions="*,100,130,180,112,36">
+              <TextBlock Text="Premio" Classes="hint"/>
+              <TextBlock Grid.Column="1" Text="Prob. %" Classes="hint" Margin="12,0,0,0"/>
+              <TextBlock Grid.Column="2" Text="Prezzo Gear Hub" Classes="hint" Margin="12,0,0,0"/>
+              <TextBlock Grid.Column="3" Text="Valuta" Classes="hint" Margin="12,0,0,0"/>
+            </Grid>
+            <StackPanel x:Name="CrPrizes"/>
+            <Border x:Name="CrVerdictBox" CornerRadius="20" Padding="18,14" Margin="0,16,0,0" Background="#0FFFFFFF" BorderBrush="#1AFFFFFF" BorderThickness="1">
+              <StackPanel>
+                <TextBlock x:Name="CrVerdict" FontSize="18" FontWeight="SemiBold" Classes="wrap"/>
+                <TextBlock x:Name="CrStats" Classes="soft wrap" Margin="0,8,0,0" LineHeight="21"/>
+              </StackPanel>
+            </Border>
+            <TextBlock Classes="faint wrap" Margin="4,8,0,0" Text="Ogni premio vale quanto costerebbe nel Gear Hub, in giorni di grind al tuo ritmo; un doppione non vale niente. Le probabilità le trovi nelle info della Crate Rush (pulsante i)."/>
+          </StackPanel>
+        </Border>
+
+        <Border x:Name="MechCard" Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <DockPanel>
+              <Border DockPanel.Dock="Right" Classes="chip"><TextBlock Text="MechVault" Foreground="#B8FFFFFF" FontSize="11" FontWeight="SemiBold"/></Border>
+              <TextBlock Text="Scheda mech" FontSize="20" FontWeight="SemiBold"/>
+            </DockPanel>
+            <TextBlock Classes="soft wrap" Margin="0,8,0,0" Text="Quanto vale un mech in battaglia prima di spenderci: resistenza, velocità, energia per le armi e abilità, confrontati con tutti gli altri mech."/>
+            <DockPanel Margin="0,14,0,0">
+              <Button x:Name="MsEditBtn" DockPanel.Dock="Right" Content="+ Aggiungi o correggi" Margin="8,0,0,0" Padding="14,7"/>
+              <TextBox x:Name="MsSearch" Watermark="Cerca un mech"/>
+            </DockPanel>
+            <DockPanel Margin="4,8,0,0">
+              <Button x:Name="MsRefresh" DockPanel.Dock="Right" Content="Aggiorna dal wiki" Padding="12,5" FontSize="12"/>
+              <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="MsCount" Classes="dim" FontSize="11"/>
+                <TextBlock x:Name="MsSource" Classes="dim wrap" FontSize="11"/>
+              </StackPanel>
+            </DockPanel>
+            <WrapPanel x:Name="MsList" Margin="0,8,0,0"/>
+            <Border x:Name="MsEdit" IsVisible="False" Classes="box" Padding="18,14" Margin="0,8,0,0">
+              <StackPanel>
+                <TextBlock Text="Mech mancante o con dati sbagliati? Scrivili come li vedi nel gioco (al rango massimo). Restano salvati solo su questo PC." Classes="soft wrap"/>
+                <Grid Margin="0,12,0,0" ColumnDefinitions="2*,8,*,8,*,8,*">
+                  <StackPanel><TextBlock Text="Nome" Classes="hint"/><TextBox x:Name="MeName"/></StackPanel>
+                  <StackPanel Grid.Column="2"><TextBlock Text="HP massimi" Classes="hint"/><TextBox x:Name="MeHp"/></StackPanel>
+                  <StackPanel Grid.Column="4"><TextBlock Text="Velocità km/h" Classes="hint"/><TextBox x:Name="MeSpeed"/></StackPanel>
+                  <StackPanel Grid.Column="6"><TextBlock Text="Energia" Classes="hint"/><TextBox x:Name="MeEnergy"/></StackPanel>
+                </Grid>
+                <WrapPanel x:Name="MeRoles" Margin="0,10,0,0">
+                  <RadioButton Tag="Attacker" Content="Attaccante" GroupName="merole" IsChecked="True" Classes="pill"/>
+                  <RadioButton Tag="Tank" Content="Tank" GroupName="merole" Classes="pill"/>
+                  <RadioButton Tag="Scout" Content="Scout" GroupName="merole" Classes="pill"/>
+                  <RadioButton Tag="Support" Content="Supporto" GroupName="merole" Classes="pill"/>
+                </WrapPanel>
+                <WrapPanel x:Name="MeRarities" Margin="0,4,0,0">
+                  <RadioButton Tag="Common" Content="Comune" GroupName="merar" Classes="pill"/>
+                  <RadioButton Tag="Uncommon" Content="Non comune" GroupName="merar" Classes="pill"/>
+                  <RadioButton Tag="Rare" Content="Raro" GroupName="merar" Classes="pill"/>
+                  <RadioButton Tag="Epic" Content="Epico" GroupName="merar" Classes="pill"/>
+                  <RadioButton Tag="Legendary" Content="Leggendario" GroupName="merar" IsChecked="True" Classes="pill"/>
+                </WrapPanel>
+                <Grid Margin="0,6,0,0" ColumnDefinitions="*,Auto,Auto">
+                  <TextBox x:Name="MeAbility" Watermark="Abilità (facoltativo)"/>
+                  <Button x:Name="MeSave" Grid.Column="1" Classes="primary" Content="Salva" Margin="8,0,0,0"/>
+                  <Button x:Name="MeDel" Grid.Column="2" Content="Togli i miei dati" Margin="8,0,0,0"/>
+                </Grid>
+                <TextBlock x:Name="MeMsg" Foreground="#8CF0A8" FontSize="12" Margin="4,8,0,0" Classes="wrap"/>
+              </StackPanel>
+            </Border>
+            <StackPanel x:Name="MsDetail" IsVisible="False" Margin="0,8,0,0">
+              <DockPanel>
+                <Border x:Name="MsTierBox" DockPanel.Dock="Right" CornerRadius="16" Padding="14,6" Background="#1AFFFFFF" BorderBrush="#33FFFFFF" BorderThickness="1" VerticalAlignment="Center">
+                  <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="MsTier" FontSize="20" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="MsScore" Classes="soft" Margin="8,0,0,0" VerticalAlignment="Center"/>
+                  </StackPanel>
+                </Border>
+                <StackPanel>
+                  <TextBlock x:Name="MsName" FontSize="24" FontWeight="SemiBold"/>
+                  <TextBlock x:Name="MsTag" Classes="soft"/>
+                </StackPanel>
+              </DockPanel>
+              <TextBlock x:Name="MsVerdict" FontSize="15" FontWeight="SemiBold" Margin="0,6,0,0" Classes="wrap"/>
+              <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                <TextBlock Text="Valuta al rango" Classes="dim" VerticalAlignment="Center" Margin="2,0,10,6"/>
+                <WrapPanel x:Name="MsRankPills"/>
+              </StackPanel>
+              <StackPanel x:Name="MsBars" Margin="0,12,0,0"/>
+              <TextBlock x:Name="MsAbilityAxes" Margin="0,4,0,0" Classes="wrap"/>
+              <TextBlock x:Name="MsAbility" Classes="soft wrap" Margin="0,10,0,0"/>
+              <TextBlock x:Name="MsAbilityText" Classes="dim wrap" FontSize="12" Margin="0,6,0,0"/>
+              <TextBlock Text="Statistiche per rango" Classes="label" Margin="0,16,0,6"/>
+              <Grid x:Name="MsRankTable"/>
+              <TextBlock x:Name="MsRankNote" Classes="dim wrap" FontSize="11" Margin="2,6,0,0"/>
+              <TextBlock x:Name="MsWiki" Classes="dim wrap" FontSize="12" FontStyle="Italic" Margin="0,8,0,0"/>
+            </StackPanel>
+            <TextBlock Classes="faint wrap" Margin="4,10,0,0" Text="Voto 0-100 e fascia S-D: HP, velocità ed energia rispetto a tutti i mech, più l'abilità (effetti × durata e ricarica) e la nota della community, pesati secondo il ruolo. Dati: Mech Arena Wiki, licenza CC BY-SA 3.0."/>
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <TextBlock Text="Informazioni" Classes="label"/>
+            <TextBlock Classes="soft wrap" Margin="0,8,0,0" Text="MechVault è un progetto di fan. Non è affiliato, approvato o sponsorizzato da Plarium Global Ltd. Mech Arena e i relativi nomi e marchi appartengono ai rispettivi proprietari."/>
+            <TextBlock Classes="dim wrap" FontSize="12" Margin="0,8,0,0" Text="MechVault legge solo lo schermo, come uno screenshot: non modifica il gioco, non legge la sua memoria e non automatizza nulla."/>
+            <TextBlock Classes="dim wrap" FontSize="12" Margin="0,8,0,0" Text="Costi di potenziamento: Mech Arena: Robot Showdown Wiki (mech-arena-robot-showdown.fandom.com, pagine Mechs e Weapons), licenza CC BY-SA 3.0. Dati riformattati in calc\wiki-costs.json, stessa licenza."/>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </ScrollViewer>
+
+    <ScrollViewer x:Name="PageSettings" Grid.Row="1" VerticalScrollBarVisibility="Auto" IsVisible="False">
+      <StackPanel Margin="40,14,40,40" MaxWidth="820">
+        <TextBlock Text="Impostazioni" Classes="h1" Margin="0,0,0,22"/>
+
+        <Border Classes="card" Margin="0,0,0,14">
+          <StackPanel>
+            <TextBlock Text="Lingua" Classes="label"/>
+            <WrapPanel x:Name="LangPanel" Margin="0,12,0,0"/>
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card">
+          <StackPanel>
+            <TextBlock Text="Account" Classes="label"/>
+            <TextBlock x:Name="AccInfo" Classes="soft wrap" Margin="0,6,0,14"/>
+            <Grid ColumnDefinitions="*,Auto,Auto,Auto">
+              <TextBox x:Name="AccRename" Watermark="Nuovo nome per questo account"/>
+              <Button x:Name="BtnAccRename" Grid.Column="1" Content="Rinomina" Margin="8,0,0,0"/>
+              <Button x:Name="BtnAccSwitch" Grid.Column="2" Content="Cambia o crea" Margin="8,0,0,0"/>
+              <Button x:Name="BtnAccDelete" Grid.Column="3" Content="Elimina" Classes="ghost" Foreground="#FF8A80" Margin="4,0,0,0"/>
+            </Grid>
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <TextBlock Text="Budget missioni" Classes="label"/>
+            <TextBlock Classes="dim wrap" FontSize="12" Margin="0,6,0,14" Text="Quanto puoi spendere ogni giorno per completare le missioni giornaliere (es. «usa 2.000 crediti») senza rompere la serie. Oltre il budget è una spesa vietata."/>
+            <Grid ColumnDefinitions="Auto,*,18,Auto,*">
+              <TextBlock Text="Crediti al giorno" VerticalAlignment="Center" Margin="0,0,14,0"/>
+              <TextBox x:Name="MisCred" Grid.Column="1"/>
+              <TextBlock Grid.Column="3" Text="A-coin al giorno" VerticalAlignment="Center" Margin="0,0,14,0"/>
+              <TextBox x:Name="MisAc" Grid.Column="4"/>
+            </Grid>
+            <Button x:Name="MisSave" Content="Salva" HorizontalAlignment="Left" Margin="0,14,0,0"/>
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <TextBlock Text="Lettura automatica" Classes="label"/>
+            <CheckBox x:Name="ChkAuto" Classes="switch" Margin="0,12,0,4" Content="Leggi crediti e A-coin dallo schermo del gioco"/>
+            <TextBlock Classes="dim wrap" FontSize="12" Text="Guarda solo la barra delle valute in alto a destra, come uno screenshot, ogni 3 secondi. Non legge la memoria del gioco e non tocca i suoi file: niente rischio ban. Funziona nell'hangar e nei menu."/>
+            <Border x:Name="ReadUnavailBox" IsVisible="False" Margin="0,12,0,0" CornerRadius="16" Padding="16,12" Background="#1FFFD60A" BorderBrush="#40FFD60A" BorderThickness="1">
+              <StackPanel>
+                <TextBlock x:Name="ReadUnavail" Foreground="#FFE98A" FontWeight="SemiBold" Classes="wrap"/>
+                <TextBlock x:Name="ReadHelp" Classes="soft wrap" FontSize="12" Margin="0,6,0,0"/>
+                <Button x:Name="BtnGrant" Content="Concedi il permesso" HorizontalAlignment="Left" Margin="0,10,0,0" IsVisible="False"/>
+              </StackPanel>
+            </Border>
+            <StackPanel Orientation="Horizontal" Margin="0,16,0,0">
+              <Button x:Name="BtnTestRead" Content="Prova lettura adesso"/>
+              <TextBlock x:Name="TestReadTxt" Classes="soft wrap" VerticalAlignment="Center" Margin="14,0,0,0" MaxWidth="460"/>
+            </StackPanel>
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <TextBlock Text="Correggi a mano" Classes="label"/>
+            <TextBlock Classes="dim wrap" FontSize="12" Margin="0,6,0,14" Text="Solo se la lettura automatica sbaglia o è spenta. Anche qui un saldo più basso conta come spesa."/>
+            <Grid ColumnDefinitions="*,Auto,18,*,Auto">
+              <TextBox x:Name="CredIn" Watermark="Crediti attuali (es. 512k)"/>
+              <Button x:Name="CredBtn" Grid.Column="1" Content="Crediti" Margin="8,0,0,0"/>
+              <TextBox x:Name="AcIn" Grid.Column="3" Watermark="A-coin attuali"/>
+              <Button x:Name="AcBtn" Grid.Column="4" Content="A-coin" Margin="8,0,0,0"/>
+            </Grid>
+            <Grid Margin="0,14,0,0" ColumnDefinitions="Auto,*,18,Auto,*,Auto">
+              <TextBlock Text="Ritmo crediti/giorno" VerticalAlignment="Center" Margin="0,0,14,0" Classes="soft"/>
+              <TextBox x:Name="RateCred" Grid.Column="1" ToolTip.Tip="0 = calcolato in automatico"/>
+              <TextBlock Grid.Column="3" Text="A-coin/giorno" VerticalAlignment="Center" Margin="0,0,14,0" Classes="soft"/>
+              <TextBox x:Name="RateAc" Grid.Column="4" ToolTip.Tip="0 = calcolato in automatico"/>
+              <Button x:Name="RateSave" Grid.Column="5" Content="Salva" Margin="8,0,0,0"/>
+            </Grid>
+            <TextBlock Text="Ritmo automatico" Classes="soft" FontWeight="SemiBold" Margin="4,14,0,0"/>
+            <TextBlock x:Name="RateAutoCred" Classes="dim wrap" FontSize="12" Margin="4,4,0,0"/>
+            <TextBlock x:Name="RateAutoAc" Classes="dim wrap" FontSize="12" Margin="4,2,0,0"/>
+            <TextBlock Text="Calcolato da solo dai saldi letti: guadagni meno spese per missioni, ultimi 28 giorni, i giorni recenti contano di più, e tiene conto dei giorni in cui non giochi. Lascia 0 nei campi sopra per usarlo." Classes="faint wrap" Margin="4,6,0,0"/>
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card" Margin="0,14,0,0">
+          <StackPanel>
+            <TextBlock Text="Sistema" Classes="label"/>
+            <CheckBox x:Name="ChkAutostart" Classes="switch" Margin="0,12,0,4" Content="Avvia MechVault con Windows"/>
+            <CheckBox x:Name="ChkGlass" Classes="switch" Content="Liquid glass (finestre trasparenti con riflessi). Spento: finestre scure piene. Cambiando, l'app si riavvia."/>
+            <CheckBox x:Name="ChkBanner" Classes="switch" Content="Promemoria fisso sullo schermo mentre giochi"/>
+            <CheckBox x:Name="ChkAutoUpdate" Classes="switch" Content="Aggiornamenti automatici (da mechvault.github.io, solo se l'impronta SHA-256 coincide; i tuoi dati non si toccano)"/>
+            <DockPanel Margin="0,4,0,6">
+              <Button x:Name="BtnUpdate" DockPanel.Dock="Right" Content="Cerca aggiornamenti" Padding="14,7" VerticalAlignment="Center"/>
+              <TextBlock x:Name="UpdStatus" Classes="dim wrap" FontSize="12" VerticalAlignment="Center" Margin="0,0,12,0"/>
+            </DockPanel>
+            <DockPanel Margin="0,4,0,6">
+              <Button x:Name="BtnOverlayReset" DockPanel.Dock="Right" Content="Riporta in basso a destra" Padding="14,7" VerticalAlignment="Center"/>
+              <TextBlock Text="Trascina il promemoria per spostarlo. Il pulsante nell'angolo lo rimpicciolisce: normale, piccolo, solo una riga." Classes="dim wrap" FontSize="12" VerticalAlignment="Center" Margin="0,0,12,0"/>
+            </DockPanel>
+            <TextBlock Text="Processo del gioco (espressione regolare)" Classes="soft" Margin="0,16,0,8"/>
+            <Grid ColumnDefinitions="*,Auto">
+              <TextBox x:Name="ProcPat"/>
+              <Button x:Name="ProcSave" Grid.Column="1" Content="Salva" Margin="8,0,0,0"/>
+            </Grid>
+            <TextBlock x:Name="DataDirTxt" Classes="faint wrap" Margin="4,10,0,0"/>
+            <Button x:Name="BtnQuit" Content="Esci da MechVault" Classes="ghost" HorizontalAlignment="Left" Padding="0,10" Margin="0,14,0,0" Foreground="#FF8A80"/>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </ScrollViewer>
+  </Grid>
+</Window>

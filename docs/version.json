@@ -1,0 +1,28 @@
+{
+    "version":  "1.1.9",
+    "sha256":  "7f68b525e4f3d884a4e40aa03fabbdfd583cf376080d9fca3dec4781ab798814",
+    "date":  "2026-11-15",
+    "url":  "https://mechvault.github.io/MechVault.zip",
+    "platforms":  {
+                      "linux-x64":  {
+                                        "version":  "2.0.2",
+                                        "url":  "https://github.com/MechVault/mechvault.github.io/releases/download/app-v2.0.2/MechVault-linux-x64.tar.gz",
+                                        "sha256":  "4620e70caf18187f06f85df9084eb3307ec9dab01285f147f2d85dd36e17cb30"
+                                    },
+                      "osx-arm64":  {
+                                        "version":  "2.0.2",
+                                        "url":  "https://github.com/MechVault/mechvault.github.io/releases/download/app-v2.0.2/MechVault-osx-arm64.zip",
+                                        "sha256":  "38ec640aa2b169ded745fed3b1e5d08bada2c8882308241580f442a13f356e84"
+                                    },
+                      "osx-x64":  {
+                                      "version":  "2.0.2",
+                                      "url":  "https://github.com/MechVault/mechvault.github.io/releases/download/app-v2.0.2/MechVault-osx-x64.zip",
+                                      "sha256":  "d62b7ef6c0755716645cf1e69bd33d86fdc9fbe507fa5a02c2d43f7e062b23f6"
+                                  },
+                      "win-x64":  {
+                                      "version":  "2.0.2",
+                                      "url":  "https://github.com/MechVault/mechvault.github.io/releases/download/app-v2.0.2/MechVault-win-x64.zip",
+                                      "sha256":  "9d4dc31b55181afea03f8d2201f051a07d5524bb0f246f9f7bd000444e9efb8d"
+                                  }
+                  }
+}

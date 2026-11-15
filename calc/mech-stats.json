@@ -1,0 +1,4290 @@
+{
+ "format": "mechvault-mechs",
+ "version": 1,
+ "source": "Mech Arena: Robot Showdown Wiki (Fandom), mech pages - https://mech-arena-robot-showdown.fandom.com/wiki/Mechs",
+ "license": "CC BY-SA 3.0 - https://creativecommons.org/licenses/by-sa/3.0/",
+ "retrieved": "2026-11-11",
+ "note": "hp = max HP at max rank; speed in km/h; gearHub = Gear Hub purchase price (money = real money only)",
+ "mechs": {
+  "Aegis": {
+   "role": "Tank",
+   "rarity": "Epic",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 215500,
+   "speed": 20.0,
+   "ability": "Dome Shield",
+   "cooldown": "10 seconds",
+   "traits": [
+    "Area Defender",
+    "Impediment"
+   ],
+   "viability": "Aegis has the HP, valuable ability, and energy capacity to survive well in endgame, but players must decide if he is worth losing a slot over other endgame mechs.",
+   "gearHub": {
+    "amount": 1865,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "exterior shield",
+    "shield"
+   ],
+   "abilityDuration": "10 seconds",
+   "abilityDamage": "10 meter (Radius) ▪︎ 79,000-750,000 (Dome Durability)",
+   "abilityText": "The special ability, called the Dome Shield, provides Aegis and its teammates a dome-like cover that protects a certain area from enemy fire and artillery for 10 seconds, while still being able to shoot through the dome. It has a max HP of 750k, which requires most of the enemy team to destroy quickly. Although some mechs that inflict status effects like Zephyr have no effect on you with their abilities outside the dome, Guardian and dashing mechs like Surge can still counter the dome.",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     13500.0,
+     35000.0,
+     60900.0,
+     94200.0,
+     122900.0,
+     158400.0,
+     215100.0
+    ],
+    "Power (Squad/Hangar)": [
+     82.0,
+     163.0,
+     283.0,
+     437.0,
+     572.0,
+     737.0,
+     1000.0
+    ],
+    "Dome Durability": [
+     79000.0,
+     122200.0,
+     215500.0,
+     328600.0,
+     428700.0,
+     552400.0,
+     7500000.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Arachnos": {
+   "role": "Attacker",
+   "rarity": "Rare",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 120600,
+   "speed": 14.0,
+   "ability": "Spider Turret",
+   "cooldown": "22 seconds",
+   "traits": [
+    "Zone Control",
+    "Low Speed"
+   ],
+   "viability": "Arachnos' best trait is its energy capacity. Midgame is the last phase you see Arachnos in.",
+   "gearHub": {
+    "amount": 42200,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "weapon system"
+   ],
+   "abilityDuration": "10 seconds",
+   "abilityDamage": "30 meters (Radius) ▪︎ 37-351 (Damage)",
+   "abilityText": "Arachnos is a Rare heavy Attacker mech. Arachnos's ability allows it to place down a turret on the ground that automatically shoots at any enemy in range. This turret stays on the ground without decaying until it shoots its first bullet which is triggered by an oncoming player's proximity. After that, the turret stays on the field for 10 seconds before despawning whether or not it continues to hit an enemy player.",
+   "ranks": {
+    "Energy Capacity": [
+     8.0,
+     12.0,
+     15.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     9000.0,
+     22100.0,
+     34200.0,
+     49500.0,
+     68900.0,
+     93300.0,
+     120600.0
+    ],
+    "Speed": [
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0
+    ],
+    "Power (Squad/Hangar)": [
+     71.0,
+     140.0,
+     216.0,
+     313.0,
+     435.0,
+     589.0,
+     762.0
+    ],
+    "Ability Cooldown": [
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0
+    ],
+    "Turret Damage": [
+     37.0,
+     64.0,
+     100.0,
+     144.0,
+     201.0,
+     272.0,
+     351.0
+    ],
+    "Turret Active Lifetime": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Arachnos Turret Range": [
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Ares": {
+   "role": "Tank",
+   "rarity": "Rare",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 160800.0,
+   "speed": 18.0,
+   "ability": "Wide Shield",
+   "cooldown": "12 seconds",
+   "traits": [
+    "Team Defender",
+    "Exposed Flanks"
+   ],
+   "viability": "Ares is a good mech for midgame. It becomes out-powered by late midgame, late game, and endgame.",
+   "gearHub": {
+    "amount": 42200,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "exterior shield",
+    "external shield",
+    "shield"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "4,600-43,900 (Shield Durability)",
+   "abilityText": "Ares is a classic Mech Arena mech. Still available today, Ares was one of the first mechs in the game, and one of the first Rare level mechs players could unlock in the game (not counting Arachnos). It's a medium energy mech and used to have one of the highest HP in the game. Its overall design is very similar to that of Juggernaut, but its higher speed, stronger shield, and no ability duration makes Ares a much more aggressively capable mech, as well as providing shelter for weaker mechs behind its massive shield. Because of this, it's a favourite of many players and generally was considered ",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     12000.0,
+     26200.0,
+     45600.0,
+     70400.0,
+     91900.0,
+     118400.0,
+     160800.0
+    ],
+    "Speed": [
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0
+    ],
+    "Power (Squad/Hangar)": [
+     79.0,
+     140.0,
+     243.0,
+     376.0,
+     490.0,
+     632.0,
+     857.0
+    ],
+    "Ability Cooldown": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Shield Durability": [
+     4600.0,
+     7100.0,
+     12400.0,
+     19200.0,
+     25100.0,
+     32300.0,
+     43900.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Bastion": {
+   "role": "Tank",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 284100,
+   "speed": 18.0,
+   "ability": "Blast Shield",
+   "cooldown": "16 seconds",
+   "traits": [],
+   "viability": "",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "emp",
+    "personal shield",
+    "shield"
+   ],
+   "abilityDuration": "Infinite",
+   "abilityDamage": "2,400-22,700",
+   "abilityText": "Bastion is a legendary Tank in Mech Arena. It has a ring-shaped shield which protects it from all sides except top and bottom. This means that Cheetah's Mines, Javelin Racks, Rocket Mortars, Helix Racks, etc. will damage it even when the shield is active. When destroyed, the shield releases an EMP which stuns all opponents in a 30m radius. The shield also deals damage to enemies when broken, with the same radius as the EMP. The shield only has a durability of 60,000, a low HP which can be destroyed almost instantly in most levels of game play. All of these traits, along with having the highest",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     15000.0,
+     46300.0,
+     80500.0,
+     124500.0,
+     162400.0,
+     209200.0,
+     284100.0
+    ],
+    "Speed": [
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0
+    ],
+    "Power (Squad/Hangar)": [
+     79.0,
+     176.0,
+     307.0,
+     475.0,
+     619.0,
+     798.0,
+     1083.0
+    ],
+    "Ability Cooldown": [
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "Shield Durability": [
+     6300.0,
+     9800.0,
+     17000.0,
+     26300.0,
+     34300.0,
+     44200.0,
+     60000.0
+    ],
+    "Shield Damage Radius": [
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0
+    ],
+    "Blast Shield Damage": [
+     2400.0,
+     3700.0,
+     6400.0,
+     10000.0,
+     13000.0,
+     16800.0,
+     22700.0
+    ],
+    "Blast Shield EMP Duration": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     2.0,
+     3.0,
+     3.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Blizzfrost": {
+   "role": "Scout",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 181800,
+   "speed": 29.0,
+   "ability": "Icy Grip",
+   "cooldown": "7",
+   "traits": [],
+   "viability": "Blizzfrost holds its own throughout all stages of gameplay being early-, mid-, late-, and endgame.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "damage reduction",
+    "daze",
+    "emp",
+    "speed boost"
+   ],
+   "abilityDuration": "5",
+   "abilityDamage": "30 meters (Radius) ▪︎ 5,300-50,000",
+   "abilityText": "Blizzfrost is a Legendary ranking Medium energy capacity Scout Mech and a force to be reckoned with.",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     9000.0,
+     29600.0,
+     51500.0,
+     79700.0,
+     103900.0,
+     133900.0,
+     181800.0
+    ],
+    "Speed": [
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0
+    ],
+    "Power (Squad/Hangar)": [
+     79.0,
+     157.0,
+     272.0,
+     421.0,
+     550.0,
+     708.0,
+     962.0
+    ],
+    "Ability Cooldown": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Ability Duration": [
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0
+    ],
+    "Icy Grip Radius": [
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0
+    ],
+    "Icy Grip Damage": [
+     5300.0,
+     8100.0,
+     14200.0,
+     21900.0,
+     28600.0,
+     38600.0,
+     50000.0
+    ],
+    "Speed Boost": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "Damage Reduction (Base)": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "Damage Reduction (per mech)": [
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5,
+     12.5
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Blockhorn": {
+   "role": "Tank",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 227300,
+   "speed": 19.0,
+   "ability": "Barricade",
+   "cooldown": "9 seconds",
+   "traits": [],
+   "viability": "Blockhorn is a low A-Tier mech. It does alright in endgame, but is often outplayed by many stronger mechs and pluthera of guided and up-and-over weapons.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage boost",
+    "exterior shield",
+    "external shield",
+    "shield"
+   ],
+   "abilityDuration": "7 seconds",
+   "abilityDamage": "53,000-503,100 (Shield Durability)",
+   "abilityText": "Blockhorn is a Heavy energy capacity Legendary ranking Tank mech. He is also a member of the arachnoid family.",
+   "ranks": {
+    "Energy Capacity": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     12000.0,
+     41600.0,
+     64400.0,
+     93300.0,
+     129900.0,
+     175800.0,
+     227300.0
+    ],
+    "Speed": [
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0
+    ],
+    "Power (Squad/Hangar)": [
+     71.0,
+     174.0,
+     269.0,
+     389.0,
+     542.0,
+     733.0,
+     948.0
+    ],
+    "Ability Cooldown": [
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0
+    ],
+    "Ability Duration": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Barricade Durability": [
+     53000.0,
+     92200.0,
+     142600.0,
+     206700.0,
+     287600.0,
+     389100.0,
+     503100.0
+    ],
+    "Barricade Amp Zone Size": [
+     11.5,
+     11.5,
+     11.5,
+     11.5,
+     11.5,
+     11.5,
+     11.5
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Brickhouse": {
+   "role": "Support",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 241500,
+   "speed": 14.0,
+   "ability": "Overdrive",
+   "cooldown": "12",
+   "traits": [
+    "A Big Target",
+    "Max HP"
+   ],
+   "viability": "Brickhouse is good, but its speed makes him fall behind in end and late game, but can be a good addition for early and midgame.",
+   "gearHub": {
+    "amount": 937500,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "damage boost"
+   ],
+   "abilityDuration": "10",
+   "abilityDamage": "50% (Mech Bonus Damage) - 100% (Team Bonus Damage)",
+   "abilityText": "Brickhouse is a legendary support mech. It has a high natural health pool in the game but has less health than Ares with shield, making Brickhouse effectively one of the most support mech. Brickhouse also has the biggest hitbox of any mech and has the lowest speed of any mech, tied with Arachnos. Its ability sets him apart from all other tanks as it doesn't enhance his toughness in any way, but instead provides support to your teammates like a support mech as M.D.. His Overdrive ability boosts Brickhouse's damage output by 50%, while also increasing all of your teammates damage output in a cer",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     12800.0,
+     39300.0,
+     68400.0,
+     105800.0,
+     138000.0,
+     177800.0,
+     241500.0
+    ],
+    "Speed": [
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0
+    ],
+    "Power": [
+     79.0,
+     168.0,
+     293.0,
+     452.0,
+     590.0,
+     761.0,
+     1033.0
+    ],
+    "Ability Cooldown": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Ability Duration": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Overcharger Radius": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Cheetah": {
+   "role": "Support",
+   "rarity": "Epic",
+   "class": "Light",
+   "energy": 16,
+   "hp": 131400,
+   "speed": 22.0,
+   "ability": "Mines",
+   "cooldown": "6 seconds",
+   "traits": [
+    "Nimble Striker",
+    "Low Armor"
+   ],
+   "viability": "Cheetah can be a useful mech in midgame play. It will become overpowered in late and endgame.",
+   "gearHub": {
+    "amount": 1305,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "weapon system"
+   ],
+   "abilityDuration": "Infinite (3 mines per cycle)",
+   "abilityDamage": "4,000-38,000",
+   "abilityText": "Cheetah is a light support mech. Currently, it can be obtained for free via the Daily Login Program. If Cheetah is owned before the free 90-day reward is given, A-Coins will be given instead. Cheetah is the first of four Epic mechs, unlocked in Tier 5 in the Gear Hub. Cheetah might not look like much at first glance, but don't be fooled. Cheetah's powerful ability allows it to lay up to three proximity triggered landmines on the battlefield, which upon detonating deal huge area damage to all enemy mechs caught in its radius. Due to this Cheetah is highly capable of keeping its ground, blowing ",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     8300.0,
+     21400.0,
+     37200.0,
+     57600.0,
+     75100.0,
+     96800.0,
+     131400.0
+    ],
+    "Speed": [
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0
+    ],
+    "Power": [
+     79.0,
+     142.0,
+     247.0,
+     382.0,
+     499.0,
+     642.0,
+     872.0
+    ],
+    "Ability Cooldown": [
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0
+    ],
+    "Ability Damage": [
+     4000.0,
+     6200.0,
+     10800.0,
+     16600.0,
+     21700.0,
+     28000.0,
+     38000.0
+    ],
+    "Mine Damage Radius": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Citadel": {
+   "role": "Support",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 269900,
+   "speed": 19.0,
+   "ability": "Seismic Field",
+   "cooldown": "10 seconds",
+   "traits": [],
+   "viability": "Citadel is a strong mech. It maintains power throughout all stages of gameplay including in endgame.",
+   "gearHub": null,
+   "abilityTags": [
+    "emp",
+    "personal shield",
+    "shield",
+    "speed boost"
+   ],
+   "abilityDuration": "8 seconds",
+   "abilityDamage": "-60% (Enemy Speed Reduction) ▪︎ 13,000-123,400 (Shield Durability) ▪︎ -75% (Enemy's Status Effect Reduction) ▪︎ +60% (Citadel Speed Increase) ▪︎ 5,000-47,500 (Bonus Shield Durability)",
+   "abilityText": "Mech Arena's newest Support Mech. Citadel's Seismic Ability puts a damper in the enemy's attack. With a personal shield, enemy ability restriction, speed boost and a stasis, Citadel has a powerful strength that ranks it high on the \"best mechs\" list. Ability Speed boost, personal shield, enemy movement reduction, an enemy ability reduction (emp, stasis, daze) and a shield boost for each mech in its radius is active during his ability. If its Seismic Field shield breaks while it's active, the ability cooldown is reduced and can be used again sooner.",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     14300.0,
+     44400.0,
+     76500.0,
+     118200.0,
+     154300.0,
+     198800.0,
+     269900.0
+    ],
+    "Speed": [
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0
+    ],
+    "Power": [
+     79.0,
+     174.0,
+     302.0,
+     467.0,
+     610.0,
+     785.0,
+     1066.0
+    ],
+    "Ability Cooldown": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Ability Duration": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Seismic Field Size": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "Shield Durability": [
+     13000.0,
+     20100.0,
+     35000.0,
+     54100.0,
+     70400.0,
+     90900.0,
+     123400.0
+    ],
+    "Bonus Shield Durability": [
+     5000.0,
+     7700.0,
+     13400.0,
+     20800.0,
+     27100.0,
+     35000.0,
+     47500.0
+    ],
+    "Enemy Speed Reduction": [
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0
+    ],
+    "Speed Increase": [
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0
+    ],
+    "Status Effect Reduction": [
+     75.0,
+     75.0,
+     75.0,
+     75.0,
+     75.0,
+     75.0,
+     75.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Dreadnought": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": null,
+   "speed": null,
+   "ability": "",
+   "cooldown": "",
+   "traits": [],
+   "viability": "Dreadnought is a decent game through early and midgame. It begins to struggle in lategame but can still hold its own more-or-less, and is not seen frequently in endgame.",
+   "gearHub": null,
+   "abilityTags": [
+    "damage",
+    "emp",
+    "speed boost",
+    "stasis"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "",
+   "abilityText": "A speedy, EMP-blasting Legendary ranked Attacker type mech in Mech Arena. Dreadnought has a very unique ability for mech arena; giant javelins sit atop its hefty shoulders and deploy a barrage of missiles that stun enemies for two (2) seconds and deal moderate to dramatic damage.",
+   "ranks": {
+    "Energy Capacity": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     12000.0,
+     41600.0,
+     64400.0,
+     93300.0,
+     129900.0,
+     175800.0,
+     227300.0
+    ],
+    "Speed": [
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0
+    ],
+    "Power": [
+     107.0,
+     299.0,
+     462.0,
+     669.0,
+     932.0,
+     1260.0,
+     1630.0
+    ],
+    "Ability Cooldown": [
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0
+    ],
+    "Wipe Out EMP Duration": [
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0
+    ],
+    "Wipe Out Damage": [
+     12202.0,
+     25982.0,
+     32868.0,
+     41296.0,
+     51578.0,
+     64085.0,
+     74319.0
+    ],
+    "Wipe Out Area Size": [
+     19.8,
+     19.8,
+     19.8,
+     19.8,
+     19.8,
+     19.8,
+     19.8
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Eclipse": {
+   "role": "Scout",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 170400,
+   "speed": 28.0,
+   "ability": "Phase Cloak",
+   "cooldown": "8 seconds",
+   "traits": [
+    "Counter effects",
+    "Very fast (with ability)"
+   ],
+   "viability": "Eclipse is too low HP to survive long in endgame, but its stealth is useful in all game modes throughout lategame.",
+   "gearHub": {
+    "amount": null,
+    "currency": "money"
+   },
+   "abilityTags": [
+    "stealth"
+   ],
+   "abilityDuration": "12 seconds",
+   "abilityDamage": "",
+   "abilityText": "",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     9000.0,
+     27800.0,
+     48300.0,
+     74700.0,
+     97400.0,
+     125500.0,
+     170400.0
+    ],
+    "Speed": [
+     28.0,
+     28.0,
+     28.0,
+     28.0,
+     28.0,
+     28.0,
+     28.0
+    ],
+    "Power": [
+     128.0,
+     304.0,
+     531.0,
+     820.0,
+     1071.0,
+     1379.0,
+     1872.0
+    ],
+    "Ability Cooldown": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Ability Duration": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Gatecrasher": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 221600,
+   "speed": 21.0,
+   "ability": "Ion Pod",
+   "cooldown": "10 seconds",
+   "traits": [],
+   "viability": "While Gatecrasher's stats are plausibly viable into endgame, its speed, ease of evading its pod, and severely long cooldown, it's not a mech you'll see in any mid, late, or endgame hangars.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "weapon system"
+   ],
+   "abilityDuration": "7 seconds",
+   "abilityDamage": "300 meters (Range) ▪︎ 16 meters (Length) ▪︎ 9,500-89,900 (Beam) ▪︎ 6,300-60,000 (Blast)",
+   "abilityText": "Gatecrasher is a Heavy Attacker Mech, which means it can carry any weapon in the game. He has a max HP of 221,600 HP, and a max speed of 21 km/h which makes him one of the tankiest and fastest mechs ever with a max of 32 energy. His ability, called the Ion Pod, shoots a slow-moving projectile that sticks to mechs or obstacles. When stuck on a mech, it has a short delay before exploding in a 20m radius, dealing damage to all mechs in the radius. When stuck to an obstacle however, it has a short delay before releasing a 16m long cylindrical beam blast to the other side of the obstacle, that last",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     11700.0,
+     40600.0,
+     62800.0,
+     91000.0,
+     126700.0,
+     171400.0,
+     221600.0
+    ],
+    "Speed": [
+     21.0,
+     21.0,
+     21.0,
+     21.0,
+     21.0,
+     21.0,
+     21.0
+    ],
+    "Power": [
+     71.0,
+     172.0,
+     267.0,
+     387.0,
+     538.0,
+     728.0,
+     941.0
+    ],
+    "Ability Cooldown": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Ion Pod Range": [
+     300.0,
+     300.0,
+     300.0,
+     300.0,
+     300.0,
+     300.0,
+     300.0
+    ],
+    "Ion Beam Duration": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Beam Blast Damage": [
+     6300.0,
+     11000.0,
+     17000.0,
+     24600.0,
+     34300.0,
+     46400.0,
+     60000.0
+    ],
+    "Ion Beam Damage": [
+     6300.0,
+     11000.0,
+     17000.0,
+     24600.0,
+     34300.0,
+     46400.0,
+     60000.0
+    ],
+    "Ion Beam Length": [
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "Mech Blast Damage": [
+     6000.0,
+     10400.0,
+     16100.0,
+     23400.0,
+     32600.0,
+     44000.0,
+     57000.0
+    ],
+    "Mech Blast Radius": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Guardian": {
+   "role": "Attacker",
+   "rarity": "Rare",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 140700,
+   "speed": 16.0,
+   "ability": "System Crash",
+   "cooldown": "15 seconds",
+   "traits": [
+    "Tank Destroyer",
+    "Long Range Vulnerability"
+   ],
+   "viability": "System Crash, and other EMP style abilities, are some of the most useful abilities in the game. Taking all of your enemy's power away from them leaving them fully without recourse is undeniably strong. However, Guardian's speed makes him very vulnerable. It is used all throughout",
+   "gearHub": {
+    "amount": 420,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "emp"
+   ],
+   "abilityDuration": "Instant",
+   "abilityDamage": "",
+   "abilityText": "Guardian is a high health heavy attacker mech, unlocked in Tier 3 of Gear Hub. Guardian's ability System Crash is a highly effective shutdown ability, putting the affected enemy mechs' weapons and abilities on cooldown, as well as stopping mechs like Surge from dashing into you and cleanses any enemy status effects negatively affecting your teammates. It has a ginormous 60 meter wide, 30 meter long blast area (which can be increased with implants affects any and all mechs in its zone. Combined with Guardian's high health and energy capacity, make Guardian a strong contender in early and midgam",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     10500.0,
+     25800.0,
+     39900.0,
+     57800.0,
+     80400.0,
+     108800.0,
+     140700.0
+    ],
+    "Speed": [
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "Power": [
+     77.0,
+     157.0,
+     242.0,
+     352.0,
+     489.0,
+     662.0,
+     856.0
+    ],
+    "Ability Cooldown": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ],
+    "System Crash Width": [
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0,
+     60.0
+    ],
+    "System Crash Range": [
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Hemlock": {
+   "role": "Support",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 204500,
+   "speed": 22.0,
+   "ability": "ECM Shot",
+   "cooldown": "16 seconds ▪︎ 3 seconds ▪︎ (if you miss a mech, cooldown is shortened to 3 seconds - this happens anytime you miss. If you hit a mech after missing it, it will go into its 16 s cooldown)",
+   "traits": [],
+   "viability": "Hemlock has a good ability and has the HP to last in endgame. Players may opt for other mechs in endgame due to its abnormally long cooldown, but can be seen in lategame and midgame hangars.",
+   "gearHub": {
+    "amount": 937500,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "daze",
+    "emp"
+   ],
+   "abilityDuration": "6 seconds (Daze) ▪︎ 2 seconds (EMP) ▪︎ 1.5 seconds (Delayed activation after deployment)",
+   "abilityDamage": "",
+   "abilityText": "Hemlock is a Legendary ranked Support mech. Its ability ECM Shot allows the player to shoot an orb to an enemy mech deploying a mobility restriction (daze) for 6 seconds while simultaneously applying an EMP that prevents the enemy player from activating their abilities for 3 seconds (ECM). After 3 seconds, the ECM will wear off. Aftet the ECM wears off, the other player will still be immobilized for the full duration of the daze ability, but the other player can now activate their abilities.",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     10800.0,
+     33300.0,
+     58000.0,
+     89600.0,
+     116900.0,
+     150600.0,
+     204500.0
+    ],
+    "Speed": [
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0
+    ],
+    "Power": [
+     115.0,
+     270.0,
+     471.0,
+     729.0,
+     951.0,
+     1226.0,
+     1666.0
+    ],
+    "Ability Cooldown": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Missed Ability Cooldown": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "Daze Delay": [
+     1.5,
+     1.5,
+     1.5,
+     1.5,
+     1.5,
+     1.5,
+     1.5
+    ],
+    "Daze Duration": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "EMP Duration": [
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Juggernaut": {
+   "role": "Tank",
+   "rarity": "Uncommon",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 152200,
+   "speed": 16.0,
+   "ability": "Personal Shield",
+   "cooldown": "10 seconds",
+   "traits": [
+    "Shielded Brawler",
+    "Low Speed"
+   ],
+   "viability": "Juggernaut is designed to be an early game only mech. Mechs from later tiers provide abilities and stats much stronger than Juggernaut, so upgrading it is not usually recommended.",
+   "gearHub": {
+    "amount": 45,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "personal shield",
+    "shield"
+   ],
+   "abilityDuration": "12 seconds",
+   "abilityDamage": "3,300-31,600 (Shield Durability)",
+   "abilityText": "",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     13500.0,
+     24800.0,
+     43100.0,
+     66700.0,
+     87000.0,
+     112100.0,
+     152200.0
+    ],
+    "Speed": [
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "Power": [
+     79.0,
+     131.0,
+     228.0,
+     352.0,
+     459.0,
+     591.0,
+     803.0
+    ],
+    "Ability Cooldown": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Ability Duration": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Shield Durability": [
+     3300.0,
+     5100.0,
+     9000.0,
+     13800.0,
+     18100.0,
+     23300.0,
+     31600.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Killshot": {
+   "role": "Scout",
+   "rarity": "Epic",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 119500,
+   "speed": 29.0,
+   "ability": "Melee Dash",
+   "cooldown": "6 seconds",
+   "traits": [
+    "Point-Blank Lethality",
+    "Low Armor"
+   ],
+   "viability": "Killshot is a strong mech through midgame, but its low HP requires a more conservative approach. To use \"dash attack\" to its full advantage, Surge and Nomad should be used by lategame and endgame",
+   "gearHub": {
+    "amount": 1865,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "dash"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "40 meters (Dash Distance)",
+   "abilityText": "Killshot is a medium energy mech, is tied with Slingshot and Nomad for highest functional speed in the game, and is the namesake of the Killshot Family. Its highly flexible nature combined with a powerful dash, relatively high energy, and decent healthpool makes Killshot a good mech for every type of player. It has become a very popular mech to use because it is so versatile. Killshot's mech ability, Melee Dash, provides a quick burst of speed that allows the player to close distances and deal high amounts of damage. It has a Low cooldown of 5 seconds, which make its one of the best mech abili",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     7500.0,
+     19500.0,
+     33900.0,
+     52300.0,
+     68300.0,
+     88000.0,
+     119500.0
+    ],
+    "Speed": [
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0
+    ],
+    "Power": [
+     79.0,
+     140.0,
+     244.0,
+     377.0,
+     492.0,
+     634.0,
+     861.0
+    ],
+    "Ability Cooldown": [
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0
+    ],
+    "Ability Damage": [
+     7100.0,
+     10900.0,
+     19000.0,
+     29300.0,
+     38300.0,
+     49300.0,
+     66900.0
+    ],
+    "Dash Distance": [
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0
+    ],
+    "Melee Dash Impact Radius": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Lacewing": {
+   "role": "Scout",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 198900,
+   "speed": 26.0,
+   "ability": "Mine Jump",
+   "cooldown": "7 seconds",
+   "traits": [],
+   "viability": "Lacewing, although a low HP mech, uses its high-on-the-mountain vantage points to be a very dominant mech even fully into endgame.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "jump"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "12 meters (Radius) ▪︎ 4,000-38,000 (Damage)",
+   "abilityText": "Lacewing is a Legendary Scout that is generally regarded as a meta mech for its high speed and ability to double jump. Lacewing can be called a mix of Lancer and Cheetah for its ability to jump and plant mines. Lacewing has a speed of 26 km/h which is good for a scout mech. Lacewing has a maximum energy capacity of 24 meaning it can use decently heavy weapons. Lacewing does have a relatively low HP which may be a problem when fighting attacker or tanks mechs in sustained fire battles. Lacewing could be obtained using the \"GRASSHOPPER\" promo code that was available to new players.",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     10500.0,
+     32400.0,
+     56300.0,
+     87100.0,
+     113700.0,
+     146500.0,
+     198900.0
+    ],
+    "Speed": [
+     26.0,
+     26.0,
+     26.0,
+     26.0,
+     26.0,
+     26.0,
+     26.0
+    ],
+    "Power": [
+     152.0,
+     387.0,
+     672.0,
+     1039.0,
+     1356.0,
+     1749.0,
+     2373.0
+    ],
+    "Ability Cooldown": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Jump Distance": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Mine Damage": [
+     4000.0,
+     6200.0,
+     10800.0,
+     16600.0,
+     21700.0,
+     28000.0,
+     38000.0
+    ],
+    "Mine Damage Radius": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Jump Charges": [
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Lancer": {
+   "role": "Scout",
+   "rarity": "Common",
+   "class": "Light",
+   "energy": 16,
+   "hp": 85400,
+   "speed": 25.0,
+   "ability": "Jump Jets",
+   "cooldown": "5 second",
+   "traits": [
+    "Highly Maneuverable",
+    "Low Firepower"
+   ],
+   "viability": "Mid to late-game is where you see Lancer the most outside of early game. While some players opt to max out Lancer to use in endgame, its low HP and inability to move while jumping makes it incredibly easy to counter. If Lancer's playstyle is favored by a player, it's usually repl",
+   "gearHub": {
+    "amount": 400,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "jump"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "",
+   "abilityText": "Lancer is classified as a Light mech with the role of \"Scout\". It starts at Rank 1 with 4 Energy limit and maxes out at 16 Energy at Rank 6, Level 7. It is quite possibly the most flexible mech out there: being able to jump over walls, on roofs, and even dodge slow-moving projectiles with its jet pack jump ability. This can, in the right hands, result in extremely complex and lethal game play. Its jump makes it able to access parts of maps no other mech could hope to reach.",
+   "ranks": {
+    "Energy": [
+     4.0,
+     6.0,
+     8.0,
+     10.0,
+     12.0,
+     14.0,
+     16.0
+    ],
+    "HP": [
+     9000.0,
+     15700.0,
+     24200.0,
+     35100.0,
+     48800.0,
+     66100.0,
+     85400.0
+    ],
+    "Speed": [
+     25.0,
+     25.0,
+     25.0,
+     25.0,
+     25.0,
+     25.0,
+     25.0
+    ],
+    "Power": [
+     86.0,
+     149.0,
+     231.0,
+     334.0,
+     465.0,
+     629.0,
+     814.0
+    ],
+    "Ability Cooldown": [
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0
+    ],
+    "Jump Distance": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "M.D.": {
+   "role": "Support",
+   "rarity": "Uncommon",
+   "class": "Light",
+   "energy": 16,
+   "hp": 101400,
+   "speed": 22.0,
+   "ability": "Repair Field",
+   "cooldown": "12 seconds",
+   "traits": [
+    "Combat Medic",
+    "Suppressible Ability"
+   ],
+   "viability": "A healing mech is welcomed at all levels of play. 🙏",
+   "gearHub": {
+    "amount": 4700,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "heal"
+   ],
+   "abilityDuration": "10 seconds",
+   "abilityDamage": "10 meters (Repair Radius)",
+   "abilityText": "M.D. is a highly specialized support mech, unlocked after Killshot (currently unlocked with Slingshot). It is currently the only bot in this game with a dedicated healing/support system (but recently the fur salvor is also capable of healing and no worse than M.D.). Its an extremely valuable component of any well-organized team, being able to carry up to all four of your teammates, not by kills, but by heals. Its highly unique playstyle is not something for everyone, but in the right hands can still be very powerful.",
+   "ranks": {
+    "Energy": [
+     4.0,
+     6.0,
+     8.0,
+     10.0,
+     12.0,
+     14.0,
+     16.0
+    ],
+    "HP": [
+     9000.0,
+     18600.0,
+     28700.0,
+     41700.0,
+     58000.0,
+     78400.0,
+     101400.0
+    ],
+    "Speed": [
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0
+    ],
+    "Power": [
+     92.0,
+     170.0,
+     262.0,
+     381.0,
+     531.0,
+     719.0,
+     928.0
+    ],
+    "Ability Cooldown": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Ability Duration": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Mech Healing Speed": [
+     430.0,
+     740.0,
+     1150.0,
+     1670.0,
+     2320.0,
+     3140.0,
+     4060.0
+    ],
+    "Team Healing Speed": [
+     860.0,
+     1490.0,
+     2300.0,
+     3340.0,
+     4640.0,
+     6280.0,
+     8130.0
+    ],
+    "Repair Radius": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Mimicker": {
+   "role": "Scout",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 176100,
+   "speed": 27.0,
+   "ability": "Adaptation",
+   "cooldown": "9 seconds",
+   "traits": [],
+   "viability": "Mimicker is a decent scout. It lasts through early lategame, but not through to endgame mostly due to its comparatively low HP.",
+   "gearHub": {
+    "amount": 937500,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "damage boost",
+    "heal",
+    "healing",
+    "personal shield",
+    "repair",
+    "shield",
+    "speed boost",
+    "stealth"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "100 meters (Range) 9,500-89,9000 (Shield Durability) 2,110-19,980 (Mech Healing Speed) 8 seconds (Attacker Ability Duration) +30% (Mech Bonus Damage)",
+   "abilityText": "Mimicker is a Legendary ranked Scout class mech with a unique ability allowing him to get a certain buff depending on who he scans.",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     9300.0,
+     32300.0,
+     49900.0,
+     72300.0,
+     100700.0,
+     136200.0,
+     176100.0
+    ],
+    "Speed": [
+     27.0,
+     27.0,
+     27.0,
+     27.0,
+     27.0,
+     27.0,
+     27.0
+    ],
+    "Power": [
+     71.0,
+     163.0,
+     251.0,
+     364.0,
+     507.0,
+     686.0,
+     887.0
+    ],
+    "Ability Cooldown": [
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0
+    ],
+    "Ability Duration": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Adaptation Range": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ],
+    "Shield Durability": [
+     6300.0,
+     11000.0,
+     17000.0,
+     24600.0,
+     34300.0,
+     46400.0,
+     60000.0
+    ],
+    "Mech Healing Speed": [
+     990.0,
+     1720.0,
+     2660.0,
+     3860.0,
+     5370.0,
+     7270.0,
+     9400.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Nomad": {
+   "role": "Scout",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 181900,
+   "speed": 29.0,
+   "ability": "Chain Dash",
+   "cooldown": "8 seconds",
+   "traits": [
+    "Point-Blank Lethality",
+    "Prime Target"
+   ],
+   "viability": "Nomad is a mech seen frequently in endgame hangars.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "damage reduction",
+    "dash"
+   ],
+   "abilityDuration": "3 seconds (to use Chain Dash again to hit another mech as well as the duration of Nomad's Damage Reduction)",
+   "abilityDamage": "45 meters (Distance)",
+   "abilityText": "= Nomad's ability, Chain Dash, is a dash similar to Killshot's, but it contains a little more. If Nomad collides with an enemy mech while dashing, he has a 3 second window (which can be extended using implants) when he can dash again. His second dash cannot damage the mech you hit first, but still can do full damage to a different mech. The Nomad's dash also grants a 60% damage reduction to Nomad for 3 seconds after Nomad dashes. This makes the Nomad a much more powerful mech than Killshot, and almost eliminates the prospect of being killed mid dash.",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     9600.0,
+     29600.0,
+     51500.0,
+     79700.0,
+     103900.0,
+     133900.0,
+     181800.0
+    ],
+    "Speed": [
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0
+    ],
+    "Power": [
+     124.0,
+     295.0,
+     513.0,
+     794.0,
+     1037.0,
+     1336.0,
+     1815.0
+    ],
+    "Ability Cooldown": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Chain Dash Time": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "Ability Damage": [
+     7400.0,
+     11400.0,
+     19900.0,
+     30800.0,
+     40200.0,
+     51700.0,
+     70200.0
+    ],
+    "Dash Distance": [
+     45.0,
+     45.0,
+     45.0,
+     45.0,
+     45.0,
+     45.0,
+     45.0
+    ],
+    "Damage Reduction From Dash": [
+     -60.0,
+     -60.0,
+     -60.0,
+     -60.0,
+     -60.0,
+     -60.0,
+     -60.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Onyx": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 198900,
+   "speed": 18.0,
+   "ability": "Quad Rocket",
+   "cooldown": "10 seconds",
+   "traits": [
+    "Ability Weapon"
+   ],
+   "viability": "Early game is where Onyx shines. It starts to get a little stiff in mid game. By late- and endgame, Onyx is no longer viable due to its low HP compared to endgame mechs and very slow speed. But games are about having fun, so enjoy it.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "weapon system"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "4 (Magazine, shoots as 1 projectile) ▪︎ 0-100 meters (Optimal Range) ▪︎ 7 meters (Radius) ▪︎ 1,628-69,833 (Damage)",
+   "abilityText": "Onyx is a Heavy Attacker Mech, which means it can carry any weapon in the game. He has a Max HP of 198,900 HP and a max speed of 18 km/h which makes him one of the tankiest and slowest mechs ever with a max of 32 energy. His ability is a built-in Ability Weapon with a cooldown timer. When activated, this Ability launches four rockets that fly in a straight line (not arched like Helix Rack) and deal Splash Damage on impact. Onyx's rockets are not guided.",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     10500.0,
+     36400.0,
+     56300.0,
+     81700.0,
+     113700.0,
+     153800.0,
+     198900.0
+    ],
+    "Speed": [
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0
+    ],
+    "Power": [
+     130.0,
+     376.0,
+     581.0,
+     843.0,
+     1172.0,
+     1585.0,
+     2049.0
+    ],
+    "Ability Cooldown": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Damage Per Magazine": [
+     1628.0,
+     6102.0,
+     11582.0,
+     19404.0,
+     30288.0,
+     45162.0,
+     69833.0
+    ],
+    "Magazine": [
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0
+    ],
+    "Optimal Range": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "Projectile Speed": [
+     120.0,
+     126.0,
+     132.0,
+     138.0,
+     144.0,
+     150.0,
+     156.0
+    ],
+    "Damage Radius": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Orion": {
+   "role": "Support",
+   "rarity": "Epic",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 155300,
+   "speed": 23.0,
+   "ability": "Hunter's Mark",
+   "cooldown": "12 seconds ▪︎ 3 seconds (if you miss a mech, cooldown is reduced to 3 seconds)",
+   "traits": [
+    "Shield Piercing",
+    "Needs Teamwork"
+   ],
+   "viability": "Orion is a strong mech in mid and most of late game. He becomes over powered by stronger mechs in endgame.",
+   "gearHub": {
+    "amount": 1865,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage boost"
+   ],
+   "abilityDuration": "10 seconds",
+   "abilityDamage": "20-30 meters (Transfer Distance) ▪︎ +150% (Hunter's Mark) ▪︎ 80% (Shield Piercing)",
+   "abilityText": "It has a unique ability named Hunter's Mark that increases both itself’s and its teammates’ damage. When you activate Hunter’s Mark, Orion shoots a homing flare towards the selected target with infinite range. If it does not hit the target, the cool down is reduced to 3 seconds allowing allowing you to try again. When the target is hit, a Marked Effect is applied. Orion and all teammates deal increased damage to the target. This is done by redirecting all damage to the enemy's back AND applying a bonus 50% damage. A total of 2 marks can be placed upon a target, increasing the damage to 350%.",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     9800.0,
+     25300.0,
+     44000.0,
+     68000.0,
+     88800.0,
+     114400.0,
+     155300.0
+    ],
+    "Speed": [
+     23.0,
+     23.0,
+     23.0,
+     23.0,
+     23.0,
+     23.0,
+     23.0
+    ],
+    "Power": [
+     79.0,
+     146.0,
+     254.0,
+     392.0,
+     512.0,
+     659.0,
+     895.0
+    ],
+    "Ability Cooldown": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Missed Mark Cooldown": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "Mark Transfer Distance": [
+     20.0,
+     20.0,
+     20.0,
+     25.0,
+     25.0,
+     30.0,
+     30.0
+    ],
+    "Mark Duration": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Mark Stasis Duration": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "Shield Piercing Ratio": [
+     66.0,
+     66.0,
+     66.0,
+     66.0,
+     66.0,
+     66.0,
+     66.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Outlaw": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 213100,
+   "speed": 24.0,
+   "ability": "Foul Play",
+   "cooldown": "15 seconds",
+   "traits": [],
+   "viability": "",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "emp"
+   ],
+   "abilityDuration": "Instant",
+   "abilityDamage": "100 meters (Range) ▪︎ 5 meters (Radius)",
+   "abilityText": "Outlaw is a Medium energy capacity Legendary ranking Attacker mech. His ability Foul Play shoots a powerful blast towards a selected enemy, disabling all abilities and weapons sending them into cooldown. It is the Legendary version of Guardian, with the added buff of launching the valuable \"system crash\" towards your enemy over 100 meters away across maps, thus never putting yourself in harm's way.",
+   "ranks": {
+    "Energy Capacity": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     11300.0,
+     39000.0,
+     60400.0,
+     87500.0,
+     121800.0,
+     164800.0,
+     213100.0
+    ],
+    "Speed": [
+     24.0,
+     24.0,
+     24.0,
+     24.0,
+     24.0,
+     24.0,
+     24.0
+    ],
+    "Power (Squad/Hangar)": [
+     71.0,
+     171.0,
+     264.0,
+     382.0,
+     532.0,
+     720.0,
+     931.0
+    ],
+    "Ability Cooldown": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ],
+    "Foul Play Range": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ],
+    "Foul Play Radius": [
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (Fandom)"
+  },
+  "Panther": {
+   "role": "Attacker",
+   "rarity": "Epic",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": null,
+   "speed": 20.0,
+   "ability": "Stasis Barrier",
+   "cooldown": "10 seconds",
+   "traits": [],
+   "viability": "Panther is chosen in midgame and lategame hangars. He's seen in endgame hangars often, but not frequently.",
+   "gearHub": {
+    "amount": 2425,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "exterior shield",
+    "shield"
+   ],
+   "abilityDuration": "6 meters (Height)",
+   "abilityDamage": "",
+   "abilityText": "Panther is a Epic Attacker that is classified as a Heavy Attacker with an Energy Capacity of 32. It can be unlocked in Tier 6 in the Gear Hub. Panther is a very straight forward and reliable mech from unlocking to endgame. Although an Attacker, Panther is often considered a strong support for teams and a staple for many hangars in mid- to late-game. It's Ability is called Stasis Barrier. This creates a protective barrier that can apply the Stasis effect to enemy mechs. Puma is Panther's Tier 2 equivalent.",
+   "ranks": {
+    "Energy Capacity": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     7500.0,
+     21900.0,
+     33900.0,
+     49100.0,
+     68300.0,
+     92400.0,
+     119500.0
+    ],
+    "Speed": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "Power": [
+     75.0,
+     157.0,
+     244.0,
+     354.0,
+     492.0,
+     665.0,
+     861.0
+    ],
+    "Ability Cooldown": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Ability Duration": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Stasis Effect Time": [
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0
+    ],
+    "Stasis Barrier Height": [
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Paragon": {
+   "role": "Attacker",
+   "rarity": "Common",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 85400,
+   "speed": 18.0,
+   "ability": "Boost",
+   "cooldown": "9 seconds",
+   "traits": [
+    "Generalist",
+    "Unspecialized"
+   ],
+   "viability": "Although it has a low HP and is meant to be replaced basically immediately upon starting the game, you may often see Paragon in late and even end game due to its high energy capacity... and likely due to players accidentally ranking it up before realizing it may be better left in",
+   "gearHub": null,
+   "abilityTags": [
+    "speed boost"
+   ],
+   "abilityDuration": "6 seconds",
+   "abilityDamage": "",
+   "abilityText": "Paragon is a Common Attacker with an Energy Capacity of 32, classifying it as Heavy Mech. This Mech is unlocked with Autocannon 4s during the tutorial. Every player begins with this Mech. Paragons health is 9,000 at Rank 1, Level 1 and is 85,400 when maxed. Paragon has been in the game since the launch of Mech Arena, and even Beta Versions.",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     9000.0,
+     15700.0,
+     24200.0,
+     35100.0,
+     48800.0,
+     66100.0,
+     85400.0
+    ],
+    "Power": [
+     71.0,
+     124.0,
+     192.0,
+     278.0,
+     388.0,
+     524.0,
+     678.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Parasite": {
+   "role": "Tank",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 261300,
+   "speed": 20.0,
+   "ability": "Redirection",
+   "cooldown": "11 seconds",
+   "traits": [],
+   "viability": "Parasite is a good mech. It survives well all the way to and in end-game, especially in Hangar Showdown. Just keep in mind that end-game has more real players than bots, so people who know how to counter him and will usually just wait for the ability to cool off, making it a litt",
+   "gearHub": {
+    "amount": null,
+    "currency": "money"
+   },
+   "abilityTags": [
+    "damage",
+    "damage reduction",
+    "weapon system"
+   ],
+   "abilityDuration": "12 seconds",
+   "abilityDamage": "35%",
+   "abilityText": "Parasite is a Medium Energy Capacity mech in Mech Arena with a Tank role. Redirection is his ability, allowing him to become, aptly, a parasite that kills its host anytime the Parasite is under attack. Instead of damage hitting the Parasite mech, all incoming damage is redirected to the mech Parasite has latched itself onto, for a total of 35%. It also has a 90% damage reduction, meaning Parasite only takes in 10% damage to itself when its ability is active. The remaining 55% does not apply to either mech."
+  },
+  "Puma": {
+   "role": "Attacker",
+   "rarity": "Uncommon",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 67600,
+   "speed": 20.0,
+   "ability": "Shield Wall",
+   "cooldown": "10",
+   "traits": [],
+   "viability": "Puma is designed to be an early game only mech. If its playstyle is favorable to a player, it is replaced by other shield mechs in mid, late, and end game.",
+   "gearHub": {
+    "amount": 45,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "exterior shield",
+    "shield"
+   ],
+   "abilityDuration": "7,100-76,800 (Shield Durability)",
+   "abilityDamage": "",
+   "abilityText": "Puma is a classic Mech Arena mech. It was one of the first mechs available when the game first released. Its ability Shield Wall deploys a 6-meter-high shield that stops weapons and abilities passing through and applies a slowing stasis to enemy mechs that try to pass through. Shield Wall protects Puma and any teammates, making it a fair mech on the battlefield.",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     6000.0,
+     12400.0,
+     19200.0,
+     27800.0,
+     38700.0,
+     52300.0,
+     67600.0
+    ],
+    "Speed": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "Power": [
+     71.0,
+     129.0,
+     199.0,
+     289.0,
+     402.0,
+     544.0,
+     703.0
+    ],
+    "Ability Cooldown": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Ability Duration": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ],
+    "Shield Wall Durability": [
+     7100.0,
+     12400.0,
+     19200.0,
+     27800.0,
+     38700.0,
+     52400.0,
+     67800.0
+    ],
+    "Shield Wall Height": [
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Redeemer": {
+   "role": "Scout",
+   "rarity": "Epic",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 167730,
+   "speed": 29.0,
+   "ability": "Backtrack",
+   "cooldown": "14 seconds",
+   "traits": [],
+   "viability": "Redeemer is a strong mech through midgame. Other mechs are stronger during lategame and should not be olayed in endgame.",
+   "gearHub": {
+    "amount": 1865,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "spawn drop"
+   ],
+   "abilityDuration": "10 Seconds back",
+   "abilityDamage": "Debuffs all Abilities applied to him.",
+   "abilityText": "Redeemer is an Epic Scout Mech with a max Energy Capacity of 24, allowing you to equip some good 16+8 or Dual 12 combos on Redeemer. It's health is the highest of all scouts before it, and it is basically near the HP of Surge when maxed. Redeemer was introduced into the game around late 2022, and has been a great mech for most players because of its ability, which allows you to debuff cleanse and backtrack the Redeemer. At every rank since March 2026, Backtracking removes every debuff from Redeemer. This makes redeemer an excellent mech for reckless plays because at max, it even counters stunn",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     24.0,
+     24.0
+    ],
+    "HP": [
+     10500.0,
+     27200.0,
+     47400.0,
+     73300.0,
+     95600.0,
+     123200.0,
+     167300.0
+    ],
+    "Speed": [
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0
+    ],
+    "Power": [
+     79.0,
+     148.0,
+     257.0,
+     397.0,
+     518.0,
+     668.0,
+     907.0
+    ],
+    "Ability Cooldown": [
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0,
+     14.0
+    ],
+    "Backtrack Timer": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Redox": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 227300,
+   "speed": 22.0,
+   "ability": "Caustic Blast",
+   "cooldown": "8 seconds",
+   "traits": [
+    "Tank Destroyer",
+    "Low Speed"
+   ],
+   "viability": "Redox holds its own well throughout all levels of gameplay, including endgame.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "exterior shield",
+    "personal shield",
+    "shield"
+   ],
+   "abilityDuration": "6 seconds",
+   "abilityDamage": "30 meters (Radius) ▪︎ 3,300-31,600 (Shield Durability) ▪︎ 8,400-79,600 (Damage)",
+   "abilityText": "Redox is a Heavy Legendary ranked Attacker mech. His powerful ability allows it to expel a corrosive and immobilizing chemical in the same fashion as Zephyr's Shock Pulse, slowing down mechs like the stasis status as well as dealing damage over time. Redox's Caustic Blast ability can go through walls, ceilings, and floors. This not only gives Redox a major advantage in any encounter, it can also provide massive support for other teammates, help him retreat, as well as take down any damaged mechs without exposing himself.",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     9000.0,
+     31200.0,
+     48300.0,
+     70000.0,
+     97400.0,
+     131800.0,
+     170400.0
+    ],
+    "Speed": [
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "Power": [
+     71.0,
+     161.0,
+     249.0,
+     362.0,
+     503.0,
+     681.0,
+     880.0
+    ],
+    "Ability Cooldown": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Ability Duration": [
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0
+    ],
+    "Ability Damage": [
+     4800.0,
+     8300.0,
+     12900.0,
+     18700.0,
+     26000.0,
+     35200.0,
+     45500.0
+    ],
+    "Caustic Blast Radius": [
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0
+    ],
+    "Caustic Blast Stasis Time": [
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Salvor": {
+   "role": "Support",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 227300,
+   "speed": 24.0,
+   "ability": "Regen Shot",
+   "cooldown": "12 seconds",
+   "traits": [],
+   "viability": "",
+   "gearHub": {
+    "amount": null,
+    "currency": "money"
+   },
+   "abilityTags": [
+    "heal"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "3 (Regen Shot Charges) ▪︎ 100 meters (Range) ▪︎ 3,190-30,230 (Healing Self) ▪︎ 6,330-60,130 (Healing Allies)",
+   "abilityText": "The Savor has a high amount of energy of 32, a high speed of 24 km/h, an average hitpoing count of 161900, and a powerful skill: to launch 3 missiles that can heal allies. If all of those missiles hit one ally, you will heal an ally 60130 hp. This can be improved to 78169 hp with implants. The cooldown of the skill is 6 seconds, it works like this: vibrate an ally, take aim and fire a rocket from his health, just like M.D. capable of healing himself, although not as much as his allies, but compared to M.D. he has a minus - it does not have a repair field like the MD, but it fires a rocket at a",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     8600.0,
+     29700.0,
+     45900.0,
+     66500.0,
+     92600.0,
+     125200.0,
+     161900.0
+    ],
+    "Speed": [
+     24.0,
+     24.0,
+     24.0,
+     24.0,
+     24.0,
+     24.0,
+     24.0
+    ],
+    "Power": [
+     71.0,
+     160.0,
+     247.0,
+     358.0,
+     498.0,
+     673.0,
+     870.0
+    ],
+    "Ability Cooldown": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Regen Shot Range": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ],
+    "HP Healed (Allies)": [
+     6330.0,
+     11020.0,
+     17040.0,
+     24700.0,
+     34370.0,
+     46500.0,
+     60130.0
+    ],
+    "HP Healed (Self)": [
+     2130.0,
+     3710.0,
+     5740.0,
+     8320.0,
+     11580.0,
+     15670.0,
+     20260.0
+    ],
+    "Regen Shot Charges": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Scorpius": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 176100,
+   "speed": 21.0,
+   "ability": "Javalin Array",
+   "cooldown": "7 seconds",
+   "traits": [],
+   "viability": "Scorpius is not a mech that is strong enough to last in endgame, but could do sort of well in late game.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "weapon system"
+   ],
+   "abilityDuration": "Instant",
+   "abilityDamage": "960-41,076",
+   "abilityText": "",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     9300.0,
+     32300.0,
+     49900.0,
+     72300.0,
+     100700.0,
+     136200.0,
+     176100.0
+    ],
+    "Speed": [
+     21.0,
+     21.0,
+     21.0,
+     21.0,
+     21.0,
+     21.0,
+     21.0
+    ],
+    "Power": [
+     71.0,
+     163.0,
+     251.0,
+     364.0,
+     507.0,
+     686.0,
+     887.0
+    ],
+    "Ability Cooldown": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Damage Per Magazine": [
+     960.0,
+     3588.0,
+     6804.0,
+     11412.0,
+     17808.0,
+     26556.0,
+     41076.0
+    ],
+    "Magazine": [
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0
+    ],
+    "Optimal Range": [
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0,
+     16.0
+    ],
+    "Projectile Speed": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "Damage Radius": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "Lock Time": [
+     0.7,
+     0.7,
+     0.7,
+     0.7,
+     0.7,
+     0.7,
+     0.7
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Seeker": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 193200,
+   "speed": 22.0,
+   "ability": "Warp",
+   "cooldown": "8 seconds",
+   "traits": [],
+   "viability": "Seeker is a fair choice in midgame, but starts to struggle in late game. Its low HP and strong disabling mechs in endgame make it a little harder for Seeker to survive in meta play.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage boost",
+    "personal shield",
+    "shield",
+    "spawn drop"
+   ],
+   "abilityDuration": "7 seconds",
+   "abilityDamage": "100 meter (Range) ▪︎ +30% (Damage) ▪︎ 3,600-34,200 (Shield Durability)",
+   "abilityText": "Seeker's special ability, called Warp, allows it to teleport behind the nearest enemy within range, and it can't take damage during teleportation. After teleporting, Seeker activates a Personal shield and deals Bonus Damage for a short time before being teleported back (In 5 seconds). This makes Seeker a very powerful Attacker as it can deal damage then teleport back to safety, allowing time to reload its weapons before re-engaging the enemy mechs. Seeker will teleport back to its original location even if any enemy applies a debuff (like emp, daze, system crash).",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     24.0
+    ],
+    "HP": [
+     10200.0,
+     31500.0,
+     54700.0,
+     84600.0,
+     110400.0,
+     142300.0,
+     193200.0
+    ],
+    "Speed": [
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0
+    ],
+    "Power": [
+     85.0,
+     177.0,
+     307.0,
+     475.0,
+     620.0,
+     799.0,
+     1085.0
+    ],
+    "Ability Cooldown": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Ability Duration": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Shield Durability": [
+     3600.0,
+     5600.0,
+     9700.0,
+     15000.0,
+     19500.0,
+     25200.0,
+     34200.0
+    ],
+    "Warp Range": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ],
+    "Warp Duration": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Sentinel": {
+   "role": "Tank",
+   "rarity": "Epic",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 203100,
+   "speed": 19.0,
+   "ability": "Tall Shield",
+   "cooldown": "12 seconds, changes based on mech's remaining HP at Max Level: 100% 12s, 80% 10s, 60% 8s, 40% 6s, 20% 4s",
+   "traits": [
+    "Shielded Brawler",
+    "Exposed Flanks"
+   ],
+   "viability": "Sentinel can be used in midgame, but struggles in lategame and endgame.",
+   "gearHub": {
+    "amount": 103600,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "exterior shield",
+    "shield"
+   ],
+   "abilityDuration": "Infinite",
+   "abilityDamage": "6,100-57,400 (Shield Durability)",
+   "abilityText": "This mech is very familiar with Ares, specially considering its ability. It has a medium energy at max level (24) so that means it can be equipped with pretty powerful weapons. As of a tank, it has a pretty fast speed (19 kmph), that means it can move around the map pretty fast."
+  },
+  "Shadow": {
+   "role": "Scout",
+   "rarity": "Rare",
+   "class": "Light",
+   "energy": 16,
+   "hp": 80400,
+   "speed": 29.0,
+   "ability": "Steaith",
+   "cooldown": "8 seconds",
+   "traits": [
+    "Quick and Sneaky",
+    "Low Armor"
+   ],
+   "viability": "",
+   "gearHub": {
+    "amount": 420,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "stealth"
+   ],
+   "abilityDuration": "12 seconds",
+   "abilityDamage": "",
+   "abilityText": "Shadow is a rare scout mech. It's tied with Killshot, Surge, Slingshot, Blizzfrost, Nomad, and Redeemer for the highest base speed of any mech, which can be enhanced with its stealth ability. It may have the lowest HP out of any mech, but hitting Shadow isn't easy. Not only does it have a very low profile, high speed and great maneuverability, it has the ability to disappear from the opponents radar, disabling aim assist when trying to target Shadow. It will still be visible with a yellow or orange aura around him, but map presence, HP, statuses, target focus square, and weapon and ability tar",
+   "ranks": {
+    "Energy": [
+     4.0,
+     6.0,
+     8.0,
+     10.0,
+     12.0,
+     14.0,
+     16.0
+    ],
+    "HP": [
+     6000.0,
+     14700.0,
+     22800.0,
+     33000.0,
+     46000.0,
+     62200.0,
+     80400.0
+    ],
+    "Speed": [
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0
+    ],
+    "Power": [
+     86.0,
+     159.0,
+     246.0,
+     357.0,
+     497.0,
+     672.0,
+     869.0
+    ],
+    "Ability Cooldown": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Ability Duration": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Silverthorn": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 221600,
+   "speed": 23.0,
+   "ability": "Blade Burst",
+   "cooldown": "7 seconds",
+   "traits": [],
+   "viability": "Although in the highest tier, Silverthorn is not a strong mech. Its blade damage is too low, even at lower gameplay such as mid- and late-game. Even after the rework, only boosting it by 20,000 yet only allowing 70% shield piercing (meaning it's now *lower* than the original dama",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "weapon system"
+   ],
+   "abilityDuration": "3.5 seconds",
+   "abilityDamage": "(Varies, please see page)",
+   "abilityText": "Similar to Revokers, Blade Burst launches up to six retractable blades on chains that cause damage on impact and when being drawn back."
+  },
+  "Slingshot": {
+   "role": "Scout",
+   "rarity": "Uncommon",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 67600,
+   "speed": 29.0,
+   "ability": "Force Dash",
+   "cooldown": "6 seconds",
+   "traits": [
+    "fast"
+   ],
+   "viability": "Slingshot is designed to be an early game only mech. He is replaced by Killshot in a 7-day derby given to all new players. If his playstyle is favorved by a player outside of early game, he is often replaced by his dashing counterparts for mid, late, and endgame.",
+   "gearHub": {
+    "amount": 4700,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "damage",
+    "dash"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "12 meters (Radius) ▪︎ 40 meters (Distance) ▪︎ 2,400-22,600 (Damage)",
+   "abilityText": "Slingshot is a medium energy scout mech in the Killshot Family. It is found in the progress path where Killshot originally was. Like it's higher counterpart, it has a high energy capacity and highest speed in the game.",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     6000.0,
+     11000.0,
+     19200.0,
+     29600.0,
+     38700.0,
+     49800.0,
+     67600.0
+    ],
+    "Speed": [
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0
+    ],
+    "Power": [
+     79.0,
+     126.0,
+     219.0,
+     338.0,
+     441.0,
+     568.0,
+     771.0
+    ],
+    "Ability Cooldown": [
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0,
+     6.0
+    ],
+    "Ability Damage": [
+     2400.0,
+     3700.0,
+     6400.0,
+     9900.0,
+     12900.0,
+     16600.0,
+     22600.0
+    ],
+    "Dash Distance": [
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0
+    ],
+    "AOE Smash Impact Radius": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Solis": {
+   "role": "Support",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 170400,
+   "speed": 20.0,
+   "ability": "Optic Override",
+   "cooldown": "12 seconds",
+   "traits": [],
+   "viability": "Solis used to be a good mech. After the nerf, it is, and I don't like to use this word, genuinely 1pp% useless. An unfortunate loss to the Mech Arena community.",
+   "gearHub": {
+    "amount": 937500,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "speed boost",
+    "weapon system"
+   ],
+   "abilityDuration": "1.5 seconds",
+   "abilityDamage": "2 (Orb Count) ▪︎ 15 meters (Radius) ▪︎ +80% (Speed Boost)",
+   "abilityText": "Solis is a Legendary Support mech in Tier VIII. It has a decent-low HP and a very fast movement speed of 20 km/H, and a heavy energy capacity means it can be equipped with some heavy weapons. Solis' special ability, Optic Override, deploys an orb that temporarily blinds any enemy it makes contact with. If the orb misses its target, it still has a radius of effect, allowing it to potentially blind multiple mechs in the area. While affected by the blindness, the enemy's screen flashes white, severely impairing their ability to see and instantly disables all guided weapons and abilities. Similar ",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     9000.0,
+     31200.0,
+     48300.0,
+     70000.0,
+     97400.0,
+     131800.0,
+     170400.0
+    ],
+    "Speed": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "Power": [
+     114.0,
+     311.0,
+     481.0,
+     699.0,
+     971.0,
+     1315.0,
+     1698.0
+    ],
+    "Ability Cooldown": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Optic Override Radius": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ],
+    "Blind Effect Duration": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "Orb Count": [
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0,
+     2.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Stalker": {
+   "role": "Attacker",
+   "rarity": "Rare",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 140700,
+   "speed": 22.0,
+   "ability": "Predator Drive",
+   "cooldown": "9 seconds",
+   "traits": [],
+   "viability": "While other mechs are a better choice for long-term use, Stalker is a decent candidate for midgame play.",
+   "gearHub": {
+    "amount": 420,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage boost"
+   ],
+   "abilityDuration": "9 seconds",
+   "abilityDamage": "50%",
+   "abilityText": "Stalker is a medium Energy Attacker mech. He was the first mech to be introduced via Crate Rush instead of the old progress path. Stalkers's ability can be seen as a combination between Shadow and Tengu, allowing him to deal 1.5x damage for the and heal for the entire duration of the ability which is called Predator Drive. This does come at a price though, as Stalker takes 1.25x damage from weapons while its ability is active. It doesn't heal continously, rather it heals when it kills an opponent while the ability is active with 10% of its base HP per heal. Healing doesn't affect teammates. Th",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     10500.0,
+     22900.0,
+     39900.0,
+     61600.0,
+     80400.0,
+     103600.0,
+     140700.0
+    ],
+    "Speed": [
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0,
+     22.0
+    ],
+    "Power": [
+     85.0,
+     150.0,
+     261.0,
+     405.0,
+     528.0,
+     680.0,
+     924.0
+    ],
+    "Ability Cooldown": [
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0
+    ],
+    "Ability Duration": [
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0,
+     9.0
+    ],
+    "Heal on Kill": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Surge": {
+   "role": "Scout",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 170400,
+   "speed": 29.0,
+   "ability": "Storm Dash",
+   "cooldown": "7 seconds",
+   "traits": [],
+   "viability": "Surge may be seen in mid and late game, and often times in late game. Although, its low HP makes it vulnerable in endgame.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "dash",
+    "emp",
+    "stealth"
+   ],
+   "abilityDuration": "3 seconds",
+   "abilityDamage": "40 meters (Distance) ▪︎ 15 meters (Radius)",
+   "abilityText": "Surge is a Legendary dasher Scout mech specialized in beacon captures and close-quarter combat. It is known as a frustrating opponent to have and a major asset if given as a teammate. Surge is considered part of the Killshot Family. Surge unlocks in the high cost tier, coming in at 9,375 a-coins. Surge is often described as a mixture of Killshot and Zephyr. Its ability, like Killshot's, makes you dash forward at high speed, then freezes its enemies like Zephyr. Unlike Killshot and like Zephyr though, Surge doesn't deal damage on impact but releases an EMP that stuns mechs in the same fashion a",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     9000.0,
+     27800.0,
+     48300.0,
+     74700.0,
+     97400.0,
+     125500.0,
+     170400.0
+    ],
+    "Speed": [
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0,
+     29.0
+    ],
+    "Power": [
+     93.0,
+     196.0,
+     343.0,
+     529.0,
+     690.0,
+     889.0,
+     1208.0
+    ],
+    "Ability Cooldown": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Ability Duration": [
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0
+    ],
+    "Dash Distance": [
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0,
+     40.0
+    ],
+    "EMP Smash Radius": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Tailsting": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": null,
+   "speed": null,
+   "ability": "Signal Jammer",
+   "cooldown": "",
+   "traits": [],
+   "viability": "",
+   "gearHub": null,
+   "abilityTags": [
+    "damage",
+    "emp"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "",
+   "abilityText": "Tailsting is the newest Attacker, its ability is Signal jammer; it fires a sphere that bypasses shields and applies the Restrict effect, which disables the enemy's weapons and ability. It also makes enemies receive extra damage, to which a part of damage bypasses shields, and doesn't let them turn the top part of their chassis."
+  },
+  "Tengu": {
+   "role": "Scout",
+   "rarity": "Rare",
+   "class": "Light",
+   "energy": 16,
+   "hp": 140700,
+   "speed": 23.0,
+   "ability": "Sky Strike",
+   "cooldown": "5 seconds",
+   "traits": [
+    "Bird of Prey",
+    "Low Firepower"
+   ],
+   "viability": "By the time you unlock Tengu in the free daily reward program, it might not be viable for your hangar anymore. It begins to lose viability in early midgame. By late midgame, lategame, and endgame Tengu is bested by stronger weapons and mech abilities.",
+   "gearHub": {
+    "amount": 420,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "emp",
+    "jump",
+    "stealth"
+   ],
+   "abilityDuration": "5 seconds (Stasis) ▪︎ 4 seconds (Stealth)",
+   "abilityDamage": "5,700-53,600",
+   "abilityText": "Tengu is a Rare ranking, light Energy Scout mech. Tengu's ability Sky Strike is comparable to that of Lancer and Zephyr, combining Lancer's ability to parkour and Zephyr's ability to damage and stun. Tengu can deal high damage (53k at max) with his Sky Strike in a massive 15m radius and gains a stealth effect not unlike Shadow that lasts 4 seconds. Tengu is basically invincible at the apex of his jump, which makes Tengu a very aggressively capable mech with a high skill cap. In stealth, he cannot be targeted by guided weapons, which are one of the few ways he can be defeated in the sky or next",
+   "ranks": {
+    "Energy": [
+     4.0,
+     6.0,
+     8.0,
+     10.0,
+     12.0,
+     14.0,
+     16.0
+    ],
+    "HP": [
+     10500.0,
+     25800.0,
+     39900.0,
+     57800.0,
+     80400.0,
+     108800.0,
+     140700.0
+    ],
+    "Speed": [
+     23.0,
+     23.0,
+     23.0,
+     23.0,
+     23.0,
+     23.0,
+     23.0
+    ],
+    "Power": [
+     86.0,
+     167.0,
+     258.0,
+     374.0,
+     521.0,
+     705.0,
+     911.0
+    ],
+    "Ability Cooldown": [
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0,
+     7.0
+    ],
+    "Ability Damage": [
+     5700.0,
+     9800.0,
+     15200.0,
+     22000.0,
+     30700.0,
+     41500.0,
+     53600.0
+    ],
+    "Sky Strike Damage Radius": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ],
+    "Stasis Duration": [
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0,
+     5.0
+    ],
+    "Sky Strike Stasis Radius": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ],
+    "Stealth Duration": [
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0,
+     4.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Voidghost": {
+   "role": "Scout",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 198900,
+   "speed": 29.0,
+   "ability": "Glitched Out",
+   "cooldown": "14 seconds",
+   "traits": [],
+   "viability": "Voidghost is a strong mech through all levels of gameplay including early-, mid-, late-, and endgame.",
+   "gearHub": {
+    "amount": null,
+    "currency": "money"
+   },
+   "abilityTags": [],
+   "abilityDuration": "4 seconds (Duration) ▪︎ 5 seconds (Recast Wait Time inbetween first and second activations)",
+   "abilityDamage": "30% (Damage Boost during Recast Wait Time)",
+   "abilityText": "Voidghost is a Legendary Medium Scout in Mech Arena. It can be found in Tier X along with Silverthorn and Tailsting. With a unique ability, Voidghost can glitch out which makes it immaterial. During this Glitched Out ability inbetween worlds, he cannot take damage nor fire its weapons. It is similar to Redeemer, but the mech can be controlled manually. Scout As Voidghost is upgraded, new Perks are added: Rank 5: Ability can be activated twice in a row before going into Cooldown, like Lacewing Rank 6: A damage boost Max Rank: damage given during Recast Time (time inbetween first and second acti"
+  },
+  "Volti": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 207400,
+   "speed": 21.0,
+   "ability": "Thunderstorm",
+   "cooldown": "13 seconds",
+   "traits": [],
+   "viability": "Volti is a good mech in lategame, but slightly overpowered in endgame, even though its ability can reach over 200k damage, due to the amount of mods opponents use in endgame. It can be a solid mech in endgame if uograded enough and played with the right skills.",
+   "gearHub": {
+    "amount": null,
+    "currency": "money"
+   },
+   "abilityTags": [
+    "damage",
+    "weapon system"
+   ],
+   "abilityDuration": "6 seconds",
+   "abilityDamage": "90 meters (Range) ▪︎ 1,100-62,400 (Damage)",
+   "abilityText": "Volti is a Heavy energy capacity Legendary ranking Attacker mech"
+  },
+  "Vortex": {
+   "role": "Tank",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 269900,
+   "speed": 18.0,
+   "ability": "Nanobot Field",
+   "cooldown": "13 seconds",
+   "traits": [],
+   "viability": "Vortex is a fair mech through mid- and lategame, but is often not strong enough in emsgame battles. He does do well in Free-For-All, though.",
+   "gearHub": {
+    "amount": 9375,
+    "currency": "acoins"
+   },
+   "abilityTags": [
+    "damage",
+    "damage reduction",
+    "speed boost"
+   ],
+   "abilityDuration": "8 seconds",
+   "abilityDamage": "12 meters (Radius) ▪︎ 500-4,700 (Damage)",
+   "abilityText": "",
+   "ranks": {
+    "Energy": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     14300.0,
+     44000.0,
+     76500.0,
+     118200.0,
+     154300.0,
+     198800.0,
+     269900.0
+    ],
+    "Speed": [
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0
+    ],
+    "Power": [
+     105.0,
+     253.0,
+     440.0,
+     681.0,
+     889.0,
+     1145.0,
+     1554.0
+    ],
+    "Ability Cooldown": [
+     13.0,
+     13.0,
+     13.0,
+     13.0,
+     13.0,
+     13.0,
+     13.0
+    ],
+    "Ability Duration": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Field Damage": [
+     500.0,
+     800.0,
+     1300.0,
+     2100.0,
+     2700.0,
+     3500.0,
+     4700.0
+    ],
+    "Field Radius": [
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0,
+     12.0
+    ],
+    "Field Damage Reduction": [
+     -50.0,
+     -50.0,
+     -50.0,
+     -50.0,
+     -50.0,
+     -50.0,
+     -50.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Zephyr": {
+   "role": "Support",
+   "rarity": "Epic",
+   "class": "Medium",
+   "energy": 24,
+   "hp": 119500,
+   "speed": 18.0,
+   "ability": "Shock Pulse",
+   "cooldown": "8 seconds",
+   "traits": [
+    "Battlefield Control",
+    "Prime Target"
+   ],
+   "viability": "Zephyr is a solid mech throughout all of midgame. His ability is powerful against any mech, but his low HP causes players to consider replacing him in late and end game",
+   "gearHub": {
+    "amount": 186600,
+    "currency": "credits"
+   },
+   "abilityTags": [
+    "emp"
+   ],
+   "abilityDuration": "3 seconds",
+   "abilityDamage": "",
+   "abilityText": "Zephyr is a medium energy Support mech. Its the second and last Epic mech to be unlocked, coming after Cheetah. Zephyr's ability, Shock Pulse, alllows him to stun all mechs in a 30 meter radius around him for 3 seconds, completely disabling them from shooting their weapons, activating their abilities, and even moving. This not only makes him a valuable support mech that can change the tide of battle in a single click, it also allows him to be a solid mech to play on its own. This control over the battlefield makes Zephyr a favorite amongst many players",
+   "ranks": {
+    "Energy Capacity": [
+     6.0,
+     8.0,
+     12.0,
+     16.0,
+     18.0,
+     20.0,
+     24.0
+    ],
+    "HP": [
+     7500.0,
+     19500.0,
+     33900.0,
+     52300.0,
+     68300.0,
+     88000.0,
+     119500.0
+    ],
+    "Speed": [
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0,
+     18.0
+    ],
+    "Power": [
+     79.0,
+     140.0,
+     244.0,
+     377.0,
+     492.0,
+     634.0,
+     861.0
+    ],
+    "Ability Cooldown": [
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0,
+     8.0
+    ],
+    "Ability Duration": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "Shock Pulse Radius": [
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0,
+     30.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Deathwalker": {
+   "role": "Attacker",
+   "rarity": "Legendary",
+   "class": "Heavy",
+   "energy": 32,
+   "hp": 227300,
+   "speed": 19.0,
+   "ability": "Reanimate",
+   "cooldown": "15 seconds",
+   "traits": [],
+   "viability": "Deathwalker is considered one of the best mechs in the game. It is good through all stages of gameplay being all of early-, mid-, late-, and endgame.",
+   "gearHub": {
+    "amount": null,
+    "currency": "money"
+   },
+   "abilityTags": [
+    "spawn drop",
+    "speed boost"
+   ],
+   "abilityDuration": "15 seconds",
+   "abilityDamage": "3 second Invulnerability duration ▪︎ 60% Speed boost ▪︎ 5% HP Restoration",
+   "abilityText": "Deathwalker is a legendary heavy tank mech that can be acquired in Tier IX, though it is not yet available for purchase with in-game currency. Its signature ability, Reanimate, marks the location where it is activated and initiates a 15-second duration. During this time, if Deathwalker is destroyed, its health is fully restored, along with a 10% increase to its total HP, Deathwalker is also transported back to the activation point, becoming invulnerable during the transition and gaining a 100% speed boost. This grants it an impressive speed of 36 km/h, allowing for rapid repositioning and reco",
+   "ranks": {
+    "Energy": [
+     8.0,
+     12.0,
+     16.0,
+     20.0,
+     24.0,
+     28.0,
+     32.0
+    ],
+    "HP": [
+     12000.0,
+     41600.0,
+     64400.0,
+     93300.0,
+     129900.0,
+     175800.0,
+     227300.0
+    ],
+    "Speed": [
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0,
+     19.0
+    ],
+    "Power": [
+     147.0,
+     439.0,
+     682.0,
+     988.0,
+     1378.0,
+     1864.0,
+     2412.0
+    ],
+    "Ability Cooldown": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ],
+    "Ability Duration": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0
+    ],
+    "Invulnerability Duration": [
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0,
+     3.0
+    ],
+    "HP Restoration": [
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0
+    ]
+   },
+   "ranksSource": "Mech Arena Wiki (wiki.gg, CC BY-SA 4.0)"
+  },
+  "Biform": {
+   "role": "Support",
+   "rarity": "Legendary",
+   "class": "Medium",
+   "energy": 24,
+   "hp": null,
+   "speed": null,
+   "ability": "Paradigm Shift",
+   "cooldown": "",
+   "traits": [],
+   "viability": "",
+   "gearHub": null,
+   "abilityTags": [
+    "damage",
+    "heal"
+   ],
+   "abilityDuration": "",
+   "abilityDamage": "",
+   "abilityText": "Legendary medium Support mech (24 energy), ability Paradigm Shift. The wiki tags the ability as damage and heal but does not publish its numbers, max HP or speed yet: add them from the game with “+ Add or correct”."
+  }
+ },
+ "ranksColumns": [
+  "R1 lvl1",
+  "R2 lvl1",
+  "R3 lvl1",
+  "R4 lvl1",
+  "R5 lvl1",
+  "R6 lvl1",
+  "R6 lvl7 (max)"
+ ]
+}

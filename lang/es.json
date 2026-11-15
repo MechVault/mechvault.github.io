@@ -1,0 +1,1926 @@
+{
+ "name": "Español",
+ "culture": "es-ES",
+ "strings": [
+  [
+   "crediti",
+   "créditos"
+  ],
+  [
+   "mai",
+   "nunca"
+  ],
+  [
+   "adesso",
+   "ahora"
+  ],
+  [
+   "{0} min fa",
+   "hace {0} min"
+  ],
+  [
+   "{0} h fa",
+   "hace {0} h"
+  ],
+  [
+   "Account del {0}",
+   "Cuenta del {0}"
+  ],
+  [
+   "È l'unico account: non si può eliminare.",
+   "Es la única cuenta: no se puede eliminar."
+  ],
+  [
+   "Eliminare l'account «{0}» con tutti i suoi obiettivi e la cronologia?\n\nIl file viene spostato nel Cestino di Windows.",
+   "¿Eliminar la cuenta «{0}» con todos sus objetivos y el historial?\n\nEl archivo se mueve a la Papelera de Windows."
+  ],
+  [
+   "impostato da te",
+   "fijado por ti"
+  ],
+  [
+   "stima iniziale",
+   "estimación inicial"
+  ],
+  [
+   "ora",
+   "ahora"
+  ],
+  [
+   "1 giorno",
+   "1 día"
+  ],
+  [
+   "{0} giorni",
+   "{0} días"
+  ],
+  [
+   "imposta il ritmo",
+   "fija el ritmo"
+  ],
+  [
+   "oggi",
+   "hoy"
+  ],
+  [
+   "pronto",
+   "listo"
+  ],
+  [
+   "mancano {0} {1}",
+   "faltan {0} {1}"
+  ],
+  [
+   "Nessun obiettivo attivo.",
+   "Ningún objetivo activo."
+  ],
+  [
+   "Guadagno · {0}",
+   "Ganancia · {0}"
+  ],
+  [
+   "Spesa non autorizzata",
+   "Gasto no autorizado"
+  ],
+  [
+   "Spesa per missione",
+   "Gasto de misión"
+  ],
+  [
+   "Piccola spesa tollerata",
+   "Pequeño gasto tolerado"
+  ],
+  [
+   "Obiettivo comprato",
+   "Objetivo comprado"
+  ],
+  [
+   "Saldo iniziale · {0}",
+   "Saldo inicial · {0}"
+  ],
+  [
+   "letto dal gioco",
+   "leído del juego"
+  ],
+  [
+   "manuale",
+   "manual"
+  ],
+  [
+   "Buongiorno, pilota",
+   "Buenos días, piloto"
+  ],
+  [
+   "Buon pomeriggio, pilota",
+   "Buenas tardes, piloto"
+  ],
+  [
+   "Buonasera, pilota",
+   "Buenas noches, piloto"
+  ],
+  [
+   "1 giorno pulito",
+   "1 día limpio"
+  ],
+  [
+   "{0} giorni puliti",
+   "{0} días limpios"
+  ],
+  [
+   "Hai chiuso Mech Arena e la lettura automatica è spenta: aggiorna i saldi in Impostazioni.",
+   "Cerraste Mech Arena y la lectura automática está apagada: actualiza los saldos en Ajustes."
+  ],
+  [
+   "Apri Mech Arena e vai nell'hangar: leggo io crediti e A-coin dalla barra in alto.",
+   "Abre Mech Arena y ve al hangar: leo yo los créditos y A-coins de la barra superior."
+  ],
+  [
+   "Inserisci i saldi attuali in Impostazioni › Correggi a mano.",
+   "Introduce los saldos actuales en Ajustes › Corrección manual."
+  ],
+  [
+   "Acquisto autorizzato: compralo in gioco, riconosco da solo la spesa.",
+   "Compra autorizada: cómpralo en el juego, reconozco el gasto yo solo."
+  ],
+  [
+   "Hai il 100%: autorizza l'acquisto, poi compralo in gioco.",
+   "Tienes el 100%: autoriza la compra y luego cómpralo en el juego."
+  ],
+  [
+   "Al ritmo di ~{0} {1} al giorno ({2}).",
+   "A un ritmo de ~{0} {1} al día ({2})."
+  ],
+  [
+   "Il tempo stimato compare dopo un giorno di letture.",
+   "El tiempo estimado aparece tras un día de lecturas."
+  ],
+  [
+   "Nessun obiettivo",
+   "Ningún objetivo"
+  ],
+  [
+   "Aggiungine uno nella sezione Obiettivi.",
+   "Añade uno en la sección Objetivos."
+  ],
+  [
+   "~{0} al giorno · {1}",
+   "~{0} al día · {1}"
+  ],
+  [
+   "oggi {0}",
+   "hoy {0}"
+  ],
+  [
+   "Record: {0} giorni  ·  Spese confessate: {1}",
+   "Récord: {0} días  ·  Gastos confesados: {1}"
+  ],
+  [
+   "/ {0} crediti",
+   "/ {0} créditos"
+  ],
+  [
+   "Budget missioni disattivato: imposta un valore in Impostazioni.",
+   "Presupuesto de misiones desactivado: fija un valor en Ajustes."
+  ],
+  [
+   "Restano {0} crediti{1} per le missioni giornaliere, senza rompere la serie. Si azzera a mezzanotte.",
+   "Quedan {0} créditos{1} para las misiones diarias sin romper la racha. Se reinicia a medianoche."
+  ],
+  [
+   " e {0} A-coin",
+   " y {0} A-coins"
+  ],
+  [
+   "Ancora niente. Gioca una partita: ogni guadagno o spesa comparirà qui da solo.",
+   "Nada todavía. Juega una partida: cada ganancia o gasto aparecerá aquí solo."
+  ],
+  [
+   "Acquisto autorizzato · compralo in gioco, la spesa verrà riconosciuta",
+   "Compra autorizada · cómpralo en el juego, el gasto será reconocido"
+  ],
+  [
+   "Pronto · hai abbastanza {0}",
+   "Listo · tienes suficientes {0}"
+  ],
+  [
+   "mancano {0} · ~{1} · entro {2}",
+   "faltan {0} · ~{1} · para el {2}"
+  ],
+  [
+   "in coda dopo «{0}» · mancano {1} in totale · entro {2}",
+   "en cola tras «{0}» · faltan {1} en total · para el {2}"
+  ],
+  [
+   "   comprato il {0}",
+   "   comprado el {0}"
+  ],
+  [
+   "Nessun obiettivo per questo account. Aggiungine uno qui sotto.",
+   "Ningún objetivo para esta cuenta. Añade uno abajo."
+  ],
+  [
+   "Ancora da mettere da parte: ",
+   "Aún por ahorrar:"
+  ],
+  [
+   "Tutti gli obiettivi attivi sono coperti.",
+   "Todos los objetivos activos están cubiertos."
+  ],
+  [
+   "Oggi",
+   "Hoy"
+  ],
+  [
+   "Ieri",
+   "Ayer"
+  ],
+  [
+   "Nessuna attività registrata.",
+   "Ninguna actividad registrada."
+  ],
+  [
+   "Nessuna spesa confessata. Continua così.",
+   "Ningún gasto confesado. Sigue así."
+  ],
+  [
+   "Totale buttato: {0} crediti · {1} A-coin",
+   "Total desperdiciado: {0} créditos · {1} A-coins"
+  ],
+  [
+   "Lette dal gioco per l'account «{0}».",
+   "Leídos del juego para la cuenta «{0}»."
+  ],
+  [
+   "Saldo non ancora letto: apri Mech Arena e vai nell'hangar.",
+   "Saldo aún no leído: abre Mech Arena y ve al hangar."
+  ],
+  [
+   "{0} copiati negli appunti: {1}",
+   "{0} copiados al portapapeles: {1}"
+  ],
+  [
+   "Attivo: {0}  ·  Account salvati: {1}\nQuando apri Mech Arena ti chiedo sempre con quale giochi.",
+   "Activa: {0}  ·  Cuentas guardadas: {1}\nCuando abres Mech Arena siempre te pregunto con cuál juegas."
+  ],
+  [
+   "Mech Arena aperto",
+   "Mech Arena abierto"
+  ],
+  [
+   "Sorveglianza attiva",
+   "Vigilancia activa"
+  ],
+  [
+   "Mech Arena chiuso",
+   "Mech Arena cerrado"
+  ],
+  [
+   "Blocco attivo",
+   "Bloqueo activo"
+  ],
+  [
+   "lettura automatica spenta",
+   "lectura automática apagada"
+  ],
+  [
+   "OCR non disponibile",
+   "OCR no disponible"
+  ],
+  [
+   "ultima lettura {0}",
+   "última lectura {0}"
+  ],
+  [
+   "in attesa del gioco",
+   "esperando al juego"
+  ],
+  [
+   "MechVault · {0} · {1} gg puliti",
+   "MechVault · {0} · {1} días limpios"
+  ],
+  [
+   "Spesa rilevata dal gioco",
+   "Gasto detectado en el juego"
+  ],
+  [
+   "Il budget missioni di oggi ha coperto {0} {1}; questo è il resto. ",
+   "El presupuesto de misiones de hoy cubrió {0} {1}; esto es el resto."
+  ],
+  [
+   "Avevi {0} giorni puliti: la serie riparte da zero.",
+   "Tenías {0} días limpios: la racha vuelve a cero."
+  ],
+  [
+   "La serie riparte da zero.",
+   "La racha vuelve a cero."
+  ],
+  [
+   " Hai bruciato circa {0} giorni di grind.",
+   " Has quemado unos {0} días de grind."
+  ],
+  [
+   "Se era per una missione giornaliera premi «Era una missione»: non rompe la serie.",
+   "Si era para una misión diaria pulsa «Era una misión»: no rompe la racha."
+  ],
+  [
+   "Saldo letto",
+   "Saldo leído"
+  ],
+  [
+   "{0}: {1} {2}. Da qui parte il conteggio.",
+   "{0}: {1} {2}. Desde aquí empieza la cuenta."
+  ],
+  [
+   "Obiettivo completato!",
+   "¡Objetivo completado!"
+  ],
+  [
+   "{0}: te lo sei guadagnato.",
+   "{0}: te lo has ganado."
+  ],
+  [
+   "Acquisto",
+   "Compra"
+  ],
+  [
+   "Segnare −{0} {1} come spesa per una missione?\nLa serie torna com'era prima.",
+   "¿Marcar −{0} {1} como gasto de misión?\nLa racha vuelve a como estaba."
+  ],
+  [
+   "Numero non valido. Esempi: 512000 · 512k · 1,2M",
+   "Número no válido. Ejemplos: 512000 · 512k · 1,2M"
+  ],
+  [
+   "Obiettivo raggiunto: {0}\n\nAutorizzo UNA spesa di circa {1} {2} per le prossime 6 ore.\nCompralo in gioco: riconosco l'acquisto da solo e segno l'obiettivo come completato.\n\nQualsiasi altra spesa resta vietata. Procedo?",
+   "Objetivo alcanzado: {0}\n\nAutorizo UN gasto de unos {1} {2} durante las próximas 6 horas.\nCómpralo en el juego: reconozco la compra yo solo y marco el objetivo como completado.\n\nCualquier otro gasto sigue prohibido. ¿Continuar?"
+  ],
+  [
+   "Eliminare l'obiettivo «{0}»?",
+   "¿Eliminar el objetivo «{0}»?"
+  ],
+  [
+   "Scrivi il nome dell'obiettivo.",
+   "Escribe el nombre del objetivo."
+  ],
+  [
+   "Costo non valido. Esempi: 827k · 932000 · 1,2M",
+   "Coste no válido. Ejemplos: 827k · 932000 · 1,2M"
+  ],
+  [
+   "Espressione non valida.",
+   "Expresión no válida."
+  ],
+  [
+   "OCR di Windows non disponibile su questo PC.",
+   "El OCR de Windows no está disponible en este PC."
+  ],
+  [
+   "Mech Arena non è aperto.",
+   "Mech Arena no está abierto."
+  ],
+  [
+   "Barra delle valute non visibile: vai nell'hangar (non in battaglia) e riprova.",
+   "Barra de monedas no visible: ve al hangar (no en batalla) y reinténtalo."
+  ],
+  [
+   "Letto: ",
+   "Leído:"
+  ],
+  [
+   "Cambia account",
+   "Cambiar de cuenta"
+  ],
+  [
+   "{0}   ·   ultimo usato",
+   "{0}   ·   última usada"
+  ],
+  [
+   "{0} · sei a {1} giorni senza spendere. Non buttarli via per una cassa.",
+   "{0} · llevas {1} días sin gastar. No los tires por una caja."
+  ],
+  [
+   "Giocare, farmare, missioni giornaliere (fino a {0} crediti al giorno). Comprare solo l'obiettivo #1 al 100%.",
+   "Jugar, farmear, misiones diarias (hasta {0} créditos al día). Comprar solo el objetivo n.º 1 al 100%."
+  ],
+  [
+   "Leggi... ({0})",
+   "Lee... ({0})"
+  ],
+  [
+   "Ho capito: oggi non spendo",
+   "Entendido: hoy no gasto"
+  ],
+  [
+   "{0} crediti  ·  {1} A-coin",
+   "{0} créditos  ·  {1} A-coins"
+  ],
+  [
+   " · missioni {0} rimasti",
+   " · misiones {0} restantes"
+  ],
+  [
+   "{0}: blocco spese attivo.",
+   "{0}: bloqueo de gastos activo."
+  ],
+  [
+   "Partita finita",
+   "Partida terminada"
+  ],
+  [
+   "{0}: {1} crediti · {2} A-coin. Serie: {3} giorni.",
+   "{0}: {1} créditos · {2} A-coins. Racha: {3} días."
+  ],
+  [
+   "Se chiudi MechVault smette di sorvegliarti fino al prossimo avvio del PC.\n\nVuoi davvero uscire?",
+   "Si cierras MechVault deja de vigilarte hasta el próximo arranque del PC.\n\n¿De verdad quieres salir?"
+  ],
+  [
+   "MechVault resta attivo",
+   "MechVault sigue activo"
+  ],
+  [
+   "Ti sorveglio dalla barra. Per uscire: tasto destro sull'icona › Esci.",
+   "Te vigilo desde la bandeja. Para salir: clic derecho en el icono › Salir."
+  ],
+  [
+   "Apri MechVault",
+   "Abrir MechVault"
+  ],
+  [
+   "Esci",
+   "Salir"
+  ],
+  [
+   "{0} · {1} giorni senza spendere.",
+   "{0} · {1} días sin gastar."
+  ],
+  [
+   "MechVault attivo",
+   "MechVault activo"
+  ],
+  [
+   "Panoramica",
+   "Resumen"
+  ],
+  [
+   "Obiettivi",
+   "Objetivos"
+  ],
+  [
+   "Attività",
+   "Actividad"
+  ],
+  [
+   "Strumenti",
+   "Herramientas"
+  ],
+  [
+   "Impostazioni",
+   "Ajustes"
+  ],
+  [
+   "0 giorni puliti",
+   "0 días limpios"
+  ],
+  [
+   "Ciao, pilota",
+   "Hola, piloto"
+  ],
+  [
+   "completato",
+   "completado"
+  ],
+  [
+   "Prossimo obiettivo",
+   "Próximo objetivo"
+  ],
+  [
+   "Mancano",
+   "Faltan"
+  ],
+  [
+   "Tempo stimato",
+   "Tiempo estimado"
+  ],
+  [
+   "Pronto entro",
+   "Listo para el"
+  ],
+  [
+   "Compra ora",
+   "Comprar ahora"
+  ],
+  [
+   "oggi 0",
+   "hoy 0"
+  ],
+  [
+   "Crediti",
+   "Créditos"
+  ],
+  [
+   "Serie senza spese",
+   "Racha sin gastos"
+  ],
+  [
+   "giorni",
+   "días"
+  ],
+  [
+   "14 giorni fa",
+   "hace 14 días"
+  ],
+  [
+   "Budget missioni di oggi",
+   "Presupuesto de misiones de hoy"
+  ],
+  [
+   "/ 2.000 crediti",
+   "/ 2.000 créditos"
+  ],
+  [
+   "Spese per le missioni giornaliere (es. «usa 2.000 crediti»): non rompono la serie. Si azzera a mezzanotte.",
+   "Gastos para las misiones diarias (p. ej. «usa 2.000 créditos»): no rompen la racha. Se reinicia a medianoche."
+  ],
+  [
+   "Vedi tutto",
+   "Ver todo"
+  ],
+  [
+   "Ultime attività",
+   "Última actividad"
+  ],
+  [
+   "Nuovo obiettivo",
+   "Nuevo objetivo"
+  ],
+  [
+   "Nome (es. Hadron Lance liv. 20)",
+   "Nombre (p. ej. Hadron Lance niv. 20)"
+  ],
+  [
+   "Costo (es. 827k)",
+   "Coste (p. ej. 827k)"
+  ],
+  [
+   "Aggiungi",
+   "Añadir"
+  ],
+  [
+   "Nome · costo (es. 827k) · valuta. L'ordine conta: si può comprare solo il primo della lista per ogni valuta.",
+   "Nombre · coste (p. ej. 827k) · moneda. El orden importa: solo se puede comprar el primero de la lista de cada moneda."
+  ],
+  [
+   "Tutto quello che MechVault ha visto cambiare nei tuoi saldi.",
+   "Todo lo que MechVault ha visto cambiar en tus saldos."
+  ],
+  [
+   "Crediti guadagnati · 14 gg",
+   "Créditos ganados · 14 d"
+  ],
+  [
+   "A-coin guadagnate · 14 gg",
+   "A-coins ganadas · 14 d"
+  ],
+  [
+   "Crediti sprecati · 14 gg",
+   "Créditos desperdiciados · 14 d"
+  ],
+  [
+   "A-coin sprecate · 14 gg",
+   "A-coins desperdiciadas · 14 d"
+  ],
+  [
+   "Cronologia",
+   "Historial"
+  ],
+  [
+   "Confessionale",
+   "Confesionario"
+  ],
+  [
+   "Le mie risorse",
+   "Mis recursos"
+  ],
+  [
+   "Copia",
+   "Copiar"
+  ],
+  [
+   "Informazioni",
+   "Información"
+  ],
+  [
+   "MechVault è un progetto di fan. Non è affiliato, approvato o sponsorizzato da Plarium Global Ltd. Mech Arena e i relativi nomi e marchi appartengono ai rispettivi proprietari.",
+   "MechVault es un proyecto de fans. No está afiliado, aprobado ni patrocinado por Plarium Global Ltd. Mech Arena y sus nombres y marcas pertenecen a sus respectivos propietarios."
+  ],
+  [
+   "MechVault legge solo lo schermo, come uno screenshot: non modifica il gioco, non legge la sua memoria e non automatizza nulla.",
+   "MechVault solo lee la pantalla, como una captura: no modifica el juego, no lee su memoria y no automatiza nada."
+  ],
+  [
+   "Lingua",
+   "Idioma"
+  ],
+  [
+   "Account",
+   "Cuenta"
+  ],
+  [
+   "Nuovo nome per questo account",
+   "Nuevo nombre para esta cuenta"
+  ],
+  [
+   "Rinomina",
+   "Renombrar"
+  ],
+  [
+   "Cambia o crea",
+   "Cambiar o crear"
+  ],
+  [
+   "Elimina",
+   "Eliminar"
+  ],
+  [
+   "Budget missioni",
+   "Presupuesto de misiones"
+  ],
+  [
+   "Quanto puoi spendere ogni giorno per completare le missioni giornaliere (es. «usa 2.000 crediti») senza rompere la serie. Oltre il budget è una spesa vietata.",
+   "Cuánto puedes gastar cada día para completar las misiones diarias (p. ej. «usa 2.000 créditos») sin romper la racha. Por encima del presupuesto es un gasto prohibido."
+  ],
+  [
+   "Crediti al giorno",
+   "Créditos al día"
+  ],
+  [
+   "A-coin al giorno",
+   "A-coins al día"
+  ],
+  [
+   "Salva",
+   "Guardar"
+  ],
+  [
+   "Lettura automatica",
+   "Lectura automática"
+  ],
+  [
+   "Leggi crediti e A-coin dallo schermo del gioco",
+   "Leer créditos y A-coins de la pantalla del juego"
+  ],
+  [
+   "Guarda solo la barra delle valute in alto a destra, come uno screenshot, ogni 3 secondi. Non legge la memoria del gioco e non tocca i suoi file: niente rischio ban. Funziona nell'hangar e nei menu.",
+   "Solo mira la barra de monedas arriba a la derecha, como una captura, cada 3 segundos. No lee la memoria del juego ni toca sus archivos: sin riesgo de baneo. Funciona en el hangar y los menús."
+  ],
+  [
+   "Prova lettura adesso",
+   "Probar lectura ahora"
+  ],
+  [
+   "Correggi a mano",
+   "Corrección manual"
+  ],
+  [
+   "Solo se la lettura automatica sbaglia o è spenta. Anche qui un saldo più basso conta come spesa.",
+   "Solo si la lectura automática falla o está apagada. Aquí también un saldo más bajo cuenta como gasto."
+  ],
+  [
+   "Crediti attuali (es. 512k)",
+   "Créditos actuales (p. ej. 512k)"
+  ],
+  [
+   "A-coin attuali",
+   "A-coins actuales"
+  ],
+  [
+   "Ritmo crediti/giorno",
+   "Ritmo créditos/día"
+  ],
+  [
+   "0 = calcolato in automatico",
+   "0 = calculado automáticamente"
+  ],
+  [
+   "A-coin/giorno",
+   "A-coins/día"
+  ],
+  [
+   "Sistema",
+   "Sistema"
+  ],
+  [
+   "Avvia MechVault con Windows",
+   "Iniciar MechVault con Windows"
+  ],
+  [
+   "Promemoria fisso sullo schermo mentre giochi",
+   "Recordatorio fijo en pantalla mientras juegas"
+  ],
+  [
+   "Processo del gioco (espressione regolare)",
+   "Proceso del juego (expresión regular)"
+  ],
+  [
+   "Esci da MechVault",
+   "Salir de MechVault"
+  ],
+  [
+   "Mech Arena rilevato",
+   "Mech Arena detectado"
+  ],
+  [
+   "Prima di giocare, leggi.",
+   "Antes de jugar, lee."
+  ],
+  [
+   "Vietato",
+   "Prohibido"
+  ],
+  [
+   "Crate Rush · casse · offerte a tempo · spin · scorciatoie",
+   "Crate Rush · cajas · ofertas por tiempo · tiradas · atajos"
+  ],
+  [
+   "Consentito",
+   "Permitido"
+  ],
+  [
+   "Giocare, farmare, missioni giornaliere. Comprare solo l'obiettivo #1 al 100%.",
+   "Jugar, farmear, misiones diarias. Comprar solo el objetivo n.º 1 al 100%."
+  ],
+  [
+   "I tuoi obiettivi",
+   "Tus objetivos"
+  ],
+  [
+   "Ti sto guardando: se i saldi scendono, lo vedo da solo.",
+   "Te estoy mirando: si los saldos bajan, lo veo yo solo."
+  ],
+  [
+   "Leggi...",
+   "Lee..."
+  ],
+  [
+   "Spesa rilevata",
+   "Gasto detectado"
+  ],
+  [
+   "Perché l'hai fatto? (obbligatorio, almeno 15 caratteri)",
+   "¿Por qué lo hiciste? (obligatorio, al menos 15 caracteres)"
+  ],
+  [
+   "Confesso. Azzera la serie.",
+   "Confieso. Reinicia la racha."
+  ],
+  [
+   "Era una missione",
+   "Era una misión"
+  ],
+  [
+   "Non rompe la serie: viene contata nel budget missioni",
+   "No rompe la racha: cuenta en el presupuesto de misiones"
+  ],
+  [
+   "Lettura sbagliata",
+   "Lectura errónea"
+  ],
+  [
+   "Con quale account giochi?",
+   "¿Con qué cuenta juegas?"
+  ],
+  [
+   "Ogni account ha saldi, obiettivi e serie separati.",
+   "Cada cuenta tiene saldos, objetivos y racha separados."
+  ],
+  [
+   "Nuovo account",
+   "Nueva cuenta"
+  ],
+  [
+   "Nome del nuovo account",
+   "Nombre de la nueva cuenta"
+  ],
+  [
+   "Crea e usa",
+   "Crear y usar"
+  ],
+  [
+   "Risparmio attivo · non spendere",
+   "Ahorro activo · no gastes"
+  ],
+  [
+   "Annulla",
+   "Cancelar"
+  ],
+  [
+   "Revoca l'autorizzazione",
+   "Revocar la autorización"
+  ],
+  [
+   "Bloccato",
+   "Bloqueado"
+  ],
+  [
+   "Più importante",
+   "Más importante"
+  ],
+  [
+   "Meno importante",
+   "Menos importante"
+  ],
+  [
+   "Rimuovi dalla lista",
+   "Quitar de la lista"
+  ],
+  [
+   "Era una missione: ripristina la serie",
+   "Era una misión: restaurar la racha"
+  ],
+  [
+   "Una Crate Rush senza garantito non ha un tetto di spesa. Un obiettivo a crediti sì.",
+   "Una Crate Rush sin garantizado no tiene tope de gasto. Un objetivo en créditos sí."
+  ],
+  [
+   "Le casse sono progettate per farti perdere. Un obiettivo fisso no.",
+   "Las cajas están diseñadas para hacerte perder. Un objetivo fijo no."
+  ],
+  [
+   "Ogni giorno senza spendere avvicina il tuo prossimo obiettivo.",
+   "Cada día sin gastar acerca tu próximo objetivo."
+  ],
+  [
+   "Un'arma sicura vale più di dieci tentativi a vuoto.",
+   "Un arma segura vale más que diez intentos fallidos."
+  ],
+  [
+   "La voglia di aprire una cassa passa in 5 minuti. Il saldo vuoto resta.",
+   "Las ganas de abrir una caja pasan en 5 minutos. El saldo vacío se queda."
+  ],
+  [
+   "Le offerte a tempo esistono per farti decidere senza pensare. Pensa.",
+   "Las ofertas por tiempo existen para que decidas sin pensar. Piensa."
+  ],
+  [
+   "budget missioni",
+   "presupuesto de misiones"
+  ],
+  [
+   "segnata come missione",
+   "marcada como misión"
+  ],
+  [
+   "saldo iniziale",
+   "saldo inicial"
+  ],
+  [
+   "Pianifica i potenziamenti con le risorse lette dal gioco. Calcolatore e gestore di obiettivi sono di MechVault: niente siti esterni.",
+   "Planifica las mejoras con los recursos leídos del juego. La calculadora y el gestor de objetivos son de MechVault; los costes vienen del wiki de la comunidad."
+  ],
+  [
+   "Calcolatore potenziamenti",
+   "Calculadora de mejoras"
+  ],
+  [
+   "Mech o arma, rarità, da quale stella e livello a quale: somma crediti, blueprint e A-coin e li confronta con le tue risorse.",
+   "Mech o arma, rareza, de qué estrella y nivel a cuál: suma créditos, planos y A-coins y los compara con tus recursos."
+  ],
+  [
+   "Nome dell'oggetto",
+   "Nombre del objeto"
+  ],
+  [
+   "Arma",
+   "Arma"
+  ],
+  [
+   "Comune",
+   "Común"
+  ],
+  [
+   "Non comune",
+   "Poco común"
+  ],
+  [
+   "Raro",
+   "Raro"
+  ],
+  [
+   "Epico",
+   "Épico"
+  ],
+  [
+   "Leggendario",
+   "Legendario"
+  ],
+  [
+   "Da stella",
+   "Desde estrella"
+  ],
+  [
+   "Da livello",
+   "Desde nivel"
+  ],
+  [
+   "A stella",
+   "Hasta estrella"
+  ],
+  [
+   "A livello",
+   "Hasta nivel"
+  ],
+  [
+   "Al massimo",
+   "Al máximo"
+  ],
+  [
+   "1-6 stelle, 7 livelli per stella. Dopo il livello 7 si sale di stella e si riparte dal livello 1. Il massimo è 6 stelle livello 7.",
+   "1-6 estrellas, 7 niveles por estrella. Tras el nivel 7 subes de estrella y vuelves al nivel 1. El máximo es 6 estrellas nivel 7."
+  ],
+  [
+   "Blueprint",
+   "Planos"
+  ],
+  [
+   "I miei blueprint",
+   "Mis planos"
+  ],
+  [
+   "Aggiungi agli obiettivi",
+   "Añadir a objetivos"
+  ],
+  [
+   "Importa tabella",
+   "Importar tabla"
+  ],
+  [
+   "Esporta tabella",
+   "Exportar tabla"
+  ],
+  [
+   "Costi passo per passo",
+   "Costes paso a paso"
+  ],
+  [
+   "Passo",
+   "Paso"
+  ],
+  [
+   "Stelle da 1 a 6, livelli da 1 a 7.",
+   "Estrellas de 1 a 6, niveles de 1 a 7."
+  ],
+  [
+   "★{0} · liv. {1} → {2}",
+   "★{0} · niv. {1} → {2}"
+  ],
+  [
+   "★{0} → ★{1}",
+   "★{0} → ★{1}"
+  ],
+  [
+   "mancano {0}",
+   "faltan {0}"
+  ],
+  [
+   "coperto ✓",
+   "cubierto ✓"
+  ],
+  [
+   "per ora coperto",
+   "cubierto por ahora"
+  ],
+  [
+   "saldo non ancora letto",
+   "saldo aún no leído"
+  ],
+  [
+   "scrivi quanti ne hai",
+   "escribe cuántos tienes"
+  ],
+  [
+   "Scegli un arrivo più alto della partenza.",
+   "Elige un destino más alto que el inicio."
+  ],
+  [
+   "Mancano {0} costi su {1}: copiali qui sotto dalla schermata di potenziamento del gioco. Per ora il totale è un minimo.",
+   "Faltan {0} costes de {1}: cópialos abajo desde la pantalla de mejora del juego. Por ahora el total es un mínimo."
+  ],
+  [
+   "crediti tra ~{0}",
+   "créditos en ~{0}"
+  ],
+  [
+   "crediti: imposta il ritmo",
+   "créditos: fija el ritmo"
+  ],
+  [
+   "A-coin tra ~{0}",
+   "A-coins en ~{0}"
+  ],
+  [
+   "A-coin: imposta il ritmo",
+   "A-coins: fija el ritmo"
+  ],
+  [
+   "{0} passi. Al tuo ritmo: {1}.",
+   "{0} pasos. A tu ritmo: {1}."
+  ],
+  [
+   "{0} passi. Hai già tutto il necessario.",
+   "{0} pasos. Ya tienes todo lo necesario."
+  ],
+  [
+   "{0} passi.",
+   "{0} pasos."
+  ],
+  [
+   "Prima compila tutti i costi ({0} mancanti).",
+   "Primero rellena todos los costes (faltan {0})."
+  ],
+  [
+   "liv. {0}",
+   "niv. {0}"
+  ],
+  [
+   "Costo totale zero: niente da aggiungere.",
+   "Coste total cero: nada que añadir."
+  ],
+  [
+   "Aggiunto agli obiettivi: {0}",
+   "Añadido a objetivos: {0}"
+  ],
+  [
+   "File non valido: serve una tabella esportata da MechVault.",
+   "Archivo no válido: hace falta una tabla exportada desde MechVault."
+  ],
+  [
+   "Importati {0} costi.",
+   "Importados {0} costes."
+  ],
+  [
+   "Tabella esportata: {0} costi.",
+   "Tabla exportada: {0} costes."
+  ],
+  [
+   "Energia dell'arma (la vedi nella scheda dell'arma)",
+   "Energía del arma (la ves en la ficha del arma)"
+  ],
+  [
+   "Dal Mech Arena Wiki: correggilo se nel gioco è diverso.",
+   "Del Mech Arena Wiki: corrígelo si en el juego es distinto."
+  ],
+  [
+   "Costi già inclusi dal Mech Arena Wiki (Fandom, licenza CC BY-SA 3.0). Se nel gioco vedi un numero diverso correggilo qui: la tua correzione vale per tutti gli oggetti uguali. Una casella vuota è un costo che il wiki non ha. Con Esporta/Importa condividi la tabella con altri piloti.",
+   "Los costes vienen incluidos del Mech Arena Wiki (Fandom, licencia CC BY-SA 3.0). Si en el juego ves otro número, corrígelo aquí: tu corrección vale para todos los objetos iguales. Una casilla vacía es un coste que el wiki no tiene. Con Exportar/Importar compartes la tabla con otros pilotos."
+  ],
+  [
+   "Costi di potenziamento: Mech Arena: Robot Showdown Wiki (mech-arena-robot-showdown.fandom.com, pagine Mechs e Weapons), licenza CC BY-SA 3.0. Dati riformattati in calc\\wiki-costs.json, stessa licenza.",
+   "Costes de mejora: Mech Arena: Robot Showdown Wiki (mech-arena-robot-showdown.fandom.com, páginas Mechs y Weapons), licencia CC BY-SA 3.0. Datos reformateados en calc\\wiki-costs.json, misma licencia."
+  ],
+  [
+   "automatico · prima sessione",
+   "automático · primera sesión"
+  ],
+  [
+   "automatico · 1 giorno giocato",
+   "automático · 1 día jugado"
+  ],
+  [
+   "automatico · {0} giorni giocati",
+   "automático · {0} días jugados"
+  ],
+  [
+   "{0}: ancora nessun guadagno registrato.",
+   "{0}: aún no hay ganancias registradas."
+  ],
+  [
+   "{0}: ~{1} al giorno · {2} per giorno giocato · giochi {3} giorni su 7 · {4}",
+   "{0}: ~{1} al día · {2} por día jugado · juegas {3} días de 7 · {4}"
+  ],
+  [
+   " (solo oggi: si assesta nei prossimi giorni)",
+   " (solo hoy: se ajusta en los próximos días)"
+  ],
+  [
+   "Ritmo automatico",
+   "Ritmo automático"
+  ],
+  [
+   "Calcolato da solo dai saldi letti: guadagni meno spese per missioni, ultimi 28 giorni, i giorni recenti contano di più, e tiene conto dei giorni in cui non giochi. Lascia 0 nei campi sopra per usarlo.",
+   "Calculado solo a partir de los saldos leídos: ganancias menos gastos de misiones, últimos 28 días, los días recientes cuentan más, y tiene en cuenta los días que no juegas. Deja 0 en los campos de arriba para usarlo."
+  ],
+  [
+   "Ritmo: gioca una partita e lo calcolo da solo",
+   "Ritmo: juega una partida y lo calculo yo solo"
+  ],
+  [
+   " · esclusi {0} guadagni una tantum",
+   " · excluidas {0} ganancias puntuales"
+  ],
+  [
+   "1 giorno di dati",
+   "1 día de datos"
+  ],
+  [
+   "{0} giorni di dati",
+   "{0} días de datos"
+  ],
+  [
+   "{0}: ultimamente spendi più di quanto guadagni, il ritmo è zero.",
+   "{0}: últimamente gastas más de lo que ganas, el ritmo es cero."
+  ],
+  [
+   "Analisi Crate Rush",
+   "Análisis de Crate Rush"
+  ],
+  [
+   "Confronta una Crate Rush (a A-coin o a crediti) con l'acquisto diretto nel Gear Hub (a crediti o A-coin), usando il tuo ritmo: quanto costa in media, nel caso peggiore, e fino a quanto ha senso spendere.",
+   "Compara una Crate Rush (en A-coins o créditos) con la compra directa en el Gear Hub (en créditos o A-coins), usando tu ritmo: coste medio, peor caso y hasta cuánto tiene sentido gastar."
+  ],
+  [
+   "Premio principale della Crate Rush",
+   "Premio principal de la Crate Rush"
+  ],
+  [
+   "Costo di uno spin",
+   "Coste de una tirada"
+  ],
+  [
+   "Probabilità del premio a spin (%)",
+   "Probabilidad del premio por tirada (%)"
+  ],
+  [
+   "La trovi nelle info della Crate Rush (es. 1,5)",
+   "Está en la info de la Crate Rush (p. ej. 1,5)"
+  ],
+  [
+   "Prezzo dello stesso oggetto nel Gear Hub",
+   "Precio del mismo objeto en el Gear Hub"
+  ],
+  [
+   "Dal calcolatore",
+   "De la calculadora"
+  ],
+  [
+   "Quanto vorresti spendere (facoltativo)",
+   "Cuánto gastarías (opcional)"
+  ],
+  [
+   "Scrivi il costo di uno spin.",
+   "Escribe el coste de una tirada."
+  ],
+  [
+   "Via diretta: {0} {2} = ~{1} di grind.",
+   "Vía directa: {0} {2} = ~{1} de grind."
+  ],
+  [
+   " (~{0} di grind)",
+   " (~{0} de grind)"
+  ],
+  [
+   "In media servono {0} spin = {1} {2}{3}.",
+   "De media hacen falta {0} tiradas = {1} {2}{3}."
+  ],
+  [
+   "Metà dei giocatori lo prende entro {0} spin ({1} {3}), 9 su 10 entro {2} ({4} {3}).",
+   "La mitad de los jugadores lo consigue en {0} tiradas ({1} {3}), 9 de 10 en {2} ({4} {3})."
+  ],
+  [
+   "Caso peggiore, con il garantito: {0} spin = {1} {2}.",
+   "Peor caso, con el garantizado: {0} tiradas = {1} {2}."
+  ],
+  [
+   "Nessun garantito: 1 giocatore su 10 spende più di {0} {1} e non c'è un tetto.",
+   "Sin garantizado: 1 de cada 10 jugadores gasta más de {0} {1} y no hay tope."
+  ],
+  [
+   "Con {0} {1} ({2} spin) hai il {3} di probabilità di prenderlo.",
+   "Con {0} {1} ({2} tiradas) tienes un {3} de probabilidad de conseguirlo."
+  ],
+  [
+   "Truffa: in media costa {0} volte la via diretta.",
+   "Estafa: de media cuesta {0} veces la vía directa."
+  ],
+  [
+   "In media conviene ({0} della via diretta), ma resta un azzardo.",
+   "De media conviene ({0} de la vía directa), pero sigue siendo una apuesta."
+  ],
+  [
+   "Pari con la via diretta: nessun vantaggio, solo rischio.",
+   "Igual que la vía directa: ninguna ventaja, solo riesgo."
+  ],
+  [
+   "Scrivi il costo a crediti per avere il giudizio.",
+   "Escribe el coste en créditos para tener el veredicto."
+  ],
+  [
+   "Scrivi la probabilità del premio per il giudizio.",
+   "Escribe la probabilidad del premio para el veredicto."
+  ],
+  [
+   "Conviene solo se lo prendi entro {0} spin: serve almeno il {1} a spin. Se le info della Crate Rush dicono meno, è una truffa.",
+   "Solo conviene si lo consigues en {0} tiradas: hace falta al menos un {1} por tirada. Si la info de la Crate Rush dice menos, es una estafa."
+  ],
+  [
+   "Truffa: un solo spin costa più della via diretta.",
+   "Estafa: una sola tirada cuesta más que la vía directa."
+  ],
+  [
+   "Budget massimo sensato: {0} {1} ({2} spin). Oltre, la via diretta costa meno.",
+   "Presupuesto máximo sensato: {0} {1} ({2} tiradas). Más allá, la vía directa cuesta menos."
+  ],
+  [
+   "Calcolato con il tuo ritmo: ~{0} crediti e ~{1} A-coin al giorno.",
+   "Calculado con tu ritmo: ~{0} créditos y ~{1} A-coins al día."
+  ],
+  [
+   "Trascina per spostare",
+   "Arrastra para mover"
+  ],
+  [
+   "Rimpicciolisci / ingrandisci",
+   "Reducir / ampliar"
+  ],
+  [
+   "Riporta in basso a destra",
+   "Volver abajo a la derecha"
+  ],
+  [
+   "Trascina il promemoria per spostarlo. Il pulsante nell'angolo lo rimpicciolisce: normale, piccolo, solo una riga.",
+   "Arrastra el recordatorio para moverlo. El botón de la esquina lo reduce: normal, pequeño, una sola línea."
+  ],
+  [
+   "{0}: blocco spese attivo. Per cambiare account: icona MechVault › Cambia account.",
+   "{0}: bloqueo de gastos activo. Para cambiar de cuenta: icono de MechVault › Cambiar de cuenta."
+  ],
+  [
+   "Garantito spendendo (0 = no)",
+   "Garantizado gastando (0 = no)"
+  ],
+  [
+   "Di solito 7.000 A-coin per la Crate Rush",
+   "Normalmente 7.000 A-coins en la Crate Rush"
+  ],
+  [
+   "Garantito: al massimo {0} spin = {1} {2}{3}, qualunque sia la fortuna.",
+   "Garantizado: como máximo {0} tiradas = {1} {2}{3}, tengas la suerte que tengas."
+  ],
+  [
+   "Conviene: anche nel caso peggiore costa {0} della via diretta.",
+   "Conviene: incluso en el peor caso cuesta un {0} de la vía directa."
+  ],
+  [
+   "Rischio: nel caso peggiore costa {0} volte la via diretta. Scrivi la probabilità per il costo medio.",
+   "Riesgo: en el peor caso cuesta {0} veces la vía directa. Escribe la probabilidad para ver el coste medio."
+  ],
+  [
+   "Ricorda: le A-coin servono anche per salire di stella (810 per un'arma epica, 1.875 per un mech epico).",
+   "Recuerda: las A-coins también sirven para subir de estrella (810 un arma épica, 1.875 un mech épico)."
+  ],
+  [
+   "Il premio della cassa arriva a ★ / liv.",
+   "El premio de la caja llega a ★ / niv."
+  ],
+  [
+   "Comprato nel Gear Hub arriva a ★ / liv.",
+   "Comprado en el Gear Hub llega a ★ / niv."
+  ],
+  [
+   "Via diretta: {0} {6}, poi da {1} servono {2} crediti, {3} A-coin e {4} blueprint = ~{5} in tutto.",
+   "Vía directa: {0} {6}, y desde {1} hacen falta {2} créditos, {3} A-coins y {4} planos = ~{5} en total."
+  ],
+  [
+   "Con la cassa: da {0} servono ancora {1} crediti, {2} A-coin e {3} blueprint (~{4}).",
+   "Con la caja: desde {0} aún hacen falta {1} créditos, {2} A-coins y {3} planos (~{4})."
+  ],
+  [
+   "Blueprint: con la cassa ne servono {0} in più (non convertibili in giorni).",
+   "Planos: con la caja hacen falta {0} más (no se convierten en días)."
+  ],
+  [
+   "Mancano {0} costi di potenziamento nella tabella: il confronto è approssimato.",
+   "Faltan {0} costes de mejora en la tabla: la comparación es aproximada."
+  ],
+  [
+   "Il premio della cassa arriva così basso che i soli potenziamenti costano più della via diretta.",
+   "El premio de la caja llega tan bajo que solo las mejoras cuestan más que la vía directa."
+  ],
+  [
+   "Potenziamenti: stelle da 1 a 6, livelli da 1 a 7.",
+   "Mejoras: estrellas de 1 a 6, niveles de 1 a 7."
+  ],
+  [
+   "Ritmo troppo alto: massimo 2.000.000 crediti e 50.000 A-coin al giorno. Lascia 0 per il calcolo automatico.",
+   "Ritmo demasiado alto: como máximo 2.000.000 créditos y 50.000 A-coins al día. Deja 0 para el cálculo automático."
+  ],
+  [
+   "Gli spin si pagano in",
+   "Las tiradas se pagan en"
+  ],
+  [
+   "Il premio arriva a ★{0}, dal Gear Hub a ★{1}: finché non paghi le stelle mancanti non hai i bonus di rango (per esempio la Voidghost sblocca la doppia abilità a rango 5).",
+   "El premio llega a ★{0}, desde el Gear Hub a ★{1}: hasta que pagues las estrellas que faltan no tienes las ventajas de rango (por ejemplo Voidghost desbloquea su doble habilidad en rango 5)."
+  ],
+  [
+   "Truffa: anche gratis, il premio della cassa ti costa più potenziamenti della via diretta.",
+   "Estafa: aunque fuera gratis, el premio de la caja te cuesta más mejoras que la vía directa."
+  ],
+  [
+   "+ Aggiungi premio",
+   "+ Añadir premio"
+  ],
+  [
+   "Altri premi della stessa Crate Rush",
+   "Otros premios de la misma Crate Rush"
+  ],
+  [
+   "Ogni premio con la sua probabilità a spin e il prezzo nel Gear Hub. Spunta «Lo voglio» solo per quelli che useresti davvero: gli altri valgono zero.",
+   "Cada premio con su probabilidad por tirada y su precio en el Gear Hub. Marca «Lo quiero» solo en los que usarías de verdad: los demás valen cero."
+  ],
+  [
+   "Premio",
+   "Premio"
+  ],
+  [
+   "Prob. %",
+   "Prob. %"
+  ],
+  [
+   "Prezzo Gear Hub",
+   "Precio Gear Hub"
+  ],
+  [
+   "Ogni premio vale quanto costerebbe nel Gear Hub, in giorni di grind al tuo ritmo; un doppione non vale niente. Le probabilità le trovi nelle info della Crate Rush (pulsante i).",
+   "Cada premio vale lo que costaría en el Gear Hub, en días de grind a tu ritmo; un duplicado no vale nada. Las probabilidades están en la info de la Crate Rush (botón i)."
+  ],
+  [
+   "Scheda mech",
+   "Ficha de mech"
+  ],
+  [
+   "Quanto vale un mech in battaglia prima di spenderci: resistenza, velocità, energia per le armi e abilità, confrontati con tutti gli altri mech.",
+   "Lo que vale un mech en batalla antes de gastar en él: resistencia, velocidad, energía para armas y habilidad, comparados con todos los demás mechs."
+  ],
+  [
+   "Cerca un mech",
+   "Buscar un mech"
+  ],
+  [
+   "Dati: Mech Arena Wiki (HP e velocità al rango massimo), licenza CC BY-SA 3.0. L'abilità e il meta contano quanto i numeri: usa la scheda come base, non come sentenza.",
+   "Datos: Mech Arena Wiki (HP y velocidad al rango máximo), licencia CC BY-SA 3.0. La habilidad y el meta cuentan tanto como los números: usa la ficha como base, no como sentencia."
+  ],
+  [
+   "Lo voglio",
+   "Lo quiero"
+  ],
+  [
+   "Premi che vuoi oltre al principale: {0}.",
+   "Premios que quieres además del principal: {0}."
+  ],
+  [
+   "{0} premi senza probabilità o prezzo non sono contati.",
+   "{0} premios sin probabilidad o precio no se cuentan."
+  ],
+  [
+   "Il punto migliore è fermarsi a {0} spin ({1} {2}): valore atteso ~{3} contro ~{4} spesi.",
+   "El mejor punto es parar en {0} tiradas ({1} {2}): valor esperado ~{3} contra ~{4} gastados."
+  ],
+  [
+   "Fino al garantito ({0} spin): valore atteso ~{1} contro ~{2} spesi.",
+   "Hasta el garantizado ({0} tiradas): valor esperado ~{1} contra ~{2} gastados."
+  ],
+  [
+   "Conviene fino a {0} spin con tutti i premi che vuoi: oltre, ogni spin vale meno di quanto costa.",
+   "Conviene hasta {0} tiradas con todos los premios que quieres: más allá, cada tirada vale menos de lo que cuesta."
+  ],
+  [
+   "Truffa: nemmeno contando tutti i premi che vuoi un solo spin ripaga quello che costa.",
+   "Estafa: ni contando todos los premios que quieres una sola tirada se paga."
+  ],
+  [
+   "{0}: {1}. Dettagli in «Scheda mech».",
+   "{0}: {1}. Detalles en «Ficha de mech»."
+  ],
+  [
+   "resistenza sconosciuta",
+   "resistencia desconocida"
+  ],
+  [
+   "molto resistente",
+   "muy resistente"
+  ],
+  [
+   "resistente",
+   "resistente"
+  ],
+  [
+   "resistenza media",
+   "resistencia media"
+  ],
+  [
+   "fragile",
+   "frágil"
+  ],
+  [
+   "molto veloce",
+   "muy rápido"
+  ],
+  [
+   "velocità media",
+   "velocidad media"
+  ],
+  [
+   "lento",
+   "lento"
+  ],
+  [
+   "armi pesanti (32 energia)",
+   "armas pesadas (32 energía)"
+  ],
+  [
+   "armi medie (24 energia)",
+   "armas medias (24 energía)"
+  ],
+  [
+   "armi leggere (16 energia)",
+   "armas ligeras (16 energía)"
+  ],
+  [
+   "HP massimi",
+   "HP máximos"
+  ],
+  [
+   "Velocità",
+   "Velocidad"
+  ],
+  [
+   "Energia per le armi",
+   "Energía para armas"
+  ],
+  [
+   "meglio del {0}",
+   "mejor que el {0}"
+  ],
+  [
+   "ricarica {0}",
+   "recarga {0}"
+  ],
+  [
+   "Abilità: {0}",
+   "Habilidad: {0}"
+  ],
+  [
+   "Dal wiki: ",
+   "Del wiki: "
+  ],
+  [
+   "Tank",
+   "Tanque"
+  ],
+  [
+   "Scout",
+   "Explorador"
+  ],
+  [
+   "Attacker",
+   "Atacante"
+  ],
+  [
+   "Support",
+   "Apoyo"
+  ],
+  [
+   "Legendary",
+   "Legendario"
+  ],
+  [
+   "Epic",
+   "Épico"
+  ],
+  [
+   "Rare",
+   "Raro"
+  ],
+  [
+   "Uncommon",
+   "Poco común"
+  ],
+  [
+   "Common",
+   "Común"
+  ],
+  [
+   "Heavy",
+   "Pesado"
+  ],
+  [
+   "Medium",
+   "Medio"
+  ],
+  [
+   "Light",
+   "Ligero"
+  ],
+  [
+   "Valuta",
+   "Moneda"
+  ],
+  [
+   "nome (es. Lacewing)",
+   "nombre (p. ej. Lacewing)"
+  ],
+  [
+   "es. 1,5",
+   "p. ej. 1,5"
+  ],
+  [
+   "prezzo",
+   "precio"
+  ],
+  [
+   "Gear Hub: {0} {1}",
+   "Gear Hub: {0} {1}"
+  ],
+  [
+   "Gear Hub: solo a pagamento",
+   "Gear Hub: solo con dinero real"
+  ],
+  [
+   "meno di un'ora",
+   "menos de una hora"
+  ],
+  [
+   "1 ora",
+   "1 hora"
+  ],
+  [
+   "{0} ore",
+   "{0} horas"
+  ],
+  [
+   "Il Gear Hub vende questa rarità a partire da ★{0}, non da ★{1}.",
+   "El Gear Hub vende esta rareza desde ★{0}, no desde ★{1}."
+  ],
+  [
+   "Nel Gear Hub {0} costa {1} {2}, tu hai scritto {3} {4}.",
+   "En el Gear Hub {0} cuesta {1} {2}; has escrito {3} {4}."
+  ],
+  [
+   "{0} è {1}, non {2}.",
+   "{0} es {1}, no {2}."
+  ],
+  [
+   "Importi troppo piccoli per un confronto sensato.",
+   "Importes demasiado pequeños para una comparación sensata."
+  ],
+  [
+   "Controlla i dati: qualcosa non torna.",
+   "Revisa los datos: algo no cuadra."
+  ],
+  [
+   "{0} mech nel database · {1} mostrati",
+   "{0} mechs en la base de datos · {1} mostrados"
+  ],
+  [
+   "Dati incompleti: aggiungili tu",
+   "Datos incompletos: añádelos tú"
+  ],
+  [
+   "+ Aggiungi o correggi",
+   "+ Añadir o corregir"
+  ],
+  [
+   "Mech mancante o con dati sbagliati? Scrivili come li vedi nel gioco (al rango massimo). Restano salvati solo su questo PC.",
+   "¿Falta un mech o tiene datos erróneos? Escríbelos como los ves en el juego (al rango máximo). Se guardan solo en este PC."
+  ],
+  [
+   "Nome",
+   "Nombre"
+  ],
+  [
+   "Velocità km/h",
+   "Velocidad km/h"
+  ],
+  [
+   "Energia",
+   "Energía"
+  ],
+  [
+   "Attaccante",
+   "Atacante"
+  ],
+  [
+   "Supporto",
+   "Apoyo"
+  ],
+  [
+   "Abilità (facoltativo)",
+   "Habilidad (opcional)"
+  ],
+  [
+   "Togli i miei dati",
+   "Quitar mis datos"
+  ],
+  [
+   "Scrivi il nome del mech.",
+   "Escribe el nombre del mech."
+  ],
+  [
+   "HP non validi: scrivi gli HP massimi, per esempio 198.900.",
+   "HP no válidos: escribe los HP máximos, p. ej. 198.900."
+  ],
+  [
+   "Velocità non valida: di solito tra 14 e 30 km/h.",
+   "Velocidad no válida: normalmente entre 14 y 30 km/h."
+  ],
+  [
+   "Energia non valida: 16, 24 o 32.",
+   "Energía no válida: 16, 24 o 32."
+  ],
+  [
+   "Salvato: {0}.",
+   "Guardado: {0}."
+  ],
+  [
+   "Tolti i tuoi dati per {0}.",
+   "Quitados tus datos de {0}."
+  ],
+  [
+   "Dati incompleti: premi «+ Aggiungi o correggi» e scrivili come li vedi nel gioco.",
+   "Datos incompletos: pulsa «+ Añadir o corregir» y escríbelos como los ves en el juego."
+  ],
+  [
+   "dati tuoi",
+   "tus datos"
+  ],
+  [
+   "Aggiorna dal wiki",
+   "Actualizar desde el wiki"
+  ],
+  [
+   "Voto 0-100 e fascia S-D: HP, velocità ed energia rispetto a tutti i mech, più l'abilità (effetti × durata e ricarica) e la nota della community, pesati secondo il ruolo. Dati: Mech Arena Wiki, licenza CC BY-SA 3.0.",
+   "Nota 0-100 y nivel S-D: HP, velocidad y energía frente a todos los mechs, más la habilidad (efectos × duración y recarga) y la nota de la comunidad, ponderados según el rol. Datos: Mech Arena Wiki, licencia CC BY-SA 3.0."
+  ],
+  [
+   "Abilità",
+   "Habilidad"
+  ],
+  [
+   "Sopravvivenza",
+   "Supervivencia"
+  ],
+  [
+   "Danno",
+   "Daño"
+  ],
+  [
+   "Controllo",
+   "Control"
+  ],
+  [
+   "Mobilità",
+   "Movilidad"
+  ],
+  [
+   "Squadra",
+   "Equipo"
+  ],
+  [
+   "attiva il {0} del tempo",
+   "activa el {0} del tiempo"
+  ],
+  [
+   "ricarica {0} s",
+   "recarga {0} s"
+  ],
+  [
+   "Aggiornamento dal wiki in corso…",
+   "Actualizando desde el wiki…"
+  ],
+  [
+   "Dati dal Mech Arena Wiki, aggiornati il {0}.",
+   "Datos del Mech Arena Wiki, actualizados el {0}."
+  ],
+  [
+   "Dati inclusi nell'app (Mech Arena Wiki). Premi Aggiorna per scaricare la versione più recente.",
+   "Datos incluidos en la app (Mech Arena Wiki). Pulsa Actualizar para descargar la versión más reciente."
+  ],
+  [
+   "{0}: fascia {1} ({2}/100) · {3} · abilità migliore del {4} dei mech.",
+   "{0}: nivel {1} ({2}/100) · {3} · habilidad mejor que el {4} de los mechs."
+  ],
+  [
+   "Attenzione: {0} è un mech debole (fascia {1}). Anche se il prezzo conviene, valuta se lo useresti davvero.",
+   "Atención: {0} es un mech débil (nivel {1}). Aunque el precio convenga, piensa si de verdad lo usarías."
+  ],
+  [
+   "Conta la differenza di rango tra il premio e il Gear Hub",
+   "Contar la diferencia de rango entre el premio y el Gear Hub"
+  ],
+  [
+   "Calcola il costo del potenziamento",
+   "Calcular el coste de la mejora"
+  ],
+  [
+   "Costo totale del potenziamento",
+   "Coste total de la mejora"
+  ],
+  [
+   "Mostra il dettaglio passo per passo",
+   "Ver el desglose paso a paso"
+  ],
+  [
+   "Nascondi il dettaglio",
+   "Ocultar el desglose"
+  ],
+  [
+   "Dati cambiati: premi di nuovo «Calcola» per aggiornare il risultato.",
+   "Datos cambiados: pulsa «Calcular» otra vez para actualizar el resultado."
+  ],
+  [
+   "energia",
+   "energía"
+  ],
+  [
+   "{0} · da ★{1} liv. {2} a ★{3} liv. {4} · {5} passi",
+   "{0} · de ★{1} niv. {2} a ★{3} niv. {4} · {5} pasos"
+  ],
+  [
+   "Valuta al rango",
+   "Valorar en el rango"
+  ],
+  [
+   "Statistiche per rango",
+   "Estadísticas por rango"
+  ],
+  [
+   "HP",
+   "HP"
+  ],
+  [
+   "Per questo mech le fonti non pubblicano ancora le statistiche per rango.",
+   "Las fuentes aún no publican estadísticas por rango para este mech."
+  ],
+  [
+   "Fonte: {0}. ★N = rango N livello 1, Max = ★6 livello 7.",
+   "Fuente: {0}. ★N = rango N nivel 1, Max = ★6 nivel 7."
+  ],
+  [
+   "Attenzione: le fonti non concordano sugli HP massimi ({0} contro {1}).",
+   "Atención: las fuentes no coinciden en los HP máximos ({0} frente a {1})."
+  ],
+  [
+   "{0}: fascia {1} ({2}/100) al massimo · {3} · abilità migliore del {4} dei mech.",
+   "{0}: nivel {1} ({2}/100) al máximo · {3} · habilidad mejor que el {4} de los mechs."
+  ],
+  [
+   "Al rango con cui arriva dalla cassa ({0}): fascia {1} ({2}/100), {3} HP, più resistente del {4} dei mech allo stesso rango.",
+   "Con el rango con el que llega de la caja ({0}): nivel {1} ({2}/100), {3} HP, más resistente que el {4} de los mechs del mismo rango."
+  ],
+  [
+   "Energy",
+   "Energía"
+  ],
+  [
+   "Speed",
+   "Velocidad"
+  ],
+  [
+   "Power",
+   "Poder"
+  ],
+  [
+   "Ability Cooldown",
+   "Recarga de habilidad"
+  ],
+  [
+   "Ability Duration",
+   "Duración de habilidad"
+  ],
+  [
+   "Shield Durability",
+   "Durabilidad del escudo"
+  ],
+  [
+   "Conferma",
+   "Confirmar"
+  ],
+  [
+   "Liquid glass (finestre trasparenti con riflessi). Spento: finestre scure piene. Cambiando, l'app si riavvia.",
+   "Liquid glass (ventanas transparentes con reflejos). Apagado: ventanas oscuras sólidas. Al cambiarlo, la app se reinicia."
+  ],
+  [
+   "Stima dalle categorie del wiki: nessun profilo rivisto per questo mech.",
+   "Estimación a partir de las categorías del wiki: aún no hay perfil revisado para este mech."
+  ],
+  [
+   "Versione {0} installata. Si attiva al prossimo avvio di MechVault.",
+   "Versión {0} instalada. Se activa la próxima vez que se inicie MechVault."
+  ],
+  [
+   "MechVault {0} è installato. Riavviare adesso per usarlo?",
+   "MechVault {0} está instalado. ¿Reiniciar ahora para usarlo?"
+  ],
+  [
+   "Controllo aggiornamenti…",
+   "Buscando actualizaciones…"
+  ],
+  [
+   "Controllo non riuscito ({0}). Riprova più tardi.",
+   "No se pudo comprobar ({0}). Inténtalo más tarde."
+  ],
+  [
+   "Hai l'ultima versione ({0}).",
+   "Tienes la última versión ({0})."
+  ],
+  [
+   "Installazione non riuscita: {0}",
+   "La instalación falló: {0}"
+  ],
+  [
+   "Versione {0}.",
+   "Versión {0}."
+  ],
+  [
+   "Aggiornamenti automatici (da mechvault.github.io, solo se l'impronta SHA-256 coincide; i tuoi dati non si toccano)",
+   "Actualizaciones automáticas (desde mechvault.github.io, solo si la huella SHA-256 coincide; tus datos no se tocan)"
+  ],
+  [
+   "Cerca aggiornamenti",
+   "Buscar actualizaciones"
+  ],
+  [
+   "Avvia MechVault all'accesso",
+   "Iniciar MechVault al iniciar sesión"
+  ],
+  [
+   "Concedi il permesso",
+   "Conceder el permiso"
+  ],
+  [
+   "Dati salvati in: {0}",
+   "Datos guardados en: {0}"
+  ],
+  [
+   "Eliminare l'account «{0}» con tutti i suoi obiettivi e la cronologia?\n\nIl file viene spostato nel Cestino.",
+   "¿Eliminar la cuenta «{0}» con todos sus objetivos y el historial?\n\nEl archivo se mueve a la Papelera."
+  ],
+  [
+   "Il grafico si riempie man mano che giochi.",
+   "El gráfico se completa a medida que juegas."
+  ],
+  [
+   "lettura automatica non disponibile",
+   "lectura automática no disponible"
+  ],
+  [
+   "Lettura automatica non disponibile senza X11: inserisci i saldi a mano.",
+   "La lectura automática no está disponible sin X11: introduce los saldos a mano."
+  ],
+  [
+   "Lettura automatica non disponibile su Wayland: inserisci i saldi a mano.",
+   "La lectura automática no está disponible en Wayland: introduce los saldos a mano."
+  ],
+  [
+   "Lettura automatica non disponibile: manca il componente di lettura. Inserisci i saldi a mano.",
+   "La lectura automática no está disponible: falta el componente de lectura. Introduce los saldos a mano."
+  ],
+  [
+   "Lettura automatica non disponibile su questo sistema: inserisci i saldi a mano.",
+   "La lectura automática no está disponible en este sistema: introduce los saldos a mano."
+  ],
+  [
+   "Per la lettura automatica installa Tesseract (pacchetto tesseract-ocr), poi riapri MechVault.",
+   "Para la lectura automática instala Tesseract (paquete tesseract-ocr) y vuelve a abrir MechVault."
+  ],
+  [
+   "Esempi: sudo apt install tesseract-ocr · sudo dnf install tesseract · sudo pacman -S tesseract tesseract-data-eng",
+   "Ejemplos: sudo apt install tesseract-ocr · sudo dnf install tesseract · sudo pacman -S tesseract tesseract-data-eng"
+  ],
+  [
+   "Su Wayland nessun programma può guardare la finestra di un altro. Per la lettura automatica scegli una sessione «X11» (o «Xorg») all'accesso; altrimenti aggiorna i saldi a mano in Impostazioni.",
+   "En Wayland ningún programa puede ver la ventana de otro. Para la lectura automática elige una sesión «X11» (o «Xorg») al iniciar sesión; si no, actualiza los saldos a mano en Ajustes."
+  ],
+  [
+   "Serve il permesso Registrazione schermo per leggere i saldi.",
+   "Se necesita el permiso de Grabación de pantalla para leer los saldos."
+  ],
+  [
+   "macOS chiede il permesso «Registrazione schermo» (Impostazioni di Sistema › Privacy e sicurezza › Registrazione schermo e audio). MechVault lo usa solo per guardare la barra delle valute di Mech Arena, come uno screenshot: niente viene salvato o inviato. Dopo averlo attivato, riapri MechVault.",
+   "macOS pide el permiso «Grabación de pantalla» (Ajustes del Sistema › Privacidad y seguridad › Grabación de pantalla y audio). MechVault lo usa solo para mirar la barra de monedas de Mech Arena, como una captura: no se guarda ni se envía nada. Después de activarlo, vuelve a abrir MechVault."
+  ],
+  [
+   "MechVault - account",
+   "MechVault - cuenta"
+  ],
+  [
+   "MechVault - prima di giocare",
+   "MechVault - antes de jugar"
+  ],
+  [
+   "MechVault - spesa rilevata",
+   "MechVault - gasto detectado"
+  ]
+ ]
+}

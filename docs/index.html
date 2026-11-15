@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MechVault — resource planner for Mech Arena</title>
+<meta name="description" content="MechVault is a free resource planner for Mech Arena on Windows, macOS and Linux: live balance tracking, goal planning, a built-in upgrade calculator and Crate Rush analysis. Fan-made, not affiliated with Plarium.">
+<meta name="theme-color" content="#0c0c0e">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0c0e; --t1: #f4f4f6; --t2: rgba(244,244,246,.7); --t3: rgba(244,244,246,.45);
+    --line: rgba(255,255,255,.1); --line2: rgba(255,255,255,.18);
+    --glass: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+    --chrome: linear-gradient(180deg, #ffffff 0%, #d9dce1 38%, #8b9098 62%, #e9ebee 100%);
+    --cred: #6fd3ff; --ac: #d79bff; --ok: #3ddc84; --bad: #ff6b6b;
+    --r: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--t1);
+    font: 16px/1.6 Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+  #metal { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -2; display: block; background: #060607; }
+  .veil { position: fixed; inset: 0; z-index: -1; pointer-events: none;
+          background: radial-gradient(60% 42% at 50% 30%, rgba(6,6,7,.78), rgba(6,6,7,.2) 72%),
+                      linear-gradient(180deg, rgba(6,6,7,0) 0%, rgba(6,6,7,.55) 55%, rgba(6,6,7,.93) 100%); }
+  .glow { position: fixed; left: 0; top: 0; width: 520px; height: 520px; margin: -260px 0 0 -260px; border-radius: 50%; pointer-events: none; z-index: -1;
+          background: radial-gradient(circle, rgba(220,228,240,.09), rgba(220,228,240,0) 65%); transform: translate3d(-999px,-999px,0); transition: opacity .3s; }
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .card { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s ease, border-color .25s; }
+  .card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .25s;
+                 background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,.12), transparent 45%); }
+  .card:hover { border-color: rgba(255,255,255,.22); }
+  .card:hover::after { opacity: 1; }
+  .shine { position: relative; overflow: hidden; }
+  .shine::before { content: ""; position: absolute; inset: -50% auto -50% -60%; width: 40%; transform: rotate(18deg);
+                   background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); animation: sweep 4.5s ease-in-out infinite; }
+  @keyframes sweep { 0%, 60% { left: -60%; } 100% { left: 130%; } }
+  .verify { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 40px; }
+  .hash { font: 12px ui-monospace, Consolas, monospace; word-break: break-all; color: var(--t1); background: rgba(255,255,255,.06);
+          border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-top: 10px; display: block; }
+  .copy { margin-top: 10px; }
+  @media (max-width: 900px) { .verify { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .shine::before { animation: none; } .card { transform: none; } }
+
+  header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4);
+           background: rgba(12,12,14,.45); border-bottom: 1px solid var(--line); }
+  nav { display: flex; align-items: center; gap: 20px; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
+  .logo img { width: 28px; height: 28px; border-radius: 8px; display: block; }
+  .logo i { width: 28px; height: 28px; border-radius: 9px; background: var(--chrome); box-shadow: inset 0 1px 0 #fff, 0 2px 10px rgba(0,0,0,.4); position: relative; }
+  .logo i::after { content: ""; position: absolute; inset: 8px 9px 7px; border: 2px solid #2a2c31; border-top-width: 3px; border-radius: 3px; }
+  .links { display: flex; gap: 22px; margin-left: 18px; }
+  .links a { color: var(--t2); text-decoration: none; font-size: 14px; }
+  .links a:hover { color: var(--t1); }
+  .spacer { flex: 1; }
+  .langs { display: flex; border: 1px solid var(--line2); border-radius: 999px; padding: 3px; }
+  .langs button { background: none; border: 0; color: var(--t3); font: 600 12px Inter, sans-serif; padding: 5px 10px; border-radius: 999px; cursor: pointer; }
+  .langs button[aria-pressed="true"] { background: rgba(255,255,255,.14); color: var(--t1); }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: 15px;
+         padding: 13px 22px; border-radius: 999px; border: 1px solid var(--line2); background: rgba(255,255,255,.06); color: var(--t1);
+         transition: transform .15s, background .15s; }
+  .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.1); }
+  .btn.metal { background: var(--chrome); color: #16171a; border-color: rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.35), inset 0 1px 0 #fff; }
+  .btn.small { padding: 8px 16px; font-size: 13px; }
+  .vtlist { display: grid; gap: 12px; margin: 14px 0 8px; }
+  .vthead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .vthead .btn { margin-left: auto; padding: 5px 12px; font-size: 12px; }
+  .vtfile { font: 12px ui-monospace, Consolas, monospace; color: var(--t3); }
+  .vtrow .hash { margin: 0; }
+
+  .hero { padding: 96px 0 40px; text-align: center; }
+  h1 { font-size: clamp(40px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.035em; font-weight: 700; margin: 26px auto 18px; max-width: 900px;
+       background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lead { font-size: clamp(17px, 2vw, 20px); color: var(--t2); max-width: 680px; margin: 0 auto; }
+  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
+  .meta { color: var(--t3); font-size: 13px; margin-top: 16px; }
+  .frame { margin: 64px auto 0; max-width: 1000px; border-radius: 26px; padding: 10px; background: var(--glass);
+           border: 1px solid var(--line2); box-shadow: 0 40px 120px rgba(0,0,0,.6); backdrop-filter: blur(20px); }
+  .frame img { border-radius: 18px; }
+
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; margin: 70px 0 0; border-radius: var(--r); overflow: hidden;
+           border: 1px solid var(--line); background: var(--line); }
+  .stats div { background: rgba(14,14,16,.82); padding: 26px 22px; backdrop-filter: blur(16px); }
+  .stats strong { display: block; font-size: 30px; font-weight: 600; letter-spacing: -.02em; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stats span { color: var(--t3); font-size: 13px; }
+
+  section { padding: 110px 0 0; }
+  .kicker { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--t3); }
+  h2 { font-size: clamp(30px, 4vw, 46px); letter-spacing: -.03em; line-height: 1.1; margin: 10px 0 14px; font-weight: 650; }
+  .sub { color: var(--t2); max-width: 640px; margin: 0; font-size: 17px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 40px; }
+  .card { border-radius: var(--r); padding: 26px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(16px);
+          position: relative; overflow: hidden; }
+  .card::before { content: ""; position: absolute; inset: 0 0 auto; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.5), transparent); }
+  .card h3 { margin: 14px 0 6px; font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--t2); font-size: 14.5px; }
+  .ico { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,255,255,.07); border: 1px solid var(--line2); }
+  .ico svg { width: 19px; height: 19px; stroke: var(--t1); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+  .row { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; margin-top: 90px; }
+  .row.flip { grid-template-columns: 1.15fr 1fr; }
+  .row.flip .txt { order: 2; }
+  .txt ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; }
+  .txt li { color: var(--t2); padding-left: 26px; position: relative; font-size: 15px; }
+  .txt li::before { content: ""; position: absolute; left: 0; top: 9px; width: 12px; height: 2px; border-radius: 2px; background: var(--chrome); }
+  .shot { border-radius: 22px; padding: 8px; background: var(--glass); border: 1px solid var(--line2); box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .shot img { border-radius: 16px; max-height: 620px; width: 100%; object-fit: cover; object-position: top; }
+  .shot.small img { max-height: none; object-fit: contain; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; counter-reset: s; }
+  .steps .card { padding-top: 64px; }
+  .steps .card::after { counter-increment: s; content: "0" counter(s); position: absolute; top: 22px; left: 26px; font-weight: 600; font-size: 13px; color: var(--t3); letter-spacing: .1em; }
+  code { font: 13px ui-monospace, Consolas, monospace; background: rgba(255,255,255,.08); padding: 2px 7px; border-radius: 6px; }
+
+  .legal { margin-top: 40px; border-radius: var(--r); padding: 30px; background: rgba(14,14,16,.82); border: 1px solid var(--line); }
+  .legal p { color: var(--t2); font-size: 14px; margin: 0 0 12px; }
+  .legal p:last-child { margin: 0; }
+  .legal strong { color: var(--t1); }
+  footer { padding: 70px 0 50px; color: var(--t3); font-size: 13px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .links { display: none; }
+    .grid, .steps { grid-template-columns: 1fr 1fr; }
+    .row, .row.flip { grid-template-columns: 1fr; gap: 28px; }
+    .row.flip .txt { order: 0; }
+    .stats { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    nav { gap: 10px; }
+    .grid, .steps { grid-template-columns: 1fr; }
+    .hero { padding-top: 70px; }
+    .btn.small.dl { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+<canvas id="metal" aria-hidden="true"></canvas>
+<div class="veil"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#top"><img src="img/logo.png" alt="" width="28" height="28" onload="this.nextElementSibling.remove()" onerror="this.remove()"><i></i>MechVault</a>
+    <div class="links">
+      <a href="#modules" data-i18n="nModules">Modules</a>
+      <a href="#calculator" data-i18n="nCalc">Calculator</a>
+      <a href="#crate" data-i18n="nCrate">Crate Rush</a>
+      <a href="#install" data-i18n="nInstall">Install</a>
+      <a href="#verify" data-i18n="nVerify">Verify</a>
+    </div>
+    <span class="spacer"></span>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="it">IT</button>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <a class="btn small metal dl" href="#install" data-i18n="download">Download</a>
+  </nav>
+</header>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <h1 data-i18n="h1">Every credit planned. No A-coin spent blind.</h1>
+    <p class="lead" data-i18n="lead">MechVault reads your balances from the screen, prices every upgrade path, projects when you reach each goal and tells you, in numbers, whether a Crate Rush is worth a single spin.</p>
+    <div class="cta">
+      <a class="btn metal shine" id="dlMain" href="#install" data-i18n="dlAny">Download</a>
+      <a class="btn" href="#modules" data-i18n="explore">Explore the modules</a>
+    </div>
+    <p class="meta"><span data-i18n="otherOs">Available for</span> <a href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-win-x64.zip">Windows</a> · <a href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-osx-arm64.zip">macOS Apple Silicon</a> · <a href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-osx-x64.zip">macOS Intel</a> · <a href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-linux-x64.tar.gz">Linux</a></p>
+    <p class="meta" data-i18n="meta">Free · no account · no ads · fan-made, not affiliated with Plarium</p>
+    <div class="reveal frame"><img src="img/overview.png" width="1180" height="1100" alt="MechVault overview: goal progress, credit and A-coin balances with daily trend, no-spend streak and mission budget"></div>
+
+    <div class="reveal stats">
+      <div><strong>975</strong><span data-i18n="st1">upgrade costs built in</span></div>
+      <div><strong>47</strong><span data-i18n="st5">mechs profiled</span></div>
+      <div><strong>3 s</strong><span data-i18n="st2">balance refresh while you play</span></div>
+      <div><strong>0</strong><span data-i18n="st3">bytes of game memory touched</span></div>
+      <div><strong>3</strong><span data-i18n="st4">languages · EN IT ES</span></div>
+    </div>
+  </div>
+
+  <section id="modules">
+    <span class="kicker" data-i18n="kModules">Modules</span>
+    <h2 data-i18n="mTitle">One tool for the whole economy.</h2>
+    <p class="sub" data-i18n="mSub">Built around how Mech Arena actually spends: credits and blueprints for levels, A-coins for ranks, and events that want both.</p>
+    <div class="reveal grid">
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <h3 data-i18n="m1t">Live balance tracking</h3><p data-i18n="m1d">Credits and A-coins are read from the currency bar every 3 seconds. Every gain and spend is logged; misreads are detected and rolled back on their own.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 data-i18n="m2t">Goal planner</h3><p data-i18n="m2d">Prioritised goals per currency, with progress, amount left and a projected completion date at your real pace.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2M16 11v4"/></svg></div>
+        <h3 data-i18n="m3t">Upgrade calculator</h3><p data-i18n="m3d">Mechs and weapons, every rarity, weapons by energy. Credits, blueprints and A-coins for any star and level range, checked against your resources.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg></div>
+        <h3 data-i18n="m4t">Crate Rush analysis</h3><p data-i18n="m4d">Expected cost, median and 90th percentile, guarantee, rank of the prize and the upgrades it still needs, compared with buying it in the Gear Hub.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3 data-i18n="m7t">Mech sheet</h3><p data-i18n="m7d">Max HP, speed and weapon energy of 47 mechs, ranked against the whole roster, with ability, cooldown and community viability notes.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></div>
+        <h3 data-i18n="m5t">Spend guard</h3><p data-i18n="m5d">A no-spend streak, a daily mission budget that never breaks it, and a prompt you must answer when your balance drops outside a planned purchase.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19l5-6 4 3 7-9"/><path d="M15 7h5v5"/></svg></div>
+        <h3 data-i18n="m6t">Adaptive income rate</h3><p data-i18n="m6d">A 28-day weighted average of what you really earn per day, net of mission spends, with one-off rewards and days off handled correctly.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 4v16"/></svg></div>
+        <h3 data-i18n="m8t">In-game overlay</h3><p data-i18n="m8d">Balances, goal progress and mission budget on top of the match. Draggable, three sizes, never steals focus.</p></div>
+    </div>
+  </section>
+
+  <section id="calculator">
+    <div class="row reveal">
+      <div class="txt">
+        <span class="kicker" data-i18n="kCalc">Upgrade calculator</span>
+        <h2 data-i18n="cTitle">The full cost of a path, step by step.</h2>
+        <p class="sub" data-i18n="cSub">Pick type, rarity, energy and a star/level range. MechVault adds up every level and every star-up and shows what you are missing.</p>
+        <ul>
+          <li data-i18n="c1">Ships with the community cost table for 1★–6★, plus in-game verified corrections</li>
+          <li data-i18n="c2">Any rarity from any star: event and promo items included</li>
+          <li data-i18n="c3">Edit a value once and it applies to every matching item</li>
+          <li data-i18n="c4">Turn the result into a goal with one click</li>
+        </ul>
+      </div>
+      <div class="shot"><img src="img/calc.png" width="820" height="1555" loading="lazy" alt="Upgrade calculator with totals for credits, blueprints and A-coins and the step-by-step cost table"></div>
+    </div>
+  </section>
+
+  <section id="crate">
+    <div class="row flip reveal">
+      <div class="txt">
+        <span class="kicker" data-i18n="kCrate">Crate Rush analysis</span>
+        <h2 data-i18n="crTitle">Know the price before the first spin.</h2>
+        <p class="sub" data-i18n="crSub">Enter spin cost, drop chances and guarantee. The verdict compares the crate with the Gear Hub in days of grind at your own income.</p>
+        <ul>
+          <li data-i18n="cr1">Spins in credits or A-coins, Gear Hub price in either</li>
+          <li data-i18n="cr2">Average, median and 9-in-10 cost, plus the guaranteed worst case</li>
+          <li data-i18n="cr3">Accounts for the rank the prize comes at and the star-ups it still needs</li>
+          <li data-i18n="cr4">A maximum budget: past it, the direct route is cheaper</li>
+          <li data-i18n="cr5">Multi-prize rushes: every prize you actually want is valued, the best number of spins is found for you</li>
+        </ul>
+      </div>
+      <div class="shot small"><img src="img/crate.png" width="820" height="1024" loading="lazy" alt="Crate Rush analysis showing a verdict, expected spins and the maximum sensible budget"></div>
+    </div>
+  </section>
+
+  <section id="mechs">
+    <div class="row reveal">
+      <div class="txt">
+        <span class="kicker" data-i18n="kMech">Mech sheet</span>
+        <h2 data-i18n="msTitle">Judge the mech, not the banner.</h2>
+        <p class="sub" data-i18n="msSub">Before a rush or a purchase, see where a mech really stands: toughness, mobility and firepower ranked against every other mech in the game.</p>
+        <ul>
+          <li data-i18n="ms1">Max HP and speed with percentile against the roster</li>
+          <li data-i18n="ms2">Weapon energy class: what it can actually carry</li>
+          <li data-i18n="ms3">Ability, cooldown and community viability notes</li>
+        </ul>
+      </div>
+      <div class="shot small"><img src="img/mech.png" width="820" height="459" loading="lazy" alt="Mech sheet with HP, speed and energy bars ranked against all mechs"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row flip reveal">
+      <div class="txt">
+        <span class="kicker" data-i18n="kOverlay">In-game overlay</span>
+        <h2 data-i18n="oTitle">Your numbers, on top of the match.</h2>
+        <p class="sub" data-i18n="oSub">A compact always-on-top card with balances, goal progress and mission budget. Drag it anywhere; switch between full, small and single-line.</p>
+        <ul>
+          <li data-i18n="o1">Never steals focus from the game</li>
+          <li data-i18n="o2">Position and size remembered per PC</li>
+          <li data-i18n="o3">Multiple accounts, each with its own goals and streak</li>
+        </ul>
+      </div>
+      <div class="shot small" style="max-width:520px;justify-self:center"><img src="img/overlay.png" width="368" height="77" loading="lazy" alt="Overlay showing credits, A-coins and goal progress"></div>
+    </div>
+  </section>
+
+  <section id="install">
+    <span class="kicker" data-i18n="kInstall">Install</span>
+    <h2 data-i18n="iTitle">Running in under a minute.</h2>
+    <p class="sub" data-i18n="iSub">For Mech Arena on Windows and macOS (Plarium Play) and on Linux through Proton. Nothing to install and nothing else to download: everything it needs is inside.</p>
+    <div class="reveal steps">
+      <div class="card"><h3 data-i18n="s1t">Download and extract</h3><p data-i18n="s1d">Put MechVault anywhere. Coming from the PowerShell version on Windows? Extract it into the same folder: accounts, goals and settings carry over.</p></div>
+      <div class="card"><h3 data-i18n="s2t">Start it</h3><p data-i18n="s2d">Windows: MechVault.exe (if SmartScreen warns: More info › Run anyway). macOS: right-click MechVault.app › Open the first time, then allow Screen Recording. Linux: ./MechVault.</p></div>
+      <div class="card"><h3 data-i18n="s3t">Open the hangar</h3><p data-i18n="s3d">MechVault reads your balances and starts tracking. From then on it starts with your computer.</p></div>
+    </div>
+    <div class="cta" style="justify-content:flex-start">
+      <a class="btn metal shine" href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-win-x64.zip" data-i18n="dlWin">Download for Windows</a>
+      <a class="btn" href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-osx-arm64.zip" data-i18n="dlMacArm">macOS · Apple Silicon</a>
+      <a class="btn" href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-osx-x64.zip" data-i18n="dlMacX64">macOS · Intel</a>
+      <a class="btn" href="https://github.com/MechVault/mechvault.github.io/releases/latest/download/MechVault-linux-x64.tar.gz" data-i18n="dlLinux">Linux</a>
+    </div>
+    <p class="sub" style="margin-top:18px" data-i18n="nOs">macOS: needs macOS 12 or later; the app is not signed by Apple yet, hence the right-click › Open. Linux: automatic reading needs an X11 session and the tesseract-ocr package; on Wayland you enter balances by hand.</p>
+    <p class="sub"><a href="MechVault.zip" download data-i18n="dlOld">Previous version (PowerShell, Windows only)</a></p>
+  </section>
+
+  <section id="verify">
+    <span class="kicker" data-i18n="kVerify">Trust</span>
+    <h2 data-i18n="vTitle">Verify it before you run it.</h2>
+    <p class="sub" data-i18n="vSub">MechVault is open source. Every download is built by GitHub Actions from the public code of this site's repository, and every release lists the SHA-256 fingerprint of each file.</p>
+    <div class="verify reveal">
+      <div class="card">
+        <h3 data-i18n="v1t">Check the download</h3>
+        <p data-i18n="v1d">The SHA-256 fingerprint of every download, with its VirusTotal report. Compare it with the one your computer calculates:</p>
+        <div class="vtlist">
+          <div class="vtrow"><div class="vthead"><strong>Windows</strong> <span class="vtfile">MechVault-win-x64.zip</span> <a class="btn small" data-vt="win-x64" href="https://www.virustotal.com/gui/file/9d4dc31b55181afea03f8d2201f051a07d5524bb0f246f9f7bd000444e9efb8d" target="_blank" rel="noopener">VirusTotal</a></div><code class="hash" data-sha="win-x64">9d4dc31b55181afea03f8d2201f051a07d5524bb0f246f9f7bd000444e9efb8d</code></div>
+          <div class="vtrow"><div class="vthead"><strong>macOS · Apple silicon</strong> <span class="vtfile">MechVault-osx-arm64.zip</span> <a class="btn small" data-vt="osx-arm64" href="https://www.virustotal.com/gui/file/38ec640aa2b169ded745fed3b1e5d08bada2c8882308241580f442a13f356e84" target="_blank" rel="noopener">VirusTotal</a></div><code class="hash" data-sha="osx-arm64">38ec640aa2b169ded745fed3b1e5d08bada2c8882308241580f442a13f356e84</code></div>
+          <div class="vtrow"><div class="vthead"><strong>macOS · Intel</strong> <span class="vtfile">MechVault-osx-x64.zip</span> <a class="btn small" data-vt="osx-x64" href="https://www.virustotal.com/gui/file/d62b7ef6c0755716645cf1e69bd33d86fdc9fbe507fa5a02c2d43f7e062b23f6" target="_blank" rel="noopener">VirusTotal</a></div><code class="hash" data-sha="osx-x64">d62b7ef6c0755716645cf1e69bd33d86fdc9fbe507fa5a02c2d43f7e062b23f6</code></div>
+          <div class="vtrow"><div class="vthead"><strong>Linux</strong> <span class="vtfile">MechVault-linux-x64.tar.gz</span> <a class="btn small" data-vt="linux-x64" href="https://www.virustotal.com/gui/file/4620e70caf18187f06f85df9084eb3307ec9dab01285f147f2d85dd36e17cb30" target="_blank" rel="noopener">VirusTotal</a></div><code class="hash" data-sha="linux-x64">4620e70caf18187f06f85df9084eb3307ec9dab01285f147f2d85dd36e17cb30</code></div>
+        </div>
+        <code class="hash">Get-FileHash .\MechVault-win-x64.zip -Algorithm SHA256</code>
+        <code class="hash">shasum -a 256 MechVault-*</code>
+        <p style="margin-top:12px"><a class="btn small" href="https://github.com/MechVault/mechvault.github.io/releases/latest" target="_blank" rel="noopener" data-i18n="v1c">Release page</a></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="v2t">What it touches</h3>
+        <p data-i18n="v2d">Screen: only the Mech Arena window, like a screenshot, to read credits and A-coins. Internet: only the two Mech Arena community wikis (Fandom and wiki.gg), to update mech stats, and mechvault.github.io, to check for app updates (installed only if the SHA-256 fingerprint matches; can be turned off in Settings). Files: only its own data folder, plus a start-at-login entry that you can turn off. No admin rights, no game memory, no input automation, no account login.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="legal">
+    <div class="reveal legal">
+      <p><strong data-i18n="lTitle">Not affiliated with Plarium</strong></p>
+      <p data-i18n="l1">MechVault is an unofficial, fan-made project. It is not affiliated with, endorsed, sponsored or approved by Plarium Global Ltd. Mech Arena and all related names, logos and content are trademarks and/or copyrights of Plarium Global Ltd. and/or their respective owners.</p>
+      <p data-i18n="l2">MechVault only reads what is on your screen. It does not modify the game, read its memory or automate any action.</p>
+      <p>Upgrade costs: <a href="https://mech-arena-robot-showdown.fandom.com/wiki/Weapons" target="_blank" rel="noopener">Mech Arena: Robot Showdown Wiki</a> (Mechs and Weapons pages), licensed <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>. Mech stats from the same wiki's mech pages. Reformatted in <code>calc/wiki-costs.json</code> and <code>calc/mech-stats.json</code> under the same license.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span data-i18n="foot">MechVault · free fan project · not affiliated with Plarium Global Ltd.</span>
+  <a href="#top" data-i18n="backTop">Back to top</a>
+</footer>
+
+<script>
+(function () {
+  const cv = document.getElementById('metal');
+  const gl = cv.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' });
+  if (!gl) return;
+  const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  const fs = `precision highp float;
+uniform vec2 R; uniform float T; uniform vec2 M; uniform float S;
+float h21(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
+void main(){
+  vec2 g=gl_FragCoord.xy/S; vec2 id=floor(g); vec2 f=fract(g);
+  float r1=h21(id), r2=h21(id+17.3), r3=h21(id+91.7);
+  float edge=smoothstep(.06,.14,f.x)*smoothstep(.06,.14,f.y)*smoothstep(.94,.86,f.x)*smoothstep(.94,.86,f.y);
+  vec3 base=vec3(.045+.10*r1)*vec3(.96,.98,1.04);
+  vec2 c=(id+.5)*S;
+  vec2 tilt=vec2(r2,r3)*2.-1.;
+  float wave=.5+.5*sin(dot(id,vec2(.055,.035))*1.6-T*.9+tilt.x*1.4);
+  float sweep=pow(wave,10.)*(.35+.65*r2);
+  float d=length(c-M);
+  float spot=exp(-d*d/(2.*pow(S*13.,2.)))*(.45+.55*max(0.,dot(normalize(vec2(1.,1.)+tilt*.6),normalize(M-c+vec2(1.)))*.5+.5));
+  float ph=fract(T*.12+r1*7.);
+  float tw=step(.965,h21(id+floor(T*.12+r1*7.)))*sin(ph*3.14159)*1.2;
+  float bevel=smoothstep(.7,.95,f.y)*.05+smoothstep(.3,.05,f.x)*.02;
+  vec3 col=base+vec3(.92,.95,1.)*(sweep*.42+spot*.55+tw*.75)+bevel;
+  vec2 uv=gl_FragCoord.xy/R; col*=1.-.55*smoothstep(.35,1.05,length((uv-.5)*vec2(1.25,1.)));
+  col=mix(vec3(.02),col,edge);
+  gl_FragColor=vec4(col,1.);}`;
+  function sh(t, s) { const o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return gl.getShaderParameter(o, gl.COMPILE_STATUS) ? o : null; }
+  const a = sh(gl.VERTEX_SHADER, vs), b = sh(gl.FRAGMENT_SHADER, fs);
+  if (!a || !b) return;
+  const pr = gl.createProgram(); gl.attachShader(pr, a); gl.attachShader(pr, b); gl.linkProgram(pr);
+  if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) return;
+  gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  const uR = gl.getUniformLocation(pr, 'R'), uT = gl.getUniformLocation(pr, 'T'), uM = gl.getUniformLocation(pr, 'M'), uS = gl.getUniformLocation(pr, 'S');
+  let dpr = 1, mx = -9999, my = -9999, tx = mx, ty = my;
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    cv.width = Math.max(1, Math.round(innerWidth * dpr)); cv.height = Math.max(1, Math.round(innerHeight * dpr));
+    gl.viewport(0, 0, cv.width, cv.height);
+  }
+  addEventListener('resize', size); size();
+  addEventListener('pointermove', e => { tx = e.clientX * dpr; ty = (innerHeight - e.clientY) * dpr; if (mx < -999) { mx = tx; my = ty; } });
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const t0 = performance.now(); let raf = 0;
+  function frame(now) {
+    mx += (tx - mx) * .12; my += (ty - my) * .12;
+    gl.uniform2f(uR, cv.width, cv.height); gl.uniform1f(uT, still ? 12 : (now - t0) / 1000); gl.uniform2f(uM, mx, my); gl.uniform1f(uS, Math.round(15 * dpr));
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    if (!still) raf = requestAnimationFrame(frame);
+  }
+  document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAnimationFrame(raf); else if (!still) raf = requestAnimationFrame(frame); });
+  raf = requestAnimationFrame(frame);
+})();
+
+(function () {
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 }) : null;
+  document.querySelectorAll('.reveal').forEach(el => io && !still ? io.observe(el) : el.classList.add('in'));
+  if (still) return;
+  const glow = document.getElementById('glow');
+  addEventListener('pointermove', e => { glow.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`; });
+  document.querySelectorAll('.card').forEach(c => {
+    c.addEventListener('pointermove', e => {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      c.style.setProperty('--gx', (x * 100) + '%'); c.style.setProperty('--gy', (y * 100) + '%');
+      c.style.setProperty('--ry', ((x - .5) * 7) + 'deg'); c.style.setProperty('--rx', ((.5 - y) * 7) + 'deg');
+    });
+    c.addEventListener('pointerleave', () => { c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
+  });
+})();
+
+(() => {
+  const b = document.getElementById('dlMain'); if (!b) return;
+  const ua = navigator.userAgent, base = 'https://github.com/MechVault/mechvault.github.io/releases/latest/download/';
+  let f = null, k = 'dlAny';
+  if (/Windows/i.test(ua)) { f = 'MechVault-win-x64.zip'; k = 'dlWin'; }
+  else if (/Macintosh|Mac OS X/i.test(ua) && !/iPhone|iPad/i.test(ua)) { f = 'MechVault-osx-arm64.zip'; k = 'dlMac'; }
+  else if (/Linux/i.test(ua) && !/Android/i.test(ua)) { f = 'MechVault-linux-x64.tar.gz'; k = 'dlLinux2'; }
+  if (f) { b.href = base + f; b.dataset.i18n = k; b.textContent = ({ dlWin: 'Download for Windows', dlMac: 'Download for macOS', dlLinux2: 'Download for Linux' })[k]; }
+})();
+
+const I18N = {
+  en: {},
+  it: {
+    title: "MechVault — pianificatore di risorse per Mech Arena",
+    nModules: "Moduli", nCalc: "Calcolatore", nCrate: "Crate Rush", nInstall: "Installazione", nVerify: "Verifica", download: "Scarica",
+    h1: "Ogni credito pianificato. Nessuna A-coin spesa alla cieca.",
+    lead: "MechVault legge i saldi dallo schermo, calcola il costo di ogni percorso di potenziamento, prevede quando raggiungi ogni obiettivo e ti dice, in numeri, se una Crate Rush vale anche un solo spin.",
+    dlWin: "Scarica per Windows", explore: "Scopri i moduli",
+    meta: "Gratis · nessun account · nessuna pubblicità · fatto da fan, non affiliato a Plarium",
+    st1: "costi di potenziamento inclusi", st2: "aggiornamento saldi mentre giochi", st3: "byte di memoria del gioco toccati", st4: "lingue · EN IT ES", st5: "mech analizzati",
+    kModules: "Moduli", mTitle: "Un solo strumento per tutta l'economia.",
+    mSub: "Pensato su come si spende davvero in Mech Arena: crediti e blueprint per i livelli, A-coin per i ranghi, ed eventi che vogliono entrambi.",
+    m1t: "Saldi in tempo reale", m1d: "Crediti e A-coin letti dalla barra delle valute ogni 3 secondi. Ogni guadagno e spesa viene registrato; le letture sbagliate vengono riconosciute e annullate da sole.",
+    m2t: "Pianificatore di obiettivi", m2d: "Obiettivi in ordine di priorità per ogni valuta, con progresso, quanto manca e la data prevista al tuo ritmo reale.",
+    m3t: "Calcolatore potenziamenti", m3d: "Mech e armi, ogni rarità, armi per energia. Crediti, blueprint e A-coin per qualsiasi intervallo di stelle e livelli, confrontati con le tue risorse.",
+    m4t: "Analisi Crate Rush", m4d: "Costo medio, mediana e 90° percentile, garantito, rango del premio e potenziamenti che ancora servono, confrontati con l'acquisto nel Gear Hub.",
+    m5t: "Blocco spese", m5d: "Una serie senza spese, un budget missioni giornaliero che non la rompe mai e un avviso a cui rispondere quando il saldo scende fuori da un acquisto pianificato.",
+    m7t: "Scheda mech", m7d: "HP massimi, velocità ed energia per le armi di 47 mech, in classifica rispetto a tutti gli altri, con abilità, ricarica e note della community.",
+    m8t: "Overlay in gioco", m8d: "Saldi, progresso dell'obiettivo e budget missioni sopra la partita. Trascinabile, tre dimensioni, non ruba mai il focus.",
+    cr5: "Crate Rush con più premi: ogni premio che vuoi davvero viene valutato e ti trova il numero di spin migliore",
+    m6t: "Ritmo di guadagno adattivo", m6d: "Media pesata su 28 giorni di quanto guadagni davvero al giorno, al netto delle missioni, con premi una tantum e giorni di pausa gestiti correttamente.",
+    kCalc: "Calcolatore potenziamenti", cTitle: "Il costo completo di un percorso, passo per passo.",
+    cSub: "Scegli tipo, rarità, energia e un intervallo di stelle e livelli. MechVault somma ogni livello e ogni salita di stella e ti mostra cosa manca.",
+    c1: "Include la tabella dei costi della community da 1★ a 6★, più correzioni verificate in gioco", c2: "Qualsiasi rarità da qualsiasi stella: anche oggetti da eventi e codici promo",
+    c3: "Correggi un valore una volta e vale per tutti gli oggetti uguali", c4: "Trasforma il risultato in un obiettivo con un clic",
+    kCrate: "Analisi Crate Rush", crTitle: "Conosci il prezzo prima del primo spin.",
+    crSub: "Inserisci costo dello spin, probabilità dei premi e garantito. Il giudizio confronta la cassa con il Gear Hub in giorni di grind al tuo ritmo.",
+    cr1: "Spin in crediti o A-coin, prezzo del Gear Hub in entrambe", cr2: "Costo medio, mediano e 9 su 10, più il caso peggiore garantito",
+    cr3: "Considera il rango con cui arriva il premio e le stelle che ancora gli servono", cr4: "Un budget massimo: oltre, la via diretta costa meno",
+    kMech: "Scheda mech", msTitle: "Giudica il mech, non il banner.",
+    msSub: "Prima di una Crate Rush o di un acquisto, guarda dove sta davvero un mech: resistenza, mobilità e potenza di fuoco confrontate con tutti gli altri mech del gioco.",
+    ms1: "HP massimi e velocità con il percentile rispetto a tutti i mech", ms2: "Classe di energia: cosa può portare davvero", ms3: "Abilità, ricarica e note della community",
+    kOverlay: "Overlay in gioco", oTitle: "I tuoi numeri, sopra la partita.",
+    oSub: "Una scheda compatta sempre in primo piano con saldi, progresso dell'obiettivo e budget missioni. Trascinala dove vuoi; normale, piccola o su una riga.",
+    o1: "Non ruba mai il focus al gioco", o2: "Posizione e dimensione ricordate su ogni PC", o3: "Più account, ognuno con obiettivi e serie propri",
+    kInstall: "Installazione", iTitle: "Pronto in meno di un minuto.",
+    iSub: "Per Mech Arena su Windows e macOS (Plarium Play) e su Linux tramite Proton. Niente da installare e niente altro da scaricare: dentro c'è tutto quello che serve.",
+    s1t: "Scarica ed estrai", s1d: "Metti MechVault dove vuoi. Arrivi dalla versione PowerShell su Windows? Estrailo nella stessa cartella: account, obiettivi e impostazioni restano.",
+    s2t: "Avvialo", s2d: "Windows: MechVault.exe (se SmartScreen avvisa: Ulteriori informazioni › Esegui comunque). macOS: la prima volta tasto destro su MechVault.app › Apri, poi consenti la Registrazione schermo. Linux: ./MechVault.",
+    s3t: "Apri l'hangar", s3d: "MechVault legge i saldi e inizia a tracciare. Da quel momento parte con il computer.",
+    kVerify: "Fiducia", vTitle: "Controllalo prima di avviarlo.",
+    vSub: "MechVault è open source. Ogni download è compilato da GitHub Actions a partire dal codice pubblico del repository di questo sito, e ogni release elenca l'impronta SHA-256 di ogni file.",
+    v1t: "Verifica il download", v1d: "L'impronta SHA-256 di ogni download, con il suo report VirusTotal. Confrontala con quella che calcola il tuo computer:", v1b: "Report VirusTotal",
+    v2t: "Cosa tocca", v2d: "Schermo: solo la finestra di Mech Arena, come uno screenshot, per leggere crediti e A-coin. Internet: solo i due wiki della community di Mech Arena (Fandom e wiki.gg), per aggiornare le statistiche dei mech, e mechvault.github.io, per gli aggiornamenti dell'app (installati solo se l'impronta SHA-256 coincide; si spengono in Impostazioni). File: solo la sua cartella dei dati, più l'avvio automatico all'accesso che puoi disattivare. Nessun permesso di amministratore, nessun accesso alla memoria del gioco, nessuna automazione, nessun login.",
+    lTitle: "Non affiliato a Plarium",
+    l1: "MechVault è un progetto non ufficiale, fatto da fan. Non è affiliato, approvato, sponsorizzato o autorizzato da Plarium Global Ltd. Mech Arena e tutti i relativi nomi, loghi e contenuti sono marchi e/o diritti d'autore di Plarium Global Ltd. e/o dei rispettivi proprietari.",
+    l2: "MechVault legge solo quello che c'è sul tuo schermo. Non modifica il gioco, non ne legge la memoria e non automatizza nessuna azione.",
+    foot: "MechVault · progetto gratuito di fan · non affiliato a Plarium Global Ltd.", backTop: "Torna su",
+    dlAny: "Scarica",
+    dlMac: "Scarica per macOS",
+    dlLinux2: "Scarica per Linux",
+    dlMacArm: "macOS · Apple Silicon",
+    dlMacX64: "macOS · Intel",
+    dlLinux: "Linux",
+    nOs: "macOS: serve macOS 12 o successivo; l'app non è ancora firmata da Apple, per questo serve tasto destro › Apri. Linux: la lettura automatica richiede una sessione X11 e il pacchetto tesseract-ocr; su Wayland i saldi si inseriscono a mano.",
+    dlOld: "Versione precedente (PowerShell, solo Windows)",
+    v1c: "Pagina della release",
+    otherOs: "Disponibile per"
+  },
+  es: {
+    title: "MechVault — planificador de recursos para Mech Arena",
+    nModules: "Módulos", nCalc: "Calculadora", nCrate: "Crate Rush", nInstall: "Instalación", nVerify: "Verificar", download: "Descargar",
+    h1: "Cada crédito planificado. Ninguna A-coin gastada a ciegas.",
+    lead: "MechVault lee tus saldos de la pantalla, calcula el coste de cada ruta de mejora, prevé cuándo alcanzas cada objetivo y te dice, con números, si una Crate Rush vale una sola tirada.",
+    dlWin: "Descargar para Windows", explore: "Ver los módulos",
+    meta: "Gratis · sin cuenta · sin anuncios · hecho por fans, no afiliado a Plarium",
+    st1: "costes de mejora incluidos", st2: "actualización de saldos mientras juegas", st3: "bytes de memoria del juego tocados", st4: "idiomas · EN IT ES", st5: "mechs analizados",
+    kModules: "Módulos", mTitle: "Una herramienta para toda la economía.",
+    mSub: "Pensado según cómo se gasta de verdad en Mech Arena: créditos y planos para niveles, A-coins para rangos, y eventos que quieren ambos.",
+    m1t: "Saldos en tiempo real", m1d: "Créditos y A-coins leídos de la barra de monedas cada 3 segundos. Cada ganancia y gasto queda registrado; las lecturas erróneas se detectan y se deshacen solas.",
+    m2t: "Planificador de objetivos", m2d: "Objetivos por prioridad para cada moneda, con progreso, cantidad restante y fecha prevista a tu ritmo real.",
+    m3t: "Calculadora de mejoras", m3d: "Mechs y armas, cada rareza, armas por energía. Créditos, planos y A-coins para cualquier rango de estrellas y niveles, comparados con tus recursos.",
+    m4t: "Análisis de Crate Rush", m4d: "Coste medio, mediana y percentil 90, garantizado, rango del premio y mejoras que aún necesita, comparado con comprarlo en el Gear Hub.",
+    m5t: "Bloqueo de gastos", m5d: "Una racha sin gastos, un presupuesto diario de misiones que nunca la rompe y un aviso que debes responder cuando el saldo baja fuera de una compra planificada.",
+    m7t: "Ficha de mech", m7d: "HP máximos, velocidad y energía para armas de 47 mechs, comparados con todos los demás, con habilidad, recarga y notas de la comunidad.",
+    m8t: "Overlay en el juego", m8d: "Saldos, progreso del objetivo y presupuesto de misiones encima de la partida. Se puede arrastrar, tres tamaños, nunca quita el foco.",
+    cr5: "Crate Rush con varios premios: valora cada premio que quieres de verdad y encuentra el mejor número de tiradas",
+    m6t: "Ritmo de ingresos adaptativo", m6d: "Media ponderada de 28 días de lo que ganas de verdad al día, sin contar las misiones, con premios puntuales y días de descanso bien gestionados.",
+    kCalc: "Calculadora de mejoras", cTitle: "El coste completo de una ruta, paso a paso.",
+    cSub: "Elige tipo, rareza, energía y un rango de estrellas y niveles. MechVault suma cada nivel y cada subida de estrella y te muestra lo que falta.",
+    c1: "Incluye la tabla de costes de la comunidad de 1★ a 6★, más correcciones verificadas en el juego", c2: "Cualquier rareza desde cualquier estrella: también objetos de eventos y códigos promo",
+    c3: "Corrige un valor una vez y vale para todos los objetos iguales", c4: "Convierte el resultado en un objetivo con un clic",
+    kCrate: "Análisis de Crate Rush", crTitle: "Conoce el precio antes de la primera tirada.",
+    crSub: "Introduce coste de tirada, probabilidades de los premios y garantizado. El veredicto compara la caja con el Gear Hub en días de grind a tu ritmo.",
+    cr1: "Tiradas en créditos o A-coins, precio del Gear Hub en ambas", cr2: "Coste medio, mediano y 9 de 10, más el peor caso garantizado",
+    cr3: "Tiene en cuenta el rango con el que llega el premio y las estrellas que aún necesita", cr4: "Un presupuesto máximo: más allá, la vía directa cuesta menos",
+    kMech: "Ficha de mech", msTitle: "Juzga el mech, no el banner.",
+    msSub: "Antes de una Crate Rush o una compra, mira dónde está de verdad un mech: resistencia, movilidad y potencia de fuego comparadas con todos los demás mechs del juego.",
+    ms1: "HP máximos y velocidad con percentil frente a todos los mechs", ms2: "Clase de energía: lo que puede llevar de verdad", ms3: "Habilidad, recarga y notas de la comunidad",
+    kOverlay: "Overlay en el juego", oTitle: "Tus números, encima de la partida.",
+    oSub: "Una tarjeta compacta siempre visible con saldos, progreso del objetivo y presupuesto de misiones. Arrástrala donde quieras; normal, pequeña o en una línea.",
+    o1: "Nunca le quita el foco al juego", o2: "Posición y tamaño recordados en cada PC", o3: "Varias cuentas, cada una con sus objetivos y racha",
+    kInstall: "Instalación", iTitle: "Listo en menos de un minuto.",
+    iSub: "Para Mech Arena en Windows y macOS (Plarium Play) y en Linux mediante Proton. Nada que instalar ni nada más que descargar: todo lo necesario va dentro.",
+    s1t: "Descarga y descomprime", s1d: "Pon MechVault donde quieras. ¿Vienes de la versión PowerShell en Windows? Extráelo en la misma carpeta: cuentas, objetivos y ajustes se mantienen.",
+    s2t: "Ejecútalo", s2d: "Windows: MechVault.exe (si SmartScreen avisa: Más información › Ejecutar de todas formas). macOS: la primera vez clic derecho en MechVault.app › Abrir, luego permite la Grabación de pantalla. Linux: ./MechVault.",
+    s3t: "Abre el hangar", s3d: "MechVault lee tus saldos y empieza a registrar. Desde entonces arranca con el ordenador.",
+    kVerify: "Confianza", vTitle: "Compruébalo antes de ejecutarlo.",
+    vSub: "MechVault es de código abierto. Cada descarga la compila GitHub Actions a partir del código público del repositorio de este sitio, y cada versión publica la huella SHA-256 de cada archivo.",
+    v1t: "Verifica la descarga", v1d: "La huella SHA-256 de cada descarga, con su informe de VirusTotal. Compárala con la que calcula tu ordenador:", v1b: "Informe de VirusTotal",
+    v2t: "Qué toca", v2d: "Pantalla: solo la ventana de Mech Arena, como una captura, para leer créditos y A-coins. Internet: solo las dos wikis de la comunidad de Mech Arena (Fandom y wiki.gg), para actualizar las estadísticas de los mechs, y mechvault.github.io, para las actualizaciones de la app (solo si la huella SHA-256 coincide; se desactivan en Ajustes). Archivos: solo su carpeta de datos, más el inicio automático al iniciar sesión que puedes desactivar. Sin permisos de administrador, sin acceso a la memoria del juego, sin automatización, sin inicio de sesión.",
+    lTitle: "No afiliado a Plarium",
+    l1: "MechVault es un proyecto no oficial hecho por fans. No está afiliado, aprobado, patrocinado ni autorizado por Plarium Global Ltd. Mech Arena y todos sus nombres, logotipos y contenidos son marcas y/o derechos de autor de Plarium Global Ltd. y/o de sus respectivos propietarios.",
+    l2: "MechVault solo lee lo que hay en tu pantalla. No modifica el juego, no lee su memoria y no automatiza ninguna acción.",
+    foot: "MechVault · proyecto gratuito de fans · no afiliado a Plarium Global Ltd.", backTop: "Volver arriba",
+    dlAny: "Descargar",
+    dlMac: "Descargar para macOS",
+    dlLinux2: "Descargar para Linux",
+    dlMacArm: "macOS · Apple Silicon",
+    dlMacX64: "macOS · Intel",
+    dlLinux: "Linux",
+    nOs: "macOS: necesita macOS 12 o posterior; la app aún no está firmada por Apple, por eso hace falta clic derecho › Abrir. Linux: la lectura automática necesita una sesión X11 y el paquete tesseract-ocr; en Wayland los saldos se introducen a mano.",
+    dlOld: "Versión anterior (PowerShell, solo Windows)",
+    v1c: "Página de la versión",
+    otherOs: "Disponible para"
+  }
+};
+const nodes = [...document.querySelectorAll('[data-i18n]')];
+nodes.forEach(n => I18N.en[n.dataset.i18n] = n.textContent);
+I18N.en.title = document.title;
+function setLang(l) {
+  if (!I18N[l]) l = 'en';
+  nodes.forEach(n => n.textContent = I18N[l][n.dataset.i18n] || I18N.en[n.dataset.i18n]);
+  document.title = I18N[l].title || I18N.en.title; document.documentElement.lang = l;
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
+  try { localStorage.setItem('mechvault-lang', l); } catch (e) {}
+}
+document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+let start = 'en';
+try { start = localStorage.getItem('mechvault-lang') || start; } catch (e) {}
+setLang(start);
+</script>
+<script>
+fetch('version.json', { cache: 'no-store' }).then(r => r.json()).then(v => {
+  for (const [k, p] of Object.entries(v.platforms || {})) {
+    if (!/^[a-f0-9]{64}$/.test(p.sha256 || '')) continue;
+    document.querySelectorAll('[data-sha="' + k + '"]').forEach(e => e.textContent = p.sha256);
+    document.querySelectorAll('[data-vt="' + k + '"]').forEach(e => e.href = 'https://www.virustotal.com/gui/file/' + p.sha256);
+  }
+}).catch(() => {});
+</script>
+</body>
+</html>

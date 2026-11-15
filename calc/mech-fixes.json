@@ -1,0 +1,175 @@
+{
+ "format": "mechvault-mech-fixes",
+ "note": "In-game verified values (Gear Hub stat tables), applied over wiki data (bundled and live). Rank columns: ★1-★6 at level 1, then ★6 level 7.",
+ "mechs": {
+  "Ares": {
+   "hp": 160800
+  },
+  "Biform": {
+   "class": "Medium",
+   "energy": 24,
+   "hp": 232900,
+   "speed": 23,
+   "cooldown": "14 seconds",
+   "abilityDuration": "7 seconds",
+   "abilityDamage": "50 meters (Beam Range) ▪︎ 485-4,604 (Damage) ▪︎ -30% (Speed Reduction) ▪︎ 320-3,070 (Healing Self) ▪︎ 650-6,130 (Healing Allies)",
+   "ranks": {
+    "Energy": [6, 8, 12, 16, 18, 20, 24],
+    "HP": [12300, 37900, 66000, 102100, 133200, 171600, 232900],
+    "Speed": [23, 23, 23, 23, 23, 23, 23],
+    "Power": [79, 167, 290, 448, 584, 753, 1022],
+    "Ability Cooldown": [14, 14, 14, 14, 14, 14, 14],
+    "Ability Duration": [7, 7, 7, 7, 7, 7, 7],
+    "Paradigm Shift Damage": [485, 750, 1305, 2017, 2632, 3391, 4604],
+    "Healing Self": [320, 500, 870, 1340, 1750, 2260, 3070],
+    "Healing Allies": [650, 1000, 1740, 2690, 3510, 4520, 6130]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Dreadnought": {
+   "energy": 32,
+   "hp": 227300,
+   "speed": 22,
+   "cooldown": "9 seconds",
+   "abilityDuration": "2 seconds (EMP)",
+   "abilityDamage": "19.8 x 33 m (Area) ▪︎ 2,440-74,319 (Damage)",
+   "ranks": {
+    "Energy": [8, 12, 16, 20, 24, 28, 32],
+    "HP": [12000, 41600, 64400, 93300, 129900, 175800, 227300],
+    "Speed": [22, 22, 22, 22, 22, 22, 22],
+    "Power": [71, 174, 269, 389, 542, 733, 948],
+    "Ability Cooldown": [9, 9, 9, 9, 9, 9, 9],
+    "EMP Duration": [2, 2, 2, 2, 2, 2, 2],
+    "Ability Damage": [2440, 7794, 11503, 18583, 36104, 54472, 74319]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Parasite": {
+   "energy": 24,
+   "hp": 261300,
+   "speed": 20,
+   "cooldown": "11 seconds",
+   "abilityDuration": "12 seconds",
+   "abilityDamage": "85 meters (Activation Range) ▪︎ 110 meters (Redirect Range) ▪︎ 10% (Damage Taken) ▪︎ 35% (Damage Redirected)",
+   "ranks": {
+    "Energy": [6, 8, 12, 16, 18, 20, 24],
+    "HP": [13800, 42600, 74100, 114500, 149400, 192500, 261300],
+    "Speed": [20, 20, 20, 20, 20, 20, 20],
+    "Power": [76, 168, 292, 451, 588, 758, 1029],
+    "Ability Cooldown": [11, 11, 11, 11, 11, 11, 11],
+    "Ability Duration": [12, 12, 12, 12, 12, 12, 12]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Silverthorn": {
+   "energy": 32,
+   "hp": 221600,
+   "speed": 23,
+   "cooldown": "10 seconds",
+   "abilityDuration": "3.5 seconds",
+   "abilityDamage": "100 meters (Range) ▪︎ 5 (Blades) ▪︎ -40% (Enemy Speed) ▪︎ 306-13,122 (Blade Hit Damage) ▪︎ 8,400-79,900 (Blade Radial Damage) ▪︎ 70% (Shield Bypass)",
+   "ranks": {
+    "Energy": [8, 12, 16, 20, 24, 28, 32],
+    "HP": [11700, 40600, 62800, 91000, 126700, 171400, 221600],
+    "Speed": [23, 23, 23, 23, 23, 23, 23],
+    "Power": [71, 172, 267, 387, 538, 728, 941],
+    "Ability Cooldown": [10, 10, 10, 10, 10, 10, 10],
+    "Ability Duration": [3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5],
+    "Blade Hit Damage": [306, 1147, 2177, 3646, 5691, 8486, 13122],
+    "Blade Radial Damage": [8400, 14600, 22700, 32800, 45700, 61800, 79900]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Voidghost": {
+   "energy": 24,
+   "hp": 198900,
+   "speed": 29,
+   "cooldown": "14 seconds",
+   "abilityDuration": "4 seconds",
+   "abilityDamage": "+40% (Speed Boost) ▪︎ 2 activations from ★5 (5 s recast) ▪︎ +30% (Weapon Damage) from ★6 ▪︎ 20% (HP Restore) at ★6 lvl 7",
+   "ranks": {
+    "Energy": [6, 8, 12, 16, 18, 20, 24],
+    "HP": [10500, 32400, 56300, 87100, 113700, 146500, 198900],
+    "Speed": [29, 29, 29, 29, 29, 29, 29],
+    "Power": [79, 160, 278, 430, 561, 723, 982],
+    "Ability Cooldown": [14, 14, 14, 14, 14, 14, 14],
+    "Ability Duration": [4, 4, 4, 4, 4, 4, 4],
+    "Ability Activations": [1, 1, 1, 1, 2, 2, 2]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Volti": {
+   "energy": 32,
+   "hp": 207400,
+   "speed": 21,
+   "cooldown": "13 seconds",
+   "abilityDuration": "6 seconds",
+   "abilityDamage": "90 meters (Activation Range) ▪︎ 130 meters (Thunder Range) ▪︎ 6 meters (Radius) ▪︎ 1,100-10,400 (Damage per tick, every 0.7 s)",
+   "ranks": {
+    "Energy": [8, 12, 16, 20, 24, 28, 32],
+    "HP": [11000, 38000, 58800, 85200, 118500, 160400, 207400],
+    "Speed": [21, 21, 21, 21, 21, 21, 21],
+    "Power": [71, 169, 262, 380, 528, 715, 924],
+    "Ability Cooldown": [13, 13, 13, 13, 13, 13, 13],
+    "Ability Duration": [6, 6, 6, 6, 6, 6, 6],
+    "Damage per Tick": [1100, 1900, 3000, 4300, 6000, 8100, 10400]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Redox": {
+   "energy": 32,
+   "hp": 227300,
+   "speed": 22,
+   "cooldown": "8 seconds",
+   "abilityDuration": "6 seconds",
+   "abilityDamage": "30 meters (Radius) ▪︎ 8,400-79,600 (Damage) ▪︎ 6 seconds (Stasis) ▪︎ 3,300-31,600 (Shield Durability) ▪︎ +50% (Speed Boost)",
+   "ranks": {
+    "Energy": [8, 12, 16, 20, 24, 28, 32],
+    "HP": [12000, 41600, 64400, 93300, 129900, 175800, 227300],
+    "Speed": [22, 22, 22, 22, 22, 22, 22],
+    "Power": [71, 174, 269, 389, 542, 733, 948],
+    "Ability Cooldown": [8, 8, 8, 8, 8, 8, 8],
+    "Ability Duration": [6, 6, 6, 6, 6, 6, 6],
+    "Ability Damage": [8400, 14600, 22600, 32700, 45500, 61600, 79600],
+    "Caustic Blast Stasis Time": [6, 6, 6, 6, 6, 6, 6],
+    "Shield Durability": [3300, 5800, 9000, 13000, 18100, 24400, 31600]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Salvor": {
+   "energy": 32,
+   "hp": 227300,
+   "speed": 24,
+   "cooldown": "12 seconds",
+   "abilityDamage": "3 (Regen Shot Charges) ▪︎ 100 meters (Range) ▪︎ 3,190-30,230 (Healing Self) ▪︎ 6,330-60,130 (Healing Allies)",
+   "ranks": {
+    "Energy": [8, 12, 16, 20, 24, 28, 32],
+    "HP": [12000, 41600, 64400, 93300, 129900, 175800, 227300],
+    "Speed": [24, 24, 24, 24, 24, 24, 24],
+    "Power": [71, 174, 269, 389, 542, 733, 948],
+    "Ability Cooldown": [12, 12, 12, 12, 12, 12, 12],
+    "Healing Allies": [6330, 11020, 17040, 24700, 34370, 46500, 60130],
+    "Healing Self": [3190, 5540, 8570, 12420, 17280, 23380, 30230]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  },
+  "Tailsting": {
+   "energy": 24,
+   "hp": 193200,
+   "speed": 22,
+   "cooldown": "12 seconds",
+   "abilityDuration": "4 seconds (Restrict)",
+   "abilityDamage": "90 meters (Range) ▪︎ 10 meters (Radius) ▪︎ 2,202-11,797 (Damage) ▪︎ +30% (Restrict Extra Damage) ▪︎ 80% (Shield Bypass)",
+   "ranks": {
+    "Energy": [6, 8, 12, 16, 18, 20, 24],
+    "HP": [10200, 31500, 54700, 84600, 110400, 142300, 193200],
+    "Speed": [22, 22, 22, 22, 22, 22, 22],
+    "Power": [79, 159, 276, 427, 557, 718, 975],
+    "Ability Cooldown": [12, 12, 12, 12, 12, 12, 12],
+    "Restrict Duration": [4, 4, 4, 4, 4, 4, 4],
+    "Ability Damage": [2202, 4125, 5218, 6555, 8187, 10171, 11797]
+   },
+   "ranksSource": "Mech Arena (in game, Gear Hub)"
+  }
+ }
+}

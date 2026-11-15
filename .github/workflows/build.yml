@@ -1,0 +1,133 @@
+name: Build MechVault app
+
+on:
+  push:
+    branches: ['**']
+    tags: ['app-v*']
+    paths: ['app/**', 'calc/**', 'lang/**', '.github/workflows/build.yml']
+  pull_request:
+    paths: ['app/**', 'calc/**', 'lang/**', '.github/workflows/build.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: '1'
+  DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+  PROJECT: app/src/MechVault.App/MechVault.App.csproj
+
+jobs:
+  test:
+    name: Test (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build
+        run: dotnet build app/MechVault.sln -c Release
+      - name: Test
+        run: dotnet test app/tests/MechVault.Tests -c Release --no-build --logger "console;verbosity=normal"
+
+  windows:
+    name: Package win-x64
+    needs: test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Publish
+        shell: pwsh
+        run: |
+          dotnet publish $env:PROJECT -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -p:DebugType=None -o out/MechVault
+          Copy-Item README.md out/MechVault/
+          Compress-Archive -Path out/MechVault -DestinationPath MechVault-win-x64.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MechVault-win-x64
+          path: MechVault-win-x64.zip
+
+  macos:
+    name: Package ${{ matrix.rid }}
+    needs: test
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        rid: [osx-arm64, osx-x64]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Publish
+        run: dotnet publish "$PROJECT" -c Release -r ${{ matrix.rid }} --self-contained -p:PublishSingleFile=true -p:DebugType=None -o out/publish
+      - name: Screen reading helper (Swift, Apple Vision)
+        run: |
+          arch=$([ "${{ matrix.rid }}" = "osx-arm64" ] && echo arm64 || echo x86_64)
+          swiftc -O -target ${arch}-apple-macos12.0 app/macos/mvhelper.swift -o out/publish/mvhelper
+      - name: Build MechVault.app
+        run: |
+          VERSION=$(sed -n 's:.*<Version>\(.*\)</Version>.*:\1:p' "$PROJECT")
+          APP=out/MechVault.app
+          mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
+          cp -R out/publish/. "$APP/Contents/MacOS/"
+          sed "s/__VERSION__/$VERSION/g" app/macos/Info.plist > "$APP/Contents/Info.plist"
+          ICON=out/MechVault.iconset; mkdir -p $ICON
+          for s in 16 32 64 128 256 512; do sips -z $s $s app/src/MechVault.App/Assets/mechvault.png --out $ICON/icon_${s}x${s}.png >/dev/null; done
+          iconutil -c icns $ICON -o "$APP/Contents/Resources/MechVault.icns"
+          chmod +x "$APP/Contents/MacOS/MechVault" "$APP/Contents/MacOS/mvhelper"
+          codesign --force --deep --sign - "$APP"
+          ditto -c -k --keepParent "$APP" MechVault-${{ matrix.rid }}.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MechVault-${{ matrix.rid }}
+          path: MechVault-${{ matrix.rid }}.zip
+
+  linux:
+    name: Package linux-x64
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Publish
+        run: |
+          dotnet publish "$PROJECT" -c Release -r linux-x64 --self-contained -p:PublishSingleFile=true -p:DebugType=None -o out/MechVault
+          cp README.md app/linux/mechvault.desktop app/src/MechVault.App/Assets/mechvault.png out/MechVault/
+          chmod +x out/MechVault/MechVault
+          tar -C out -czf MechVault-linux-x64.tar.gz MechVault
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MechVault-linux-x64
+          path: MechVault-linux-x64.tar.gz
+
+  release:
+    name: GitHub Release
+    if: startsWith(github.ref, 'refs/tags/app-v')
+    needs: [windows, macos, linux]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Checksums
+        run: cd dist && sha256sum MechVault-* > SHA256SUMS.txt && cat SHA256SUMS.txt
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" --title "MechVault ${GITHUB_REF_NAME#app-v}" --latest \
+            --notes "MechVault for Windows, macOS and Linux. Download: https://mechvault.github.io. SHA-256 checksums in SHA256SUMS.txt. macOS: not signed by Apple, right-click MechVault.app › Open the first time."

@@ -1,0 +1,284 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MechVault.App.App"
+             RequestedThemeVariant="Dark"
+             Name="MechVault">
+  <Application.Resources>
+    <ResourceDictionary>
+      <LinearGradientBrush x:Key="GlassFill" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Color="#2EFFFFFF" Offset="0"/><GradientStop Color="#0CFFFFFF" Offset="0.12"/><GradientStop Color="#05FFFFFF" Offset="0.55"/><GradientStop Color="#05FFFFFF" Offset="0.85"/><GradientStop Color="#14FFFFFF" Offset="1"/>
+      </LinearGradientBrush>
+      <LinearGradientBrush x:Key="GlassEdge" StartPoint="0%,0%" EndPoint="100%,100%">
+        <GradientStop Color="#D9FFFFFF" Offset="0"/><GradientStop Color="#40FFFFFF" Offset="0.22"/><GradientStop Color="#12FFFFFF" Offset="0.55"/><GradientStop Color="#8CFFFFFF" Offset="1"/>
+      </LinearGradientBrush>
+      <LinearGradientBrush x:Key="GlassFillStrong" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Color="#40FFFFFF" Offset="0"/><GradientStop Color="#14FFFFFF" Offset="0.45"/><GradientStop Color="#0DFFFFFF" Offset="0.8"/><GradientStop Color="#24FFFFFF" Offset="1"/>
+      </LinearGradientBrush>
+      <LinearGradientBrush x:Key="GCred" StartPoint="0%,0%" EndPoint="100%,100%"><GradientStop Color="#9BE3FF"/><GradientStop Color="#0A84FF" Offset="1"/></LinearGradientBrush>
+      <LinearGradientBrush x:Key="GAc" StartPoint="0%,0%" EndPoint="100%,100%"><GradientStop Color="#F0C4FF"/><GradientStop Color="#BF5AF2" Offset="1"/></LinearGradientBrush>
+      <LinearGradientBrush x:Key="GSafe" StartPoint="0%,0%" EndPoint="100%,100%"><GradientStop Color="#8CF0A8"/><GradientStop Color="#30D158" Offset="1"/></LinearGradientBrush>
+      <LinearGradientBrush x:Key="GWarn" StartPoint="0%,0%" EndPoint="100%,100%"><GradientStop Color="#FFE98A"/><GradientStop Color="#FFB340" Offset="1"/></LinearGradientBrush>
+
+      <SolidColorBrush x:Key="TextControlBackground" Color="#14FFFFFF"/>
+      <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#14FFFFFF"/>
+      <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#1FFFFFFF"/>
+      <SolidColorBrush x:Key="TextControlBorderBrush" Color="#1FFFFFFF"/>
+      <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="#33FFFFFF"/>
+      <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="#73FFFFFF"/>
+      <SolidColorBrush x:Key="TextControlForeground" Color="#F5F5F7"/>
+      <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="#F5F5F7"/>
+      <SolidColorBrush x:Key="TextControlForegroundFocused" Color="#F5F5F7"/>
+      <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="#52FFFFFF"/>
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="#52FFFFFF"/>
+      <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="#52FFFFFF"/>
+      <SolidColorBrush x:Key="TextControlSelectionHighlightColor" Color="#8FFFFFFF"/>
+      <Thickness x:Key="TextControlBorderThemeThicknessFocused">1</Thickness>
+
+      <StreamGeometry x:Key="IcLock">M4,7 L4,5 C4,2.8 5.8,1 8,1 C10.2,1 12,2.8 12,5 L12,7 M3,7 L13,7 L13,15 L3,15 Z</StreamGeometry>
+      <StreamGeometry x:Key="IcCheck">M2,8.5 L6,12.5 L14,3.5</StreamGeometry>
+      <StreamGeometry x:Key="IcDown">M3,6 L8,11 L13,6</StreamGeometry>
+      <StreamGeometry x:Key="IcUp">M3,10 L8,5 L13,10</StreamGeometry>
+      <StreamGeometry x:Key="IcMin">M3,8.5 L13,8.5 L13,9.5 L3,9.5 Z</StreamGeometry>
+      <StreamGeometry x:Key="IcMax">M3,3 L13,3 L13,13 L3,13 Z</StreamGeometry>
+      <StreamGeometry x:Key="IcRestore">M3,5 L11,5 L11,13 L3,13 Z M5,5 L5,3 L13,3 L13,11 L11,11</StreamGeometry>
+      <StreamGeometry x:Key="IcClose">M3,3 L13,13 M13,3 L3,13</StreamGeometry>
+      <StreamGeometry x:Key="IcPlus">M8,2 L8,14 M2,8 L14,8</StreamGeometry>
+      <StreamGeometry x:Key="IcSpend">M8,2 L8,13 M3,8 L8,13 L13,8</StreamGeometry>
+      <StreamGeometry x:Key="IcFlag">M3,15 L3,2 L12,2 L10,5.5 L12,9 L3,9</StreamGeometry>
+      <StreamGeometry x:Key="IcCart">M1,2 L3,2 L5,11 L13,11 L14.5,5 L4,5 M6,14 L6.5,14 M12,14 L12.5,14</StreamGeometry>
+      <StreamGeometry x:Key="IcInfo">M8,1 C11.9,1 15,4.1 15,8 C15,11.9 11.9,15 8,15 C4.1,15 1,11.9 1,8 C1,4.1 4.1,1 8,1 Z M8,7 L8,12 M8,4.5 L8,5</StreamGeometry>
+      <StreamGeometry x:Key="IcTrash">M2,4 L14,4 M6,4 L6,2 L10,2 L10,4 M4,4 L5,15 L11,15 L12,4</StreamGeometry>
+      <StreamGeometry x:Key="IcUser">M8,1.5 C9.9,1.5 11.3,3 11.3,4.8 C11.3,6.6 9.9,8.1 8,8.1 C6.1,8.1 4.7,6.6 4.7,4.8 C4.7,3 6.1,1.5 8,1.5 Z M1.5,15 C1.5,11.5 4.4,9.7 8,9.7 C11.6,9.7 14.5,11.5 14.5,15</StreamGeometry>
+      <StreamGeometry x:Key="IcShrink">M2,14 L7,9 M7,13 L7,9 L3,9 M14,2 L9,7 M9,3 L9,7 L13,7</StreamGeometry>
+      <StreamGeometry x:Key="IcGrow">M7,9 L2,14 M2,10 L2,14 L6,14 M9,7 L14,2 M10,2 L14,2 L14,6</StreamGeometry>
+      <StreamGeometry x:Key="IcWarn">M8,1.5 L15,14.5 L1,14.5 Z M8,6 L8,10 M8,12 L8,12.5</StreamGeometry>
+    </ResourceDictionary>
+  </Application.Resources>
+
+  <Application.Styles>
+    <FluentTheme />
+
+    <Style Selector="Window">
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+      <Setter Property="FontSize" Value="13"/>
+    </Style>
+    <Style Selector="TextBlock">
+      <Setter Property="TextWrapping" Value="NoWrap"/>
+    </Style>
+
+    <Style Selector="TextBox">
+      <Setter Property="FontSize" Value="14"/>
+      <Setter Property="Padding" Value="14,0"/>
+      <Setter Property="MinHeight" Value="42"/>
+      <Setter Property="CornerRadius" Value="14"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="SelectionBrush" Value="#8FFFFFFF"/>
+      <Setter Property="CaretBrush" Value="#F5F5F7"/>
+    </Style>
+    <Style Selector="TextBox.small">
+      <Setter Property="MinHeight" Value="34"/>
+      <Setter Property="Height" Value="34"/>
+      <Setter Property="FontSize" Value="13"/>
+      <Setter Property="Padding" Value="10,0"/>
+      <Setter Property="CornerRadius" Value="12"/>
+    </Style>
+
+    <Style Selector="Button">
+      <Setter Property="Background" Value="{DynamicResource GlassFillStrong}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource GlassEdge}"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+      <Setter Property="Padding" Value="18,10"/>
+      <Setter Property="FontSize" Value="13"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="CornerRadius" Value="20"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="Template">
+        <ControlTemplate>
+          <ContentPresenter Name="P" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Foreground="{TemplateBinding Foreground}"/>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+    <Style Selector="Button:pointerover"><Setter Property="Opacity" Value="0.82"/></Style>
+    <Style Selector="Button:pressed"><Setter Property="Opacity" Value="0.65"/></Style>
+    <Style Selector="Button:disabled"><Setter Property="Opacity" Value="0.38"/></Style>
+    <Style Selector="Button.primary">
+      <Setter Property="Background" Value="#EBF5F5F7"/>
+      <Setter Property="BorderBrush" Value="#FFFFFFFF"/>
+      <Setter Property="Foreground" Value="#1C1C1E"/>
+    </Style>
+    <Style Selector="Button.safe">
+      <Setter Property="Background" Value="{DynamicResource GSafe}"/>
+      <Setter Property="BorderBrush" Value="#66FFFFFF"/>
+      <Setter Property="Foreground" Value="#0B2A14"/>
+    </Style>
+    <Style Selector="Button.danger">
+      <Setter Property="Background" Value="#E6FF453A"/>
+      <Setter Property="BorderBrush" Value="#66FFFFFF"/>
+      <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <Style Selector="Button.ghost">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="Foreground" Value="#B8FFFFFF"/>
+      <Setter Property="FontWeight" Value="Normal"/>
+    </Style>
+    <Style Selector="Button.icon">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="Foreground" Value="#7AFFFFFF"/>
+      <Setter Property="Padding" Value="10,9"/>
+      <Setter Property="Margin" Value="2,0,0,0"/>
+    </Style>
+    <Style Selector="Button.chrome">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="Foreground" Value="#B8FFFFFF"/>
+      <Setter Property="Width" Value="40"/>
+      <Setter Property="Height" Value="32"/>
+      <Setter Property="Padding" Value="0"/>
+      <Setter Property="CornerRadius" Value="16"/>
+    </Style>
+    <Style Selector="Button.chrome:pointerover"><Setter Property="Opacity" Value="1"/><Setter Property="Background" Value="#1FFFFFFF"/></Style>
+    <Style Selector="Button.chromeClose:pointerover"><Setter Property="Background" Value="#CCFF453A"/><Setter Property="Foreground" Value="White"/></Style>
+
+    <Style Selector="PathIcon">
+      <Setter Property="Width" Value="12"/>
+      <Setter Property="Height" Value="12"/>
+    </Style>
+    <Style Selector="Path.ic">
+      <Setter Property="Stroke" Value="{Binding $parent[ContentPresenter].Foreground}"/>
+      <Setter Property="StrokeThickness" Value="1.6"/>
+      <Setter Property="StrokeLineCap" Value="Round"/>
+      <Setter Property="StrokeJoin" Value="Round"/>
+      <Setter Property="Stretch" Value="Uniform"/>
+      <Setter Property="Width" Value="12"/>
+      <Setter Property="Height" Value="12"/>
+    </Style>
+
+    <Style Selector="RadioButton.seg">
+      <Setter Property="Foreground" Value="#B8FFFFFF"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="FontSize" Value="13"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="Transparent"/>
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="16" Padding="18,7">
+            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}"/>
+          </Border>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+    <Style Selector="RadioButton.seg:pointerover"><Setter Property="Background" Value="#0FFFFFFF"/></Style>
+    <Style Selector="RadioButton.seg:checked">
+      <Setter Property="Background" Value="{DynamicResource GlassFillStrong}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource GlassEdge}"/>
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+    </Style>
+
+    <Style Selector="RadioButton.pill">
+      <Setter Property="Foreground" Value="#B8FFFFFF"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Background" Value="#0FFFFFFF"/>
+      <Setter Property="BorderBrush" Value="#1FFFFFFF"/>
+      <Setter Property="Margin" Value="0,0,6,6"/>
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="20" Padding="16,9">
+            <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}"/>
+          </Border>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+    <Style Selector="RadioButton.pill:checked">
+      <Setter Property="Background" Value="#33FFFFFF"/>
+      <Setter Property="BorderBrush" Value="#66FFFFFF"/>
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+    </Style>
+
+    <Style Selector="CheckBox.switch">
+      <Setter Property="HorizontalAlignment" Value="Stretch"/>
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="Margin" Value="0,6"/>
+      <Setter Property="Template">
+        <ControlTemplate>
+          <DockPanel Background="Transparent" LastChildFill="True">
+            <Border Name="track" DockPanel.Dock="Right" Width="46" Height="28" CornerRadius="14" Background="#29FFFFFF" Margin="16,0,0,0" VerticalAlignment="Center">
+              <Ellipse Name="knob" Width="22" Height="22" Fill="#F5F5F7" HorizontalAlignment="Left" Margin="3,0"/>
+            </Border>
+            <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}">
+              <ContentPresenter.Styles><Style Selector="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/></Style></ContentPresenter.Styles>
+            </ContentPresenter>
+          </DockPanel>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+    <Style Selector="CheckBox.switch:checked /template/ Border#track"><Setter Property="Background" Value="#30D158"/></Style>
+    <Style Selector="CheckBox.switch:checked /template/ Ellipse#knob"><Setter Property="HorizontalAlignment" Value="Right"/></Style>
+    <Style Selector="CheckBox.plain">
+      <Setter Property="Foreground" Value="#B8FFFFFF"/>
+    </Style>
+
+    <Style Selector="ToolTip">
+      <Setter Property="Background" Value="#F02C2C2E"/>
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+      <Setter Property="BorderBrush" Value="#33FFFFFF"/>
+      <Setter Property="Padding" Value="10,6"/>
+    </Style>
+
+    <Style Selector="Border.card">
+      <Setter Property="Background" Value="{DynamicResource GlassFill}"/>
+      <Setter Property="BorderBrush" Value="{DynamicResource GlassEdge}"/>
+      <Setter Property="BorderThickness" Value="1.2"/>
+      <Setter Property="CornerRadius" Value="26"/>
+      <Setter Property="Padding" Value="26,22"/>
+    </Style>
+    <Style Selector="Border.box">
+      <Setter Property="Background" Value="#0FFFFFFF"/>
+      <Setter Property="BorderBrush" Value="#1AFFFFFF"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="20"/>
+    </Style>
+    <Style Selector="Border.chip">
+      <Setter Property="CornerRadius" Value="12"/>
+      <Setter Property="Padding" Value="10,4"/>
+      <Setter Property="Background" Value="#14FFFFFF"/>
+      <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <Style Selector="TextBlock.label">
+      <Setter Property="Foreground" Value="#7AFFFFFF"/>
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+    <Style Selector="TextBlock.h1">
+      <Setter Property="FontSize" Value="30"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+    </Style>
+    <Style Selector="TextBlock.big">
+      <Setter Property="FontSize" Value="44"/>
+      <Setter Property="FontWeight" Value="Light"/>
+      <Setter Property="Foreground" Value="#F5F5F7"/>
+    </Style>
+    <Style Selector="TextBlock.hint">
+      <Setter Property="Foreground" Value="#7AFFFFFF"/>
+      <Setter Property="FontSize" Value="11"/>
+      <Setter Property="Margin" Value="4,0,0,4"/>
+    </Style>
+    <Style Selector="TextBlock.wrap"><Setter Property="TextWrapping" Value="Wrap"/></Style>
+    <Style Selector="TextBlock.dim"><Setter Property="Foreground" Value="#7AFFFFFF"/></Style>
+    <Style Selector="TextBlock.soft"><Setter Property="Foreground" Value="#B8FFFFFF"/></Style>
+    <Style Selector="TextBlock.faint"><Setter Property="Foreground" Value="#52FFFFFF"/><Setter Property="FontSize" Value="11"/></Style>
+  </Application.Styles>
+</Application>

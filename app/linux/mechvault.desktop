@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=MechVault
+Comment=Resource planner for Mech Arena
+Exec=MechVault
+Icon=mechvault
+Terminal=false
+Categories=Game;Utility;
